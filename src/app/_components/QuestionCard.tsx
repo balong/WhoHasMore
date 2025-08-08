@@ -208,14 +208,6 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
     <div className="w-full max-w-6xl mx-auto">
       <div className="space-y-6">
         
-        {/* Category Badge */}
-        <div className="flex justify-center">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-surface border border-glass-border">
-            <span className="text-xl">{getCategoryIcon(question.category)}</span>
-            <span className="text-caption text-secondary font-medium">{question.category}</span>
-          </div>
-        </div>
-
         {/* Question */}
         <div className="text-center space-y-3">
           <h2 className="text-heading-lg text-primary font-bold leading-tight max-w-4xl mx-auto">
@@ -223,9 +215,9 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
           </h2>
         </div>
 
-        {/* Answer Options - Narrower width */}
+        {/* Answer Options - Narrower width (1/3 screen on desktop) */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-lg md:max-w-xl">
             
             {/* Option A */}
             <motion.button
@@ -344,13 +336,13 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
           </div>
         </div>
 
-        {/* Explanation Card - More compact */}
+        {/* Explanation Card - With added spacing */}
         {isAnswered && (
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="max-w-2xl mx-auto"
+            className="max-w-2xl mx-auto mt-8"
           >
             <div className="card p-5">
               <div className="flex items-start gap-3">
@@ -364,19 +356,6 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
                     <h3 className="text-body-lg text-primary font-semibold">
                       {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}
                     </h3>
-                    <div className={`status-indicator ${wasAnswerCorrect ? 'status-correct' : 'status-incorrect'}`}>
-                      {wasAnswerCorrect ? (
-                        <>
-                          <CheckCircle2 className="h-3 w-3" />
-                          <span className="text-xs">Correct</span>
-                        </>
-                      ) : (
-                        <>
-                          <XCircle className="h-3 w-3" />
-                          <span className="text-xs">Incorrect</span>
-                        </>
-                      )}
-                    </div>
                   </div>
                   <p className="text-body text-secondary leading-relaxed">
                     {question.category === 'House Price Index' 
