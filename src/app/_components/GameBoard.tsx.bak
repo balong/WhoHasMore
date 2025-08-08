@@ -5,6 +5,7 @@ import { useGameStore } from '../_stores/gameStore';
 import QuestionCard from './QuestionCard';
 import StartButton from './StartButton';
 import GameOverModal from './GameOverModal';
+import ProgressDots from './ProgressDots';
 
 export default function GameBoard() {
   const {
@@ -81,7 +82,7 @@ export default function GameBoard() {
 
   return (
     <div className="w-full mx-auto px-6">
-      <div className="space-y-12">
+      <div className="space-y-16">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentQuestionIndex}
