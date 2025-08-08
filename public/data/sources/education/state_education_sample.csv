@@ -1,0 +1,157 @@
+State,Metric,Year,Value
+Alabama,High School Graduation Rate,2023,89.3
+Alabama,College Attainment Rate,2023,26.1
+Alabama,Average SAT Score,2023,1019
+Alabama,Education Spending Per Pupil,2023,9875
+California,High School Graduation Rate,2023,87.2
+California,College Attainment Rate,2023,35.0
+California,Average SAT Score,2023,1076
+California,Education Spending Per Pupil,2023,13542
+Texas,High School Graduation Rate,2023,90.0
+Texas,College Attainment Rate,2023,31.5
+Texas,Average SAT Score,2023,1041
+Texas,Education Spending Per Pupil,2023,10342
+Florida,High School Graduation Rate,2023,86.9
+Florida,College Attainment Rate,2023,30.5
+Florida,Average SAT Score,2023,1038
+Florida,Education Spending Per Pupil,2023,9346
+New York,High School Graduation Rate,2023,84.8
+New York,College Attainment Rate,2023,38.7
+New York,Average SAT Score,2023,1104
+New York,Education Spending Per Pupil,2023,25520
+Massachusetts,High School Graduation Rate,2023,88.3
+Massachusetts,College Attainment Rate,2023,46.6
+Massachusetts,Average SAT Score,2023,1163
+Massachusetts,Education Spending Per Pupil,2023,19265
+Connecticut,High School Graduation Rate,2023,87.9
+Connecticut,College Attainment Rate,2023,41.2
+Connecticut,Average SAT Score,2023,1151
+Connecticut,Education Spending Per Pupil,2023,20635
+Utah,High School Graduation Rate,2023,87.7
+Utah,College Attainment Rate,2023,34.8
+Utah,Average SAT Score,2023,1238
+Utah,Education Spending Per Pupil,2023,7628
+Vermont,High School Graduation Rate,2023,87.7
+Vermont,College Attainment Rate,2023,38.7
+Vermont,Average SAT Score,2023,1130
+Vermont,Education Spending Per Pupil,2023,19340
+New Hampshire,High School Graduation Rate,2023,88.1
+New Hampshire,College Attainment Rate,2023,37.8
+New Hampshire,Average SAT Score,2023,1131
+New Hampshire,Education Spending Per Pupil,2023,16356
+New Jersey,High School Graduation Rate,2023,91.0
+New Jersey,College Attainment Rate,2023,41.0
+New Jersey,Average SAT Score,2023,1097
+New Jersey,Education Spending Per Pupil,2023,21643
+Virginia,High School Graduation Rate,2023,91.5
+Virginia,College Attainment Rate,2023,40.5
+Virginia,Average SAT Score,2023,1142
+Virginia,Education Spending Per Pupil,2023,12019
+Maryland,High School Graduation Rate,2023,87.0
+Maryland,College Attainment Rate,2023,42.0
+Maryland,Average SAT Score,2023,1130
+Maryland,Education Spending Per Pupil,2023,15175
+Pennsylvania,High School Graduation Rate,2023,86.6
+Pennsylvania,College Attainment Rate,2023,32.8
+Pennsylvania,Average SAT Score,2023,1118
+Pennsylvania,Education Spending Per Pupil,2023,16395
+Ohio,High School Graduation Rate,2023,87.1
+Ohio,College Attainment Rate,2023,29.0
+Ohio,Average SAT Score,2023,1080
+Ohio,Education Spending Per Pupil,2023,12648
+Illinois,High School Graduation Rate,2023,87.0
+Illinois,College Attainment Rate,2023,35.2
+Illinois,Average SAT Score,2023,1086
+Illinois,Education Spending Per Pupil,2023,15741
+Michigan,High School Graduation Rate,2023,80.2
+Michigan,College Attainment Rate,2023,30.1
+Michigan,Average SAT Score,2023,1077
+Michigan,Education Spending Per Pupil,2023,12345
+Wisconsin,High School Graduation Rate,2023,88.2
+Wisconsin,College Attainment Rate,2023,30.5
+Wisconsin,Average SAT Score,2023,1123
+Wisconsin,Education Spending Per Pupil,2023,12234
+Minnesota,High School Graduation Rate,2023,83.2
+Minnesota,College Attainment Rate,2023,36.4
+Minnesota,Average SAT Score,2023,1178
+Minnesota,Education Spending Per Pupil,2023,13456
+Iowa,High School Graduation Rate,2023,91.3
+Iowa,College Attainment Rate,2023,28.7
+Iowa,Average SAT Score,2023,1248
+Iowa,Education Spending Per Pupil,2023,11987
+North Carolina,High School Graduation Rate,2023,86.5
+North Carolina,College Attainment Rate,2023,32.3
+North Carolina,Average SAT Score,2023,1030
+North Carolina,Education Spending Per Pupil,2023,9123
+South Carolina,High School Graduation Rate,2023,81.1
+South Carolina,College Attainment Rate,2023,28.8
+South Carolina,Average SAT Score,2023,1001
+South Carolina,Education Spending Per Pupil,2023,10456
+Georgia,High School Graduation Rate,2023,83.8
+Georgia,College Attainment Rate,2023,32.5
+Georgia,Average SAT Score,2023,1050
+Georgia,Education Spending Per Pupil,2023,10234
+Tennessee,High School Graduation Rate,2023,89.7
+Tennessee,College Attainment Rate,2023,27.9
+Tennessee,Average SAT Score,2023,1058
+Tennessee,Education Spending Per Pupil,2023,9567
+Kentucky,High School Graduation Rate,2023,90.5
+Kentucky,College Attainment Rate,2023,25.0
+Kentucky,Average SAT Score,2023,1065
+Kentucky,Education Spending Per Pupil,2023,10123
+Indiana,High School Graduation Rate,2023,87.0
+Indiana,College Attainment Rate,2023,26.5
+Indiana,Average SAT Score,2023,1095
+Indiana,Education Spending Per Pupil,2023,10567
+Missouri,High School Graduation Rate,2023,89.0
+Missouri,College Attainment Rate,2023,29.6
+Missouri,Average SAT Score,2023,1089
+Missouri,Education Spending Per Pupil,2023,10789
+Kansas,High School Graduation Rate,2023,87.0
+Kansas,College Attainment Rate,2023,33.4
+Kansas,Average SAT Score,2023,1156
+Kansas,Education Spending Per Pupil,2023,11456
+Nebraska,High School Graduation Rate,2023,89.9
+Nebraska,College Attainment Rate,2023,32.2
+Nebraska,Average SAT Score,2023,1167
+Nebraska,Education Spending Per Pupil,2023,12234
+Colorado,High School Graduation Rate,2023,81.0
+Colorado,College Attainment Rate,2023,42.7
+Colorado,Average SAT Score,2023,1159
+Colorado,Education Spending Per Pupil,2023,10567
+Arizona,High School Graduation Rate,2023,79.7
+Arizona,College Attainment Rate,2023,30.6
+Arizona,Average SAT Score,2023,1078
+Arizona,Education Spending Per Pupil,2023,8765
+Nevada,High School Graduation Rate,2023,83.2
+Nevada,College Attainment Rate,2023,25.5
+Nevada,Average SAT Score,2023,1069
+Nevada,Education Spending Per Pupil,2023,9234
+Washington,High School Graduation Rate,2023,84.2
+Washington,College Attainment Rate,2023,36.7
+Washington,Average SAT Score,2023,1195
+Washington,Education Spending Per Pupil,2023,14567
+Oregon,High School Graduation Rate,2023,80.6
+Oregon,College Attainment Rate,2023,33.8
+Oregon,Average SAT Score,2023,1156
+Oregon,Education Spending Per Pupil,2023,12345
+Idaho,High School Graduation Rate,2023,81.0
+Idaho,College Attainment Rate,2023,27.5
+Idaho,Average SAT Score,2023,1201
+Idaho,Education Spending Per Pupil,2023,8456
+Montana,High School Graduation Rate,2023,86.0
+Montana,College Attainment Rate,2023,31.8
+Montana,Average SAT Score,2023,1235
+Montana,Education Spending Per Pupil,2023,11234
+Wyoming,High School Graduation Rate,2023,80.1
+Wyoming,College Attainment Rate,2023,27.4
+Wyoming,Average SAT Score,2023,1234
+Wyoming,Education Spending Per Pupil,2023,16789
+North Dakota,High School Graduation Rate,2023,87.7
+North Dakota,College Attainment Rate,2023,29.2
+North Dakota,Average SAT Score,2023,1276
+North Dakota,Education Spending Per Pupil,2023,13456
+South Dakota,High School Graduation Rate,2023,83.9
+South Dakota,College Attainment Rate,2023,28.8
+South Dakota,Average SAT Score,2023,1248
+South Dakota,Education Spending Per Pupil,2023,10234 

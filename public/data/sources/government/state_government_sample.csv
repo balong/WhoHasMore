@@ -1,0 +1,201 @@
+State,Metric,Year,Value
+Alabama,Voter Turnout,2022,54.2
+Alabama,State Income Tax Rate,2023,5.0
+Alabama,Government Employment Rate,2023,16.8
+Alabama,Property Tax Rate,2023,0.42
+California,Voter Turnout,2022,58.9
+California,State Income Tax Rate,2023,13.3
+California,Government Employment Rate,2023,14.2
+California,Property Tax Rate,2023,0.68
+Texas,Voter Turnout,2022,46.3
+Texas,State Income Tax Rate,2023,0.0
+Texas,Government Employment Rate,2023,13.1
+Texas,Property Tax Rate,2023,1.69
+Florida,Voter Turnout,2022,50.1
+Florida,State Income Tax Rate,2023,0.0
+Florida,Government Employment Rate,2023,12.4
+Florida,Property Tax Rate,2023,0.86
+New York,Voter Turnout,2022,51.8
+New York,State Income Tax Rate,2023,10.9
+New York,Government Employment Rate,2023,17.2
+New York,Property Tax Rate,2023,1.40
+Massachusetts,Voter Turnout,2022,63.2
+Massachusetts,State Income Tax Rate,2023,5.0
+Massachusetts,Government Employment Rate,2023,15.1
+Massachusetts,Property Tax Rate,2023,1.04
+Connecticut,Voter Turnout,2022,62.7
+Connecticut,State Income Tax Rate,2023,6.99
+Connecticut,Government Employment Rate,2023,16.3
+Connecticut,Property Tax Rate,2023,1.73
+Washington,Voter Turnout,2022,60.8
+Washington,State Income Tax Rate,2023,0.0
+Washington,Government Employment Rate,2023,14.8
+Washington,Property Tax Rate,2023,1.00
+Oregon,Voter Turnout,2022,64.1
+Oregon,State Income Tax Rate,2023,9.9
+Oregon,Government Employment Rate,2023,15.6
+Oregon,Property Tax Rate,2023,0.93
+Colorado,Voter Turnout,2022,66.4
+Colorado,State Income Tax Rate,2023,4.4
+Colorado,Government Employment Rate,2023,15.2
+Colorado,Property Tax Rate,2023,0.51
+Utah,Voter Turnout,2022,52.1
+Utah,State Income Tax Rate,2023,4.95
+Utah,Government Employment Rate,2023,16.7
+Utah,Property Tax Rate,2023,0.58
+Nevada,Voter Turnout,2022,48.6
+Nevada,State Income Tax Rate,2023,0.0
+Nevada,Government Employment Rate,2023,16.9
+Nevada,Property Tax Rate,2023,0.65
+Arizona,Voter Turnout,2022,60.0
+Arizona,State Income Tax Rate,2023,4.5
+Arizona,Government Employment Rate,2023,14.1
+Arizona,Property Tax Rate,2023,0.62
+Idaho,Voter Turnout,2022,60.2
+Idaho,State Income Tax Rate,2023,5.8
+Idaho,Government Employment Rate,2023,16.4
+Idaho,Property Tax Rate,2023,0.69
+Montana,Voter Turnout,2022,71.0
+Montana,State Income Tax Rate,2023,6.75
+Montana,Government Employment Rate,2023,18.9
+Montana,Property Tax Rate,2023,0.85
+Wyoming,Voter Turnout,2022,58.4
+Wyoming,State Income Tax Rate,2023,0.0
+Wyoming,Government Employment Rate,2023,21.3
+Wyoming,Property Tax Rate,2023,0.62
+North Dakota,Voter Turnout,2022,56.3
+North Dakota,State Income Tax Rate,2023,2.9
+North Dakota,Government Employment Rate,2023,17.8
+North Dakota,Property Tax Rate,2023,1.00
+South Dakota,Voter Turnout,2022,61.9
+South Dakota,State Income Tax Rate,2023,0.0
+South Dakota,Government Employment Rate,2023,16.2
+South Dakota,Property Tax Rate,2023,1.31
+Nebraska,Voter Turnout,2022,55.4
+Nebraska,State Income Tax Rate,2023,6.84
+Nebraska,Government Employment Rate,2023,17.1
+Nebraska,Property Tax Rate,2023,1.54
+Kansas,Voter Turnout,2022,51.2
+Kansas,State Income Tax Rate,2023,5.7
+Kansas,Government Employment Rate,2023,16.8
+Kansas,Property Tax Rate,2023,1.42
+Oklahoma,Voter Turnout,2022,47.8
+Oklahoma,State Income Tax Rate,2023,5.0
+Oklahoma,Government Employment Rate,2023,17.2
+Oklahoma,Property Tax Rate,2023,0.90
+New Mexico,Voter Turnout,2022,54.1
+New Mexico,State Income Tax Rate,2023,5.9
+New Mexico,Government Employment Rate,2023,20.8
+New Mexico,Property Tax Rate,2023,0.80
+Minnesota,Voter Turnout,2022,64.3
+Minnesota,State Income Tax Rate,2023,9.85
+Minnesota,Government Employment Rate,2023,14.9
+Minnesota,Property Tax Rate,2023,1.12
+Wisconsin,Voter Turnout,2022,62.1
+Wisconsin,State Income Tax Rate,2023,7.65
+Wisconsin,Government Employment Rate,2023,14.2
+Wisconsin,Property Tax Rate,2023,1.76
+Iowa,Voter Turnout,2022,55.8
+Iowa,State Income Tax Rate,2023,8.53
+Iowa,Government Employment Rate,2023,15.6
+Iowa,Property Tax Rate,2023,1.53
+Missouri,Voter Turnout,2022,53.7
+Missouri,State Income Tax Rate,2023,5.4
+Missouri,Government Employment Rate,2023,14.8
+Missouri,Property Tax Rate,2023,0.97
+Arkansas,Voter Turnout,2022,48.9
+Arkansas,State Income Tax Rate,2023,5.5
+Arkansas,Government Employment Rate,2023,16.4
+Arkansas,Property Tax Rate,2023,0.62
+Louisiana,Voter Turnout,2022,50.4
+Louisiana,State Income Tax Rate,2023,6.0
+Louisiana,Government Employment Rate,2023,16.8
+Louisiana,Property Tax Rate,2023,0.55
+Mississippi,Voter Turnout,2022,47.1
+Mississippi,State Income Tax Rate,2023,5.0
+Mississippi,Government Employment Rate,2023,18.2
+Mississippi,Property Tax Rate,2023,0.81
+Tennessee,Voter Turnout,2022,50.6
+Tennessee,State Income Tax Rate,2023,0.0
+Tennessee,Government Employment Rate,2023,14.1
+Tennessee,Property Tax Rate,2023,0.64
+Kentucky,Voter Turnout,2022,48.7
+Kentucky,State Income Tax Rate,2023,5.0
+Kentucky,Government Employment Rate,2023,16.2
+Kentucky,Property Tax Rate,2023,0.86
+Illinois,Voter Turnout,2022,54.9
+Illinois,State Income Tax Rate,2023,4.95
+Illinois,Government Employment Rate,2023,13.8
+Illinois,Property Tax Rate,2023,2.16
+Indiana,Voter Turnout,2022,47.2
+Indiana,State Income Tax Rate,2023,3.23
+Indiana,Government Employment Rate,2023,13.9
+Indiana,Property Tax Rate,2023,0.87
+Ohio,Voter Turnout,2022,51.3
+Ohio,State Income Tax Rate,2023,3.99
+Ohio,Government Employment Rate,2023,13.2
+Ohio,Property Tax Rate,2023,1.56
+Michigan,Voter Turnout,2022,54.8
+Michigan,State Income Tax Rate,2023,4.25
+Michigan,Government Employment Rate,2023,13.1
+Michigan,Property Tax Rate,2023,1.54
+Pennsylvania,Voter Turnout,2022,53.4
+Pennsylvania,State Income Tax Rate,2023,3.07
+Pennsylvania,Government Employment Rate,2023,12.8
+Pennsylvania,Property Tax Rate,2023,1.58
+New Jersey,Voter Turnout,2022,48.7
+New Jersey,State Income Tax Rate,2023,10.75
+New Jersey,Government Employment Rate,2023,14.6
+New Jersey,Property Tax Rate,2023,2.13
+Maryland,Voter Turnout,2022,55.1
+Maryland,State Income Tax Rate,2023,5.75
+Maryland,Government Employment Rate,2023,15.4
+Maryland,Property Tax Rate,2023,1.09
+Virginia,Voter Turnout,2022,52.8
+Virginia,State Income Tax Rate,2023,5.75
+Virginia,Government Employment Rate,2023,15.8
+Virginia,Property Tax Rate,2023,0.81
+North Carolina,Voter Turnout,2022,51.4
+North Carolina,State Income Tax Rate,2023,4.99
+North Carolina,Government Employment Rate,2023,14.6
+North Carolina,Property Tax Rate,2023,0.84
+South Carolina,Voter Turnout,2022,49.3
+South Carolina,State Income Tax Rate,2023,7.0
+South Carolina,Government Employment Rate,2023,15.1
+South Carolina,Property Tax Rate,2023,0.57
+Georgia,Voter Turnout,2022,50.7
+Georgia,State Income Tax Rate,2023,5.75
+Georgia,Government Employment Rate,2023,14.2
+Georgia,Property Tax Rate,2023,0.92
+West Virginia,Voter Turnout,2022,45.8
+West Virginia,State Income Tax Rate,2023,6.5
+West Virginia,Government Employment Rate,2023,18.9
+West Virginia,Property Tax Rate,2023,0.59
+Delaware,Voter Turnout,2022,57.2
+Delaware,State Income Tax Rate,2023,6.6
+Delaware,Government Employment Rate,2023,15.8
+Delaware,Property Tax Rate,2023,0.57
+Rhode Island,Voter Turnout,2022,58.9
+Rhode Island,State Income Tax Rate,2023,5.99
+Rhode Island,Government Employment Rate,2023,16.7
+Rhode Island,Property Tax Rate,2023,1.53
+Vermont,Voter Turnout,2022,65.8
+Vermont,State Income Tax Rate,2023,8.75
+Vermont,Government Employment Rate,2023,16.9
+Vermont,Property Tax Rate,2023,1.90
+New Hampshire,Voter Turnout,2022,56.4
+New Hampshire,State Income Tax Rate,2023,0.0
+New Hampshire,Government Employment Rate,2023,13.8
+New Hampshire,Property Tax Rate,2023,2.05
+Maine,Voter Turnout,2022,64.2
+Maine,State Income Tax Rate,2023,7.15
+Maine,Government Employment Rate,2023,15.6
+Maine,Property Tax Rate,2023,1.35
+Alaska,Voter Turnout,2022,51.7
+Alaska,State Income Tax Rate,2023,0.0
+Alaska,Government Employment Rate,2023,23.1
+Alaska,Property Tax Rate,2023,1.04
+Hawaii,Voter Turnout,2022,52.3
+Hawaii,State Income Tax Rate,2023,11.0
+Hawaii,Government Employment Rate,2023,19.8
+Hawaii,Property Tax Rate,2023,0.31 

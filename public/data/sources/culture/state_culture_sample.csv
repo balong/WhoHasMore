@@ -1,0 +1,201 @@
+State,Metric,Year,Value
+Alabama,Museums Per Capita,2023,12.3
+Alabama,Restaurants Per Capita,2023,89.7
+Alabama,Breweries Per Capita,2023,2.1
+Alabama,Entertainment Venues Per Capita,2023,15.6
+California,Museums Per Capita,2023,18.9
+California,Restaurants Per Capita,2023,156.8
+California,Breweries Per Capita,2023,8.4
+California,Entertainment Venues Per Capita,2023,42.7
+Texas,Museums Per Capita,2023,14.2
+Texas,Restaurants Per Capita,2023,98.5
+Texas,Breweries Per Capita,2023,4.3
+Texas,Entertainment Venues Per Capita,2023,28.9
+Florida,Museums Per Capita,2023,16.7
+Florida,Restaurants Per Capita,2023,134.2
+Florida,Breweries Per Capita,2023,3.8
+Florida,Entertainment Venues Per Capita,2023,67.4
+New York,Museums Per Capita,2023,34.5
+New York,Restaurants Per Capita,2023,178.9
+New York,Breweries Per Capita,2023,5.2
+New York,Entertainment Venues Per Capita,2023,89.7
+Massachusetts,Museums Per Capita,2023,45.6
+Massachusetts,Restaurants Per Capita,2023,167.3
+Massachusetts,Breweries Per Capita,2023,12.1
+Massachusetts,Entertainment Venues Per Capita,2023,78.4
+Connecticut,Museums Per Capita,2023,38.9
+Connecticut,Restaurants Per Capita,2023,145.7
+Connecticut,Breweries Per Capita,2023,9.8
+Connecticut,Entertainment Venues Per Capita,2023,56.3
+Washington,Museums Per Capita,2023,28.7
+Washington,Restaurants Per Capita,2023,156.9
+Washington,Breweries Per Capita,2023,15.6
+Washington,Entertainment Venues Per Capita,2023,67.8
+Oregon,Museums Per Capita,2023,32.1
+Oregon,Restaurants Per Capita,2023,167.8
+Oregon,Breweries Per Capita,2023,23.4
+Oregon,Entertainment Venues Per Capita,2023,45.9
+Colorado,Museums Per Capita,2023,29.8
+Colorado,Restaurants Per Capita,2023,189.4
+Colorado,Breweries Per Capita,2023,18.9
+Colorado,Entertainment Venues Per Capita,2023,87.6
+Utah,Museums Per Capita,2023,19.4
+Utah,Restaurants Per Capita,2023,76.8
+Utah,Breweries Per Capita,2023,3.2
+Utah,Entertainment Venues Per Capita,2023,34.5
+Nevada,Museums Per Capita,2023,14.6
+Nevada,Restaurants Per Capita,2023,234.7
+Nevada,Breweries Per Capita,2023,4.8
+Nevada,Entertainment Venues Per Capita,2023,156.8
+Arizona,Museums Per Capita,2023,17.8
+Arizona,Restaurants Per Capita,2023,98.7
+Arizona,Breweries Per Capita,2023,5.4
+Arizona,Entertainment Venues Per Capita,2023,45.6
+Idaho,Museums Per Capita,2023,16.7
+Idaho,Restaurants Per Capita,2023,89.4
+Idaho,Breweries Per Capita,2023,8.9
+Idaho,Entertainment Venues Per Capita,2023,23.4
+Montana,Museums Per Capita,2023,28.9
+Montana,Restaurants Per Capita,2023,156.7
+Montana,Breweries Per Capita,2023,21.3
+Montana,Entertainment Venues Per Capita,2023,34.5
+Wyoming,Museums Per Capita,2023,23.4
+Wyoming,Restaurants Per Capita,2023,134.6
+Wyoming,Breweries Per Capita,2023,12.8
+Wyoming,Entertainment Venues Per Capita,2023,28.9
+North Dakota,Museums Per Capita,2023,18.9
+North Dakota,Restaurants Per Capita,2023,78.9
+North Dakota,Breweries Per Capita,2023,6.7
+North Dakota,Entertainment Venues Per Capita,2023,19.8
+South Dakota,Museums Per Capita,2023,21.3
+South Dakota,Restaurants Per Capita,2023,89.7
+South Dakota,Breweries Per Capita,2023,8.4
+South Dakota,Entertainment Venues Per Capita,2023,23.6
+Nebraska,Museums Per Capita,2023,17.8
+Nebraska,Restaurants Per Capita,2023,87.6
+Nebraska,Breweries Per Capita,2023,7.8
+Nebraska,Entertainment Venues Per Capita,2023,21.4
+Kansas,Museums Per Capita,2023,15.6
+Kansas,Restaurants Per Capita,2023,76.8
+Kansas,Breweries Per Capita,2023,5.9
+Kansas,Entertainment Venues Per Capita,2023,18.7
+Oklahoma,Museums Per Capita,2023,13.4
+Oklahoma,Restaurants Per Capita,2023,67.8
+Oklahoma,Breweries Per Capita,2023,3.7
+Oklahoma,Entertainment Venues Per Capita,2023,16.5
+New Mexico,Museums Per Capita,2023,19.7
+New Mexico,Restaurants Per Capita,2023,98.4
+New Mexico,Breweries Per Capita,2023,8.7
+New Mexico,Entertainment Venues Per Capita,2023,28.9
+Minnesota,Museums Per Capita,2023,26.8
+Minnesota,Restaurants Per Capita,2023,134.5
+Minnesota,Breweries Per Capita,2023,11.2
+Minnesota,Entertainment Venues Per Capita,2023,56.7
+Wisconsin,Museums Per Capita,2023,23.4
+Wisconsin,Restaurants Per Capita,2023,123.6
+Wisconsin,Breweries Per Capita,2023,16.8
+Wisconsin,Entertainment Venues Per Capita,2023,45.9
+Iowa,Museums Per Capita,2023,18.9
+Iowa,Restaurants Per Capita,2023,78.4
+Iowa,Breweries Per Capita,2023,7.8
+Iowa,Entertainment Venues Per Capita,2023,21.3
+Missouri,Museums Per Capita,2023,19.8
+Missouri,Restaurants Per Capita,2023,89.7
+Missouri,Breweries Per Capita,2023,6.4
+Missouri,Entertainment Venues Per Capita,2023,34.5
+Arkansas,Museums Per Capita,2023,12.1
+Arkansas,Restaurants Per Capita,2023,67.8
+Arkansas,Breweries Per Capita,2023,3.2
+Arkansas,Entertainment Venues Per Capita,2023,14.6
+Louisiana,Museums Per Capita,2023,16.7
+Louisiana,Restaurants Per Capita,2023,123.4
+Louisiana,Breweries Per Capita,2023,4.8
+Louisiana,Entertainment Venues Per Capita,2023,67.8
+Mississippi,Museums Per Capita,2023,11.2
+Mississippi,Restaurants Per Capita,2023,56.7
+Mississippi,Breweries Per Capita,2023,2.1
+Mississippi,Entertainment Venues Per Capita,2023,12.3
+Tennessee,Museums Per Capita,2023,17.8
+Tennessee,Restaurants Per Capita,2023,98.7
+Tennessee,Breweries Per Capita,2023,5.6
+Tennessee,Entertainment Venues Per Capita,2023,45.8
+Kentucky,Museums Per Capita,2023,15.6
+Kentucky,Restaurants Per Capita,2023,78.9
+Kentucky,Breweries Per Capita,2023,4.3
+Kentucky,Entertainment Venues Per Capita,2023,23.4
+Illinois,Museums Per Capita,2023,28.9
+Illinois,Restaurants Per Capita,2023,145.7
+Illinois,Breweries Per Capita,2023,7.8
+Illinois,Entertainment Venues Per Capita,2023,89.4
+Indiana,Museums Per Capita,2023,16.7
+Indiana,Restaurants Per Capita,2023,87.6
+Indiana,Breweries Per Capita,2023,5.9
+Indiana,Entertainment Venues Per Capita,2023,28.7
+Ohio,Museums Per Capita,2023,21.3
+Ohio,Restaurants Per Capita,2023,98.4
+Ohio,Breweries Per Capita,2023,8.7
+Ohio,Entertainment Venues Per Capita,2023,34.5
+Michigan,Museums Per Capita,2023,23.4
+Michigan,Restaurants Per Capita,2023,112.6
+Michigan,Breweries Per Capita,2023,11.8
+Michigan,Entertainment Venues Per Capita,2023,45.6
+Pennsylvania,Museums Per Capita,2023,32.1
+Pennsylvania,Restaurants Per Capita,2023,123.4
+Pennsylvania,Breweries Per Capita,2023,9.8
+Pennsylvania,Entertainment Venues Per Capita,2023,67.8
+New Jersey,Museums Per Capita,2023,26.8
+New Jersey,Restaurants Per Capita,2023,178.9
+New Jersey,Breweries Per Capita,2023,6.7
+New Jersey,Entertainment Venues Per Capita,2023,89.7
+Maryland,Museums Per Capita,2023,31.2
+Maryland,Restaurants Per Capita,2023,156.8
+Maryland,Breweries Per Capita,2023,8.9
+Maryland,Entertainment Venues Per Capita,2023,78.4
+Virginia,Museums Per Capita,2023,24.6
+Virginia,Restaurants Per Capita,2023,134.5
+Virginia,Breweries Per Capita,2023,7.8
+Virginia,Entertainment Venues Per Capita,2023,56.7
+North Carolina,Museums Per Capita,2023,19.8
+North Carolina,Restaurants Per Capita,2023,108.7
+North Carolina,Breweries Per Capita,2023,8.4
+North Carolina,Entertainment Venues Per Capita,2023,45.9
+South Carolina,Museums Per Capita,2023,17.8
+South Carolina,Restaurants Per Capita,2023,123.4
+South Carolina,Breweries Per Capita,2023,6.7
+South Carolina,Entertainment Venues Per Capita,2023,67.8
+Georgia,Museums Per Capita,2023,18.9
+Georgia,Restaurants Per Capita,2023,112.6
+Georgia,Breweries Per Capita,2023,5.4
+Georgia,Entertainment Venues Per Capita,2023,56.7
+West Virginia,Museums Per Capita,2023,13.4
+West Virginia,Restaurants Per Capita,2023,56.8
+West Virginia,Breweries Per Capita,2023,2.8
+West Virginia,Entertainment Venues Per Capita,2023,14.6
+Delaware,Museums Per Capita,2023,21.3
+Delaware,Restaurants Per Capita,2023,134.5
+Delaware,Breweries Per Capita,2023,7.8
+Delaware,Entertainment Venues Per Capita,2023,45.6
+Rhode Island,Museums Per Capita,2023,34.5
+Rhode Island,Restaurants Per Capita,2023,189.7
+Rhode Island,Breweries Per Capita,2023,12.8
+Rhode Island,Entertainment Venues Per Capita,2023,78.9
+Vermont,Museums Per Capita,2023,42.1
+Vermont,Restaurants Per Capita,2023,234.6
+Vermont,Breweries Per Capita,2023,28.9
+Vermont,Entertainment Venues Per Capita,2023,89.7
+New Hampshire,Museums Per Capita,2023,29.8
+New Hampshire,Restaurants Per Capita,2023,167.8
+New Hampshire,Breweries Per Capita,2023,18.9
+New Hampshire,Entertainment Venues Per Capita,2023,67.4
+Maine,Museums Per Capita,2023,38.9
+Maine,Restaurants Per Capita,2023,189.4
+Maine,Breweries Per Capita,2023,21.3
+Maine,Entertainment Venues Per Capita,2023,78.9
+Alaska,Museums Per Capita,2023,31.2
+Alaska,Restaurants Per Capita,2023,145.7
+Alaska,Breweries Per Capita,2023,14.6
+Alaska,Entertainment Venues Per Capita,2023,67.8
+Hawaii,Museums Per Capita,2023,28.9
+Hawaii,Restaurants Per Capita,2023,267.8
+Hawaii,Breweries Per Capita,2023,9.8
+Hawaii,Entertainment Venues Per Capita,2023,156.7 

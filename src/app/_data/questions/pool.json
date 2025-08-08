@@ -1,0 +1,19 @@
+[
+  {
+    "id": "population|2020|Los Angeles|New York",
+    "category": "Population",
+    "question": "Which city has more population?",
+    "optionA": {
+      "name": "Los Angeles",
+      "value": 3979576,
+      "unit": "people"
+    },
+    "optionB": {
+      "name": "New York City",
+      "value": 8336817,
+      "unit": "people"
+    },
+    "correctAnswer": "B",
+    "explanation": "Los Angeles: 3,979,576 people vs New York City: 8,336,817 people. Source: US Census."
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "metric_id": "population",
+    "metric_name": "Population",
+    "unit": "people",
+    "geography_type": "city",
+    "geography_id": "New York",
+    "geography_name": "New York City",
+    "year": 2020,
+    "value": 8336817,
+    "source_name": "US Census",
+    "source_url": "https://www.census.gov"
+  },
+  {
+    "metric_id": "population",
+    "metric_name": "Population",
+    "unit": "people",
+    "geography_type": "city",
+    "geography_id": "Los Angeles",
+    "geography_name": "Los Angeles",
+    "year": 2020,
+    "value": 3979576,
+    "source_name": "US Census",
+    "source_url": "https://www.census.gov"
+  }
+]

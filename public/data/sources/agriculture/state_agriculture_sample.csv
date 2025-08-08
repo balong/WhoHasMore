@@ -1,0 +1,201 @@
+State,Metric,Year,Value
+Alabama,Corn Production,2023,34567
+Alabama,Farmland Percentage,2023,8.7
+Alabama,Renewable Energy Percentage,2023,12.4
+Alabama,Forest Coverage Percentage,2023,69.9
+California,Corn Production,2023,89234
+California,Farmland Percentage,2023,26.1
+California,Renewable Energy Percentage,2023,34.5
+California,Forest Coverage Percentage,2023,33.0
+Texas,Corn Production,2023,167890
+Texas,Farmland Percentage,2023,58.4
+Texas,Renewable Energy Percentage,2023,26.8
+Texas,Forest Coverage Percentage,2023,7.0
+Florida,Corn Production,2023,12345
+Florida,Farmland Percentage,2023,27.4
+Florida,Renewable Energy Percentage,2023,4.2
+Florida,Forest Coverage Percentage,2023,49.9
+New York,Corn Production,2023,78456
+New York,Farmland Percentage,2023,23.6
+New York,Renewable Energy Percentage,2023,28.1
+New York,Forest Coverage Percentage,2023,61.5
+Illinois,Corn Production,2023,2234567
+Illinois,Farmland Percentage,2023,75.1
+Illinois,Renewable Energy Percentage,2023,9.7
+Illinois,Forest Coverage Percentage,2023,11.1
+Iowa,Corn Production,2023,2567890
+Iowa,Farmland Percentage,2023,85.2
+Iowa,Renewable Energy Percentage,2023,62.1
+Iowa,Forest Coverage Percentage,2023,8.9
+Nebraska,Corn Production,2023,1789012
+Nebraska,Farmland Percentage,2023,91.4
+Nebraska,Renewable Energy Percentage,2023,25.4
+Nebraska,Forest Coverage Percentage,2023,1.5
+Minnesota,Corn Production,2023,1456789
+Minnesota,Farmland Percentage,2023,62.8
+Minnesota,Renewable Energy Percentage,2023,26.7
+Minnesota,Forest Coverage Percentage,2023,33.4
+Indiana,Corn Production,2023,1123456
+Indiana,Farmland Percentage,2023,64.7
+Indiana,Renewable Energy Percentage,2023,8.2
+Indiana,Forest Coverage Percentage,2023,20.0
+Ohio,Corn Production,2023,567890
+Ohio,Farmland Percentage,2023,50.3
+Ohio,Renewable Energy Percentage,2023,3.8
+Ohio,Forest Coverage Percentage,2023,31.3
+Wisconsin,Corn Production,2023,456789
+Wisconsin,Farmland Percentage,2023,48.9
+Wisconsin,Renewable Energy Percentage,2023,11.2
+Wisconsin,Forest Coverage Percentage,2023,46.1
+South Dakota,Corn Production,2023,789012
+South Dakota,Farmland Percentage,2023,89.6
+South Dakota,Renewable Energy Percentage,2023,83.7
+South Dakota,Forest Coverage Percentage,2023,1.9
+North Dakota,Corn Production,2023,345678
+North Dakota,Farmland Percentage,2023,89.1
+North Dakota,Renewable Energy Percentage,2023,34.2
+North Dakota,Forest Coverage Percentage,2023,0.7
+Kansas,Corn Production,2023,456789
+Kansas,Farmland Percentage,2023,87.5
+Kansas,Renewable Energy Percentage,2023,43.6
+Kansas,Forest Coverage Percentage,2023,4.9
+Michigan,Corn Production,2023,234567
+Michigan,Farmland Percentage,2023,26.7
+Michigan,Renewable Energy Percentage,2023,11.4
+Michigan,Forest Coverage Percentage,2023,53.4
+Missouri,Corn Production,2023,512345
+Missouri,Farmland Percentage,2023,66.9
+Missouri,Renewable Energy Percentage,2023,8.4
+Missouri,Forest Coverage Percentage,2023,33.9
+Colorado,Corn Production,2023,123456
+Colorado,Farmland Percentage,2023,47.8
+Colorado,Renewable Energy Percentage,2023,29.8
+Colorado,Forest Coverage Percentage,2023,24.4
+Pennsylvania,Corn Production,2023,167890
+Pennsylvania,Farmland Percentage,2023,25.6
+Pennsylvania,Renewable Energy Percentage,2023,7.8
+Pennsylvania,Forest Coverage Percentage,2023,58.7
+North Carolina,Corn Production,2023,78901
+North Carolina,Farmland Percentage,2023,27.8
+North Carolina,Renewable Energy Percentage,2023,6.1
+North Carolina,Forest Coverage Percentage,2023,59.0
+Tennessee,Corn Production,2023,56789
+Tennessee,Farmland Percentage,2023,40.5
+Tennessee,Renewable Energy Percentage,2023,9.2
+Tennessee,Forest Coverage Percentage,2023,52.3
+Kentucky,Corn Production,2023,145678
+Kentucky,Farmland Percentage,2023,48.1
+Kentucky,Renewable Energy Percentage,2023,4.8
+Kentucky,Forest Coverage Percentage,2023,48.0
+Virginia,Corn Production,2023,34567
+Virginia,Farmland Percentage,2023,33.7
+Virginia,Renewable Energy Percentage,2023,7.4
+Virginia,Forest Coverage Percentage,2023,62.4
+Georgia,Corn Production,2023,23456
+Georgia,Farmland Percentage,2023,26.9
+Georgia,Renewable Energy Percentage,2023,8.7
+Georgia,Forest Coverage Percentage,2023,67.4
+South Carolina,Corn Production,2023,12345
+South Carolina,Farmland Percentage,2023,25.1
+South Carolina,Renewable Energy Percentage,2023,5.2
+South Carolina,Forest Coverage Percentage,2023,68.4
+Arkansas,Corn Production,2023,23456
+Arkansas,Farmland Percentage,2023,49.2
+Arkansas,Renewable Energy Percentage,2023,11.8
+Arkansas,Forest Coverage Percentage,2023,56.2
+Louisiana,Corn Production,2023,34567
+Louisiana,Farmland Percentage,2023,29.8
+Louisiana,Renewable Energy Percentage,2023,3.4
+Louisiana,Forest Coverage Percentage,2023,48.8
+Mississippi,Corn Production,2023,12345
+Mississippi,Farmland Percentage,2023,37.4
+Mississippi,Renewable Energy Percentage,2023,2.1
+Mississippi,Forest Coverage Percentage,2023,65.4
+Oklahoma,Corn Production,2023,45678
+Oklahoma,Farmland Percentage,2023,78.4
+Oklahoma,Renewable Energy Percentage,2023,35.7
+Oklahoma,Forest Coverage Percentage,2023,24.6
+Maryland,Corn Production,2023,56789
+Maryland,Farmland Percentage,2023,33.2
+Maryland,Renewable Energy Percentage,2023,9.8
+Maryland,Forest Coverage Percentage,2023,38.8
+Delaware,Corn Production,2023,23456
+Delaware,Farmland Percentage,2023,41.2
+Delaware,Renewable Energy Percentage,2023,4.9
+Delaware,Forest Coverage Percentage,2023,31.8
+New Jersey,Corn Production,2023,12345
+New Jersey,Farmland Percentage,2023,15.4
+New Jersey,Renewable Energy Percentage,2023,5.6
+New Jersey,Forest Coverage Percentage,2023,41.8
+Connecticut,Corn Production,2023,4567
+Connecticut,Farmland Percentage,2023,11.2
+Connecticut,Renewable Energy Percentage,2023,8.1
+Connecticut,Forest Coverage Percentage,2023,59.0
+Rhode Island,Corn Production,2023,123
+Rhode Island,Farmland Percentage,2023,3.7
+Rhode Island,Renewable Energy Percentage,2023,11.2
+Rhode Island,Forest Coverage Percentage,2023,54.5
+Massachusetts,Corn Production,2023,2345
+Massachusetts,Farmland Percentage,2023,11.2
+Massachusetts,Renewable Energy Percentage,2023,14.8
+Massachusetts,Forest Coverage Percentage,2023,62.2
+Vermont,Corn Production,2023,6789
+Vermont,Farmland Percentage,2023,19.4
+Vermont,Renewable Energy Percentage,2023,99.9
+Vermont,Forest Coverage Percentage,2023,78.2
+New Hampshire,Corn Production,2023,1234
+New Hampshire,Farmland Percentage,2023,8.4
+New Hampshire,Renewable Energy Percentage,2023,17.8
+New Hampshire,Forest Coverage Percentage,2023,84.0
+Maine,Corn Production,2023,5678
+Maine,Farmland Percentage,2023,7.8
+Maine,Renewable Energy Percentage,2023,78.4
+Maine,Forest Coverage Percentage,2023,89.1
+Washington,Corn Production,2023,23456
+Washington,Farmland Percentage,2023,40.2
+Washington,Renewable Energy Percentage,2023,74.2
+Washington,Forest Coverage Percentage,2023,52.8
+Oregon,Corn Production,2023,12345
+Oregon,Farmland Percentage,2023,46.8
+Oregon,Renewable Energy Percentage,2023,56.8
+Oregon,Forest Coverage Percentage,2023,48.4
+Idaho,Corn Production,2023,34567
+Idaho,Farmland Percentage,2023,52.1
+Idaho,Renewable Energy Percentage,2023,78.9
+Idaho,Forest Coverage Percentage,2023,38.2
+Montana,Corn Production,2023,45678
+Montana,Farmland Percentage,2023,68.4
+Montana,Renewable Energy Percentage,2023,44.1
+Montana,Forest Coverage Percentage,2023,25.9
+Wyoming,Corn Production,2023,12345
+Wyoming,Farmland Percentage,2023,52.8
+Wyoming,Renewable Energy Percentage,2023,13.4
+Wyoming,Forest Coverage Percentage,2023,17.4
+Utah,Corn Production,2023,6789
+Utah,Farmland Percentage,2023,11.2
+Utah,Renewable Energy Percentage,2023,22.8
+Utah,Forest Coverage Percentage,2023,18.5
+Nevada,Corn Production,2023,1234
+Nevada,Farmland Percentage,2023,2.1
+Nevada,Renewable Energy Percentage,2023,23.4
+Nevada,Forest Coverage Percentage,2023,10.1
+Arizona,Corn Production,2023,5678
+Arizona,Farmland Percentage,2023,3.2
+Arizona,Renewable Energy Percentage,2023,11.8
+Arizona,Forest Coverage Percentage,2023,15.0
+New Mexico,Corn Production,2023,7890
+New Mexico,Farmland Percentage,2023,43.2
+New Mexico,Renewable Energy Percentage,2023,23.1
+New Mexico,Forest Coverage Percentage,2023,24.5
+Alaska,Corn Production,2023,0
+Alaska,Farmland Percentage,2023,0.1
+Alaska,Renewable Energy Percentage,2023,23.4
+Alaska,Forest Coverage Percentage,2023,28.8
+Hawaii,Corn Production,2023,890
+Hawaii,Farmland Percentage,2023,19.2
+Hawaii,Renewable Energy Percentage,2023,28.1
+Hawaii,Forest Coverage Percentage,2023,46.7
+West Virginia,Corn Production,2023,3456
+West Virginia,Farmland Percentage,2023,20.8
+West Virginia,Renewable Energy Percentage,2023,7.2
+West Virginia,Forest Coverage Percentage,2023,78.1 

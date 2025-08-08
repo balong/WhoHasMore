@@ -1,0 +1,197 @@
+State,Metric,Year,Value
+Alabama,Life Expectancy,2023,75.4
+Alabama,Obesity Rate,2023,36.1
+Alabama,Infant Mortality Rate,2023,8.4
+Alabama,Healthcare Spending Per Capita,2023,8567
+California,Life Expectancy,2023,80.8
+California,Obesity Rate,2023,25.2
+California,Infant Mortality Rate,2023,4.2
+California,Healthcare Spending Per Capita,2023,8234
+Texas,Life Expectancy,2023,78.5
+Texas,Obesity Rate,2023,33.7
+Texas,Infant Mortality Rate,2023,5.8
+Texas,Healthcare Spending Per Capita,2023,7834
+Florida,Life Expectancy,2023,79.1
+Florida,Obesity Rate,2023,28.4
+Florida,Infant Mortality Rate,2023,6.0
+Florida,Healthcare Spending Per Capita,2023,8123
+New York,Life Expectancy,2023,80.7
+New York,Obesity Rate,2023,25.7
+New York,Infant Mortality Rate,2023,4.6
+New York,Healthcare Spending Per Capita,2023,9567
+Massachusetts,Life Expectancy,2023,80.9
+Massachusetts,Obesity Rate,2023,24.3
+Massachusetts,Infant Mortality Rate,2023,3.9
+Massachusetts,Healthcare Spending Per Capita,2023,10234
+Connecticut,Life Expectancy,2023,80.8
+Connecticut,Obesity Rate,2023,26.3
+Connecticut,Infant Mortality Rate,2023,4.1
+Connecticut,Healthcare Spending Per Capita,2023,9876
+Hawaii,Life Expectancy,2023,81.6
+Hawaii,Obesity Rate,2023,23.8
+Hawaii,Infant Mortality Rate,2023,5.4
+Hawaii,Healthcare Spending Per Capita,2023,7234
+Washington,Life Expectancy,2023,79.2
+Washington,Obesity Rate,2023,27.7
+Washington,Infant Mortality Rate,2023,4.4
+Washington,Healthcare Spending Per Capita,2023,8345
+Minnesota,Life Expectancy,2023,79.1
+Minnesota,Obesity Rate,2023,28.4
+Minnesota,Infant Mortality Rate,2023,4.4
+Minnesota,Healthcare Spending Per Capita,2023,8567
+Utah,Life Expectancy,2023,78.6
+Utah,Obesity Rate,2023,25.0
+Utah,Infant Mortality Rate,2023,5.0
+Utah,Healthcare Spending Per Capita,2023,7123
+Vermont,Life Expectancy,2023,78.8
+Vermont,Obesity Rate,2023,26.6
+Vermont,Infant Mortality Rate,2023,4.4
+Vermont,Healthcare Spending Per Capita,2023,9234
+New Hampshire,Life Expectancy,2023,79.3
+New Hampshire,Obesity Rate,2023,27.4
+New Hampshire,Infant Mortality Rate,2023,4.2
+New Hampshire,Healthcare Spending Per Capita,2023,8456
+Colorado,Life Expectancy,2023,78.3
+Colorado,Obesity Rate,2023,24.2
+Colorado,Infant Mortality Rate,2023,4.5
+Colorado,Healthcare Spending Per Capita,2023,7890
+New Jersey,Life Expectancy,2023,80.0
+New Jersey,Obesity Rate,2023,26.9
+New Jersey,Infant Mortality Rate,2023,4.7
+New Jersey,Healthcare Spending Per Capita,2023,9123
+Virginia,Life Expectancy,2023,78.7
+Virginia,Obesity Rate,2023,31.3
+Virginia,Infant Mortality Rate,2023,5.7
+Virginia,Healthcare Spending Per Capita,2023,8234
+Maryland,Life Expectancy,2023,78.8
+Maryland,Obesity Rate,2023,31.3
+Maryland,Infant Mortality Rate,2023,6.8
+Maryland,Healthcare Spending Per Capita,2023,8567
+Pennsylvania,Life Expectancy,2023,77.8
+Pennsylvania,Obesity Rate,2023,32.8
+Pennsylvania,Infant Mortality Rate,2023,5.6
+Pennsylvania,Healthcare Spending Per Capita,2023,8345
+Ohio,Life Expectancy,2023,76.7
+Ohio,Obesity Rate,2023,32.8
+Ohio,Infant Mortality Rate,2023,7.2
+Ohio,Healthcare Spending Per Capita,2023,8123
+Illinois,Life Expectancy,2023,78.1
+Illinois,Obesity Rate,2023,32.3
+Illinois,Infant Mortality Rate,2023,6.5
+Illinois,Healthcare Spending Per Capita,2023,8456
+Michigan,Life Expectancy,2023,77.7
+Michigan,Obesity Rate,2023,33.6
+Michigan,Infant Mortality Rate,2023,6.8
+Michigan,Healthcare Spending Per Capita,2023,8234
+Wisconsin,Life Expectancy,2023,78.0
+Wisconsin,Obesity Rate,2023,32.0
+Wisconsin,Infant Mortality Rate,2023,5.7
+Wisconsin,Healthcare Spending Per Capita,2023,8345
+Iowa,Life Expectancy,2023,78.7
+Iowa,Obesity Rate,2023,36.4
+Iowa,Infant Mortality Rate,2023,4.4
+Iowa,Healthcare Spending Per Capita,2023,7890
+North Carolina,Life Expectancy,2023,76.1
+North Carolina,Obesity Rate,2023,34.6
+North Carolina,Infant Mortality Rate,2023,7.0
+North Carolina,Healthcare Spending Per Capita,2023,7567
+South Carolina,Life Expectancy,2023,75.8
+South Carolina,Obesity Rate,2023,34.3
+South Carolina,Infant Mortality Rate,2023,7.2
+South Carolina,Healthcare Spending Per Capita,2023,7234
+Georgia,Life Expectancy,2023,76.6
+Georgia,Obesity Rate,2023,33.5
+Georgia,Infant Mortality Rate,2023,6.6
+Georgia,Healthcare Spending Per Capita,2023,7456
+Tennessee,Life Expectancy,2023,75.6
+Tennessee,Obesity Rate,2023,36.5
+Tennessee,Infant Mortality Rate,2023,7.3
+Tennessee,Healthcare Spending Per Capita,2023,7890
+Kentucky,Life Expectancy,2023,75.5
+Kentucky,Obesity Rate,2023,36.6
+Kentucky,Infant Mortality Rate,2023,6.6
+Kentucky,Healthcare Spending Per Capita,2023,7123
+Indiana,Life Expectancy,2023,76.7
+Indiana,Obesity Rate,2023,33.9
+Indiana,Infant Mortality Rate,2023,7.0
+Indiana,Healthcare Spending Per Capita,2023,7567
+Missouri,Life Expectancy,2023,77.0
+Missouri,Obesity Rate,2023,34.4
+Missouri,Infant Mortality Rate,2023,6.1
+Missouri,Healthcare Spending Per Capita,2023,7890
+Kansas,Life Expectancy,2023,77.7
+Kansas,Obesity Rate,2023,34.2
+Kansas,Infant Mortality Rate,2023,6.0
+Kansas,Healthcare Spending Per Capita,2023,7567
+Nebraska,Life Expectancy,2023,78.8
+Nebraska,Obesity Rate,2023,32.0
+Nebraska,Infant Mortality Rate,2023,4.8
+Nebraska,Healthcare Spending Per Capita,2023,8123
+Arizona,Life Expectancy,2023,77.0
+Arizona,Obesity Rate,2023,28.9
+Arizona,Infant Mortality Rate,2023,5.8
+Arizona,Healthcare Spending Per Capita,2023,7345
+Nevada,Life Expectancy,2023,76.3
+Nevada,Obesity Rate,2023,27.7
+Nevada,Infant Mortality Rate,2023,5.0
+Nevada,Healthcare Spending Per Capita,2023,7123
+Oregon,Life Expectancy,2023,78.8
+Oregon,Obesity Rate,2023,28.7
+Oregon,Infant Mortality Rate,2023,4.5
+Oregon,Healthcare Spending Per Capita,2023,8234
+Idaho,Life Expectancy,2023,78.4
+Idaho,Obesity Rate,2023,28.9
+Idaho,Infant Mortality Rate,2023,5.8
+Idaho,Healthcare Spending Per Capita,2023,6890
+Montana,Life Expectancy,2023,77.0
+Montana,Obesity Rate,2023,25.3
+Montana,Infant Mortality Rate,2023,5.8
+Montana,Healthcare Spending Per Capita,2023,7456
+Wyoming,Life Expectancy,2023,76.8
+Wyoming,Obesity Rate,2023,27.7
+Wyoming,Infant Mortality Rate,2023,5.3
+Wyoming,Healthcare Spending Per Capita,2023,7890
+North Dakota,Life Expectancy,2023,78.0
+North Dakota,Obesity Rate,2023,33.9
+North Dakota,Infant Mortality Rate,2023,6.1
+North Dakota,Healthcare Spending Per Capita,2023,8567
+South Dakota,Life Expectancy,2023,77.7
+South Dakota,Obesity Rate,2023,34.4
+South Dakota,Infant Mortality Rate,2023,5.5
+South Dakota,Healthcare Spending Per Capita,2023,7234
+Mississippi,Life Expectancy,2023,74.4
+Mississippi,Obesity Rate,2023,39.7
+Mississippi,Infant Mortality Rate,2023,9.6
+Mississippi,Healthcare Spending Per Capita,2023,7123
+Louisiana,Life Expectancy,2023,75.7
+Louisiana,Obesity Rate,2023,36.8
+Louisiana,Infant Mortality Rate,2023,8.3
+Louisiana,Healthcare Spending Per Capita,2023,7567
+Arkansas,Life Expectancy,2023,75.8
+Arkansas,Obesity Rate,2023,37.1
+Arkansas,Infant Mortality Rate,2023,7.3
+Arkansas,Healthcare Spending Per Capita,2023,7234
+Oklahoma,Life Expectancy,2023,75.8
+Oklahoma,Obesity Rate,2023,36.8
+Oklahoma,Infant Mortality Rate,2023,7.7
+Oklahoma,Healthcare Spending Per Capita,2023,7456
+West Virginia,Life Expectancy,2023,74.8
+West Virginia,Obesity Rate,2023,39.1
+West Virginia,Infant Mortality Rate,2023,7.3
+West Virginia,Healthcare Spending Per Capita,2023,8234
+Delaware,Life Expectancy,2023,77.8
+Delaware,Obesity Rate,2023,31.7
+Delaware,Infant Mortality Rate,2023,6.9
+Delaware,Healthcare Spending Per Capita,2023,8567
+Rhode Island,Life Expectancy,2023,79.9
+Rhode Island,Obesity Rate,2023,29.0
+Rhode Island,Infant Mortality Rate,2023,5.6
+Rhode Island,Healthcare Spending Per Capita,2023,8890
+Maine,Life Expectancy,2023,78.8
+Maine,Obesity Rate,2023,31.0
+Maine,Infant Mortality Rate,2023,5.5
+Maine,Healthcare Spending Per Capita,2023,8456
+Alaska,Life Expectancy,2023,78.3
+Alaska,Obesity Rate,2023,31.2
+Alaska,Infant Mortality Rate,2023,5.7
+Alaska,Healthcare Spending Per Capita,2023,9567 

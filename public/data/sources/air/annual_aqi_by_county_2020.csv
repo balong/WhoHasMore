@@ -1,0 +1,11 @@
+State,County,Good Days,Moderate Days,Unhealthy for Sensitive Groups Days,Unhealthy Days,Very Unhealthy Days,Hazardous Days,Max AQI,90th Percentile AQI,Median AQI,Days CO,Days NO2,Days Ozone,Days SO2,Days PM2.5,Days PM10,Local Source?
+California,Los Angeles,100,200,50,10,5,0,200,120,70,0,5,120,0,150,40,No
+California,San Diego,150,170,30,5,0,0,180,100,60,0,3,90,0,130,20,No
+Texas,Harris,160,160,35,8,0,0,175,95,55,0,2,80,0,120,15,No
+New York,New York,200,150,10,3,0,0,160,85,50,0,1,70,0,100,10,No
+Arizona,Maricopa,140,180,25,6,0,0,170,90,55,0,2,85,0,110,15,No
+Washington,King,220,120,15,2,0,0,150,80,45,0,1,60,0,90,5,No
+Illinois,Cook,210,130,12,3,0,0,155,82,48,0,1,65,0,95,8,No
+Florida,Miami-Dade,260,90,5,1,0,0,140,75,40,0,0,55,0,80,1,No
+Colorado,Denver,180,160,20,4,0,0,165,88,52,0,2,78,0,105,12,No
+Massachusetts,Suffolk,230,120,8,2,0,0,150,80,45,0,1,60,0,90,4,No

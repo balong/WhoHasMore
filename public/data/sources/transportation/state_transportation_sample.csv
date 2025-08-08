@@ -1,0 +1,201 @@
+State,Metric,Year,Value
+Alabama,Highway Miles Per Capita,2023,0.089
+Alabama,Structurally Deficient Bridges,2023,7.8
+Alabama,EV Charging Stations,2023,285
+Alabama,Public Transit Ridership Per Capita,2023,12.5
+California,Highway Miles Per Capita,2023,0.042
+California,Structurally Deficient Bridges,2023,7.5
+California,EV Charging Stations,2023,14567
+California,Public Transit Ridership Per Capita,2023,89.4
+Texas,Highway Miles Per Capita,2023,0.067
+Texas,Structurally Deficient Bridges,2023,8.2
+Texas,EV Charging Stations,2023,5234
+Texas,Public Transit Ridership Per Capita,2023,34.7
+Florida,Highway Miles Per Capita,2023,0.058
+Florida,Structurally Deficient Bridges,2023,2.1
+Florida,EV Charging Stations,2023,3456
+Florida,Public Transit Ridership Per Capita,2023,23.8
+New York,Highway Miles Per Capita,2023,0.029
+New York,Structurally Deficient Bridges,2023,12.1
+New York,EV Charging Stations,2023,4567
+New York,Public Transit Ridership Per Capita,2023,234.5
+Massachusetts,Highway Miles Per Capita,2023,0.027
+Massachusetts,Structurally Deficient Bridges,2023,9.4
+Massachusetts,EV Charging Stations,2023,2134
+Massachusetts,Public Transit Ridership Per Capita,2023,156.7
+Connecticut,Highway Miles Per Capita,2023,0.031
+Connecticut,Structurally Deficient Bridges,2023,6.2
+Connecticut,EV Charging Stations,2023,987
+Connecticut,Public Transit Ridership Per Capita,2023,78.9
+Washington,Highway Miles Per Capita,2023,0.045
+Washington,Structurally Deficient Bridges,2023,4.8
+Washington,EV Charging Stations,2023,3789
+Washington,Public Transit Ridership Per Capita,2023,98.7
+Oregon,Highway Miles Per Capita,2023,0.067
+Oregon,Structurally Deficient Bridges,2023,3.2
+Oregon,EV Charging Stations,2023,1897
+Oregon,Public Transit Ridership Per Capita,2023,65.4
+Colorado,Highway Miles Per Capita,2023,0.078
+Colorado,Structurally Deficient Bridges,2023,5.8
+Colorado,EV Charging Stations,2023,2345
+Colorado,Public Transit Ridership Per Capita,2023,45.6
+Utah,Highway Miles Per Capita,2023,0.067
+Utah,Structurally Deficient Bridges,2023,3.4
+Utah,EV Charging Stations,2023,1234
+Utah,Public Transit Ridership Per Capita,2023,32.1
+Nevada,Highway Miles Per Capita,2023,0.156
+Nevada,Structurally Deficient Bridges,2023,4.5
+Nevada,EV Charging Stations,2023,567
+Nevada,Public Transit Ridership Per Capita,2023,18.7
+Arizona,Highway Miles Per Capita,2023,0.067
+Arizona,Structurally Deficient Bridges,2023,3.8
+Arizona,EV Charging Stations,2023,1789
+Arizona,Public Transit Ridership Per Capita,2023,25.4
+Idaho,Highway Miles Per Capita,2023,0.156
+Idaho,Structurally Deficient Bridges,2023,4.2
+Idaho,EV Charging Stations,2023,234
+Idaho,Public Transit Ridership Per Capita,2023,8.9
+Montana,Highway Miles Per Capita,2023,0.289
+Montana,Structurally Deficient Bridges,2023,5.1
+Montana,EV Charging Stations,2023,178
+Montana,Public Transit Ridership Per Capita,2023,6.7
+Wyoming,Highway Miles Per Capita,2023,0.345
+Wyoming,Structurally Deficient Bridges,2023,6.8
+Wyoming,EV Charging Stations,2023,89
+Wyoming,Public Transit Ridership Per Capita,2023,3.2
+North Dakota,Highway Miles Per Capita,2023,0.234
+North Dakota,Structurally Deficient Bridges,2023,7.9
+North Dakota,EV Charging Stations,2023,123
+North Dakota,Public Transit Ridership Per Capita,2023,4.5
+South Dakota,Highway Miles Per Capita,2023,0.198
+South Dakota,Structurally Deficient Bridges,2023,8.2
+South Dakota,EV Charging Stations,2023,145
+South Dakota,Public Transit Ridership Per Capita,2023,5.1
+Nebraska,Highway Miles Per Capita,2023,0.134
+Nebraska,Structurally Deficient Bridges,2023,8.9
+Nebraska,EV Charging Stations,2023,234
+Nebraska,Public Transit Ridership Per Capita,2023,7.8
+Kansas,Highway Miles Per Capita,2023,0.123
+Kansas,Structurally Deficient Bridges,2023,9.1
+Kansas,EV Charging Stations,2023,345
+Kansas,Public Transit Ridership Per Capita,2023,12.3
+Oklahoma,Highway Miles Per Capita,2023,0.098
+Oklahoma,Structurally Deficient Bridges,2023,13.4
+Oklahoma,EV Charging Stations,2023,456
+Oklahoma,Public Transit Ridership Per Capita,2023,8.9
+New Mexico,Highway Miles Per Capita,2023,0.145
+New Mexico,Structurally Deficient Bridges,2023,6.7
+New Mexico,EV Charging Stations,2023,289
+New Mexico,Public Transit Ridership Per Capita,2023,11.2
+Minnesota,Highway Miles Per Capita,2023,0.067
+Minnesota,Structurally Deficient Bridges,2023,4.5
+Minnesota,EV Charging Stations,2023,1456
+Minnesota,Public Transit Ridership Per Capita,2023,54.7
+Wisconsin,Highway Miles Per Capita,2023,0.078
+Wisconsin,Structurally Deficient Bridges,2023,6.8
+Wisconsin,EV Charging Stations,2023,789
+Wisconsin,Public Transit Ridership Per Capita,2023,23.4
+Iowa,Highway Miles Per Capita,2023,0.089
+Iowa,Structurally Deficient Bridges,2023,19.1
+Iowa,EV Charging Stations,2023,456
+Iowa,Public Transit Ridership Per Capita,2023,15.6
+Missouri,Highway Miles Per Capita,2023,0.078
+Missouri,Structurally Deficient Bridges,2023,8.7
+Missouri,EV Charging Stations,2023,567
+Missouri,Public Transit Ridership Per Capita,2023,18.9
+Arkansas,Highway Miles Per Capita,2023,0.089
+Arkansas,Structurally Deficient Bridges,2023,11.2
+Arkansas,EV Charging Stations,2023,234
+Arkansas,Public Transit Ridership Per Capita,2023,6.7
+Louisiana,Highway Miles Per Capita,2023,0.067
+Louisiana,Structurally Deficient Bridges,2023,13.2
+Louisiana,EV Charging Stations,2023,345
+Louisiana,Public Transit Ridership Per Capita,2023,12.1
+Mississippi,Highway Miles Per Capita,2023,0.089
+Mississippi,Structurally Deficient Bridges,2023,10.8
+Mississippi,EV Charging Stations,2023,178
+Mississippi,Public Transit Ridership Per Capita,2023,4.5
+Tennessee,Highway Miles Per Capita,2023,0.067
+Tennessee,Structurally Deficient Bridges,2023,6.8
+Tennessee,EV Charging Stations,2023,678
+Tennessee,Public Transit Ridership Per Capita,2023,14.7
+Kentucky,Highway Miles Per Capita,2023,0.078
+Kentucky,Structurally Deficient Bridges,2023,9.1
+Kentucky,EV Charging Stations,2023,345
+Kentucky,Public Transit Ridership Per Capita,2023,8.9
+Illinois,Highway Miles Per Capita,2023,0.045
+Illinois,Structurally Deficient Bridges,2023,8.2
+Illinois,EV Charging Stations,2023,2345
+Illinois,Public Transit Ridership Per Capita,2023,89.4
+Indiana,Highway Miles Per Capita,2023,0.067
+Indiana,Structurally Deficient Bridges,2023,7.8
+Indiana,EV Charging Stations,2023,789
+Indiana,Public Transit Ridership Per Capita,2023,16.8
+Ohio,Highway Miles Per Capita,2023,0.056
+Ohio,Structurally Deficient Bridges,2023,6.7
+Ohio,EV Charging Stations,2023,1456
+Ohio,Public Transit Ridership Per Capita,2023,34.5
+Michigan,Highway Miles Per Capita,2023,0.067
+Michigan,Structurally Deficient Bridges,2023,10.1
+Michigan,EV Charging Stations,2023,1234
+Michigan,Public Transit Ridership Per Capita,2023,28.9
+Pennsylvania,Highway Miles Per Capita,2023,0.056
+Pennsylvania,Structurally Deficient Bridges,2023,15.3
+Pennsylvania,EV Charging Stations,2023,1789
+Pennsylvania,Public Transit Ridership Per Capita,2023,67.8
+New Jersey,Highway Miles Per Capita,2023,0.023
+New Jersey,Structurally Deficient Bridges,2023,8.9
+New Jersey,EV Charging Stations,2023,2345
+New Jersey,Public Transit Ridership Per Capita,2023,123.4
+Maryland,Highway Miles Per Capita,2023,0.034
+Maryland,Structurally Deficient Bridges,2023,6.2
+Maryland,EV Charging Stations,2023,1456
+Maryland,Public Transit Ridership Per Capita,2023,89.7
+Virginia,Highway Miles Per Capita,2023,0.045
+Virginia,Structurally Deficient Bridges,2023,7.1
+Virginia,EV Charging Stations,2023,1789
+Virginia,Public Transit Ridership Per Capita,2023,45.6
+North Carolina,Highway Miles Per Capita,2023,0.067
+North Carolina,Structurally Deficient Bridges,2023,6.8
+North Carolina,EV Charging Stations,2023,1234
+North Carolina,Public Transit Ridership Per Capita,2023,19.8
+South Carolina,Highway Miles Per Capita,2023,0.078
+South Carolina,Structurally Deficient Bridges,2023,8.9
+South Carolina,EV Charging Stations,2023,456
+South Carolina,Public Transit Ridership Per Capita,2023,8.7
+Georgia,Highway Miles Per Capita,2023,0.067
+Georgia,Structurally Deficient Bridges,2023,5.4
+Georgia,EV Charging Stations,2023,1567
+Georgia,Public Transit Ridership Per Capita,2023,34.5
+West Virginia,Highway Miles Per Capita,2023,0.089
+West Virginia,Structurally Deficient Bridges,2023,18.7
+West Virginia,EV Charging Stations,2023,123
+West Virginia,Public Transit Ridership Per Capita,2023,3.4
+Delaware,Highway Miles Per Capita,2023,0.034
+Delaware,Structurally Deficient Bridges,2023,4.2
+Delaware,EV Charging Stations,2023,234
+Delaware,Public Transit Ridership Per Capita,2023,23.4
+Rhode Island,Highway Miles Per Capita,2023,0.029
+Rhode Island,Structurally Deficient Bridges,2023,22.1
+Rhode Island,EV Charging Stations,2023,178
+Rhode Island,Public Transit Ridership Per Capita,2023,56.7
+Vermont,Highway Miles Per Capita,2023,0.089
+Vermont,Structurally Deficient Bridges,2023,7.8
+Vermont,EV Charging Stations,2023,145
+Vermont,Public Transit Ridership Per Capita,2023,12.3
+New Hampshire,Highway Miles Per Capita,2023,0.067
+New Hampshire,Structurally Deficient Bridges,2023,6.4
+New Hampshire,EV Charging Stations,2023,289
+New Hampshire,Public Transit Ridership Per Capita,2023,8.9
+Maine,Highway Miles Per Capita,2023,0.089
+Maine,Structurally Deficient Bridges,2023,9.2
+Maine,EV Charging Stations,2023,234
+Maine,Public Transit Ridership Per Capita,2023,7.8
+Alaska,Highway Miles Per Capita,2023,0.198
+Alaska,Structurally Deficient Bridges,2023,12.3
+Alaska,EV Charging Stations,2023,67
+Alaska,Public Transit Ridership Per Capita,2023,15.6
+Hawaii,Highway Miles Per Capita,2023,0.023
+Hawaii,Structurally Deficient Bridges,2023,16.7
+Hawaii,EV Charging Stations,2023,345
+Hawaii,Public Transit Ridership Per Capita,2023,89.7 

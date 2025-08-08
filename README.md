@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Who Has More? 🎮
+
+A fun and educational game show-style app that tests your knowledge about US states and cities! Players must guess which state or city has more of various interesting metrics.
+
+## Features
+
+- **Game Show Styling**: Professional graphics and animations inspired by popular game shows
+- **Educational Content**: Questions cover diverse topics like agriculture, public safety, wildlife, health, and more
+- **Smooth Animations**: Built with Framer Motion for engaging user experience
+- **Responsive Design**: Works perfectly on desktop and mobile devices
+- **Score Tracking**: Real-time score display with animated trophy
+- **Game Over Modal**: Beautiful end-game screen with performance feedback
+
+## Game Categories
+
+The game includes questions about:
+- 🐄 Agriculture (cattle populations)
+- 🔫 Public Safety (gun deaths per capita)
+- 🐯 Wildlife (pet tigers)
+- 👶 Health (infant mortality rates)
+- 🏙️ Population (city populations)
+- 🎓 Education (college graduation rates)
+- 🌧️ Weather (annual rainfall)
+- 💰 Economy (minimum wages)
+- 🚇 Transportation (subway systems)
+- 🏞️ Tourism (national parks)
+
+## Technology Stack
+
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **Zustand** - State management
+- **Lucide React** - Beautiful icons
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Play
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Read the question carefully
+2. Compare the two options (A or B)
+3. Click on your answer
+4. See your score and continue to the next question
+5. Try to get the highest score possible!
 
-## Learn More
+## Data Sources
 
-To learn more about Next.js, take a look at the following resources:
+The game uses real data from various sources including:
+- USDA Agricultural Statistics
+- CDC Health Statistics
+- US Census Bureau
+- State and local government databases
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All data is formatted for educational purposes and may be simplified for gameplay.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Feel free to add more questions or improve the game! The data structure is easily extensible in `src/app/_data/gameData.ts`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License - feel free to use this project for educational purposes!

@@ -1,0 +1,189 @@
+State,Offense,Year,Value
+Alabama,Robbery,2023,3400
+Alabama,Motor Vehicle Theft,2023,18000
+Alabama,Burglary,2023,15600
+Alabama,Murder,2023,348
+Alabama,Vandalism,2023,7800
+Alabama,DUI,2023,12400
+Alabama,Arson,2023,890
+Alabama,Liquor Law Violations,2023,4200
+Alabama,Disorderly Conduct,2023,8900
+Alabama,Shoplifting,2023,15600
+Florida,Robbery,2023,8900
+Florida,Motor Vehicle Theft,2023,48000
+Florida,Burglary,2023,42000
+Florida,Murder,2023,1290
+Florida,Vandalism,2023,28500
+Florida,DUI,2023,34200
+Florida,Arson,2023,2800
+Florida,Liquor Law Violations,2023,12400
+Florida,Disorderly Conduct,2023,23400
+Florida,Shoplifting,2023,45600
+Texas,Robbery,2023,12000
+Texas,Motor Vehicle Theft,2023,98000
+Texas,Burglary,2023,78000
+Texas,Murder,2023,1927
+Texas,Vandalism,2023,45600
+Texas,DUI,2023,78500
+Texas,Arson,2023,3200
+Texas,Liquor Law Violations,2023,19800
+Texas,Disorderly Conduct,2023,34500
+Texas,Shoplifting,2023,67800
+California,Robbery,2023,26000
+California,Motor Vehicle Theft,2023,210000
+California,Burglary,2023,156000
+California,Murder,2023,2197
+California,Vandalism,2023,89200
+California,DUI,2023,156000
+California,Arson,2023,4500
+California,Liquor Law Violations,2023,28900
+California,Disorderly Conduct,2023,56700
+California,Shoplifting,2023,134000
+New York,Robbery,2023,15000
+New York,Motor Vehicle Theft,2023,65000
+New York,Burglary,2023,28500
+New York,Murder,2023,808
+New York,Vandalism,2023,34200
+New York,DUI,2023,45600
+New York,Arson,2023,1900
+New York,Liquor Law Violations,2023,15600
+New York,Disorderly Conduct,2023,28900
+New York,Shoplifting,2023,56700
+Georgia,Robbery,2023,6800
+Georgia,Motor Vehicle Theft,2023,34000
+Georgia,Burglary,2023,25500
+Georgia,Murder,2023,698
+Georgia,Vandalism,2023,15600
+Georgia,DUI,2023,28900
+Georgia,Arson,2023,1200
+Georgia,Liquor Law Violations,2023,8900
+Georgia,Disorderly Conduct,2023,19800
+Georgia,Shoplifting,2023,34500
+Illinois,Robbery,2023,11500
+Illinois,Motor Vehicle Theft,2023,45600
+Illinois,Burglary,2023,32400
+Illinois,Murder,2023,1122
+Illinois,Vandalism,2023,24700
+Illinois,DUI,2023,38500
+Illinois,Arson,2023,1800
+Illinois,Liquor Law Violations,2023,12400
+Illinois,Disorderly Conduct,2023,23400
+Illinois,Shoplifting,2023,45600
+North Carolina,Robbery,2023,4200
+North Carolina,Motor Vehicle Theft,2023,22800
+North Carolina,Burglary,2023,34500
+North Carolina,Murder,2023,756
+North Carolina,Vandalism,2023,18900
+North Carolina,DUI,2023,42300
+North Carolina,Arson,2023,980
+North Carolina,Liquor Law Violations,2023,9800
+North Carolina,Disorderly Conduct,2023,15600
+North Carolina,Shoplifting,2023,28900
+Ohio,Robbery,2023,8900
+Ohio,Motor Vehicle Theft,2023,34500
+Ohio,Burglary,2023,45600
+Ohio,Murder,2023,867
+Ohio,Vandalism,2023,28900
+Ohio,DUI,2023,38700
+Ohio,Arson,2023,1560
+Ohio,Liquor Law Violations,2023,15600
+Ohio,Disorderly Conduct,2023,34500
+Ohio,Shoplifting,2023,45600
+Michigan,Robbery,2023,7800
+Michigan,Motor Vehicle Theft,2023,23400
+Michigan,Burglary,2023,28900
+Michigan,Murder,2023,634
+Michigan,Vandalism,2023,19800
+Michigan,DUI,2023,34500
+Michigan,Arson,2023,1200
+Michigan,Liquor Law Violations,2023,12400
+Michigan,Disorderly Conduct,2023,19800
+Michigan,Shoplifting,2023,32400
+Pennsylvania,Robbery,2023,9200
+Pennsylvania,Motor Vehicle Theft,2023,19800
+Pennsylvania,Burglary,2023,32100
+Pennsylvania,Murder,2023,789
+Pennsylvania,Vandalism,2023,23400
+Pennsylvania,DUI,2023,45600
+Pennsylvania,Arson,2023,1400
+Pennsylvania,Liquor Law Violations,2023,19800
+Pennsylvania,Disorderly Conduct,2023,28900
+Pennsylvania,Shoplifting,2023,38500
+Arizona,Robbery,2023,5600
+Arizona,Motor Vehicle Theft,2023,45600
+Arizona,Burglary,2023,23400
+Arizona,Murder,2023,445
+Arizona,Vandalism,2023,15600
+Arizona,DUI,2023,34500
+Arizona,Arson,2023,890
+Arizona,Liquor Law Violations,2023,8900
+Arizona,Disorderly Conduct,2023,15600
+Arizona,Shoplifting,2023,28900
+Washington,Robbery,2023,4800
+Washington,Motor Vehicle Theft,2023,34500
+Washington,Burglary,2023,19800
+Washington,Murder,2023,394
+Washington,Vandalism,2023,14200
+Washington,DUI,2023,28900
+Washington,Arson,2023,780
+Washington,Liquor Law Violations,2023,9800
+Washington,Disorderly Conduct,2023,12400
+Washington,Shoplifting,2023,23400
+Nevada,Gambling,2023,1200
+Nevada,Robbery,2023,2800
+Nevada,Motor Vehicle Theft,2023,15600
+Nevada,Burglary,2023,8900
+Nevada,Murder,2023,198
+Nevada,Arson,2023,340
+Nevada,Liquor Law Violations,2023,3400
+Nevada,Disorderly Conduct,2023,5600
+Nevada,Shoplifting,2023,8900
+Wisconsin,Public Intoxication,2023,5400
+Wisconsin,Robbery,2023,2100
+Wisconsin,Motor Vehicle Theft,2023,8900
+Wisconsin,Burglary,2023,12400
+Wisconsin,Murder,2023,246
+Wisconsin,Arson,2023,450
+Wisconsin,Liquor Law Violations,2023,8900
+Wisconsin,Disorderly Conduct,2023,12400
+Wisconsin,Shoplifting,2023,15600
+Maryland,Robbery,2023,6700
+Maryland,Motor Vehicle Theft,2023,28900
+Maryland,Burglary,2023,19800
+Maryland,Murder,2023,556
+Maryland,Vandalism,2023,15600
+Maryland,DUI,2023,23400
+Maryland,Arson,2023,890
+Maryland,Liquor Law Violations,2023,8900
+Maryland,Disorderly Conduct,2023,15600
+Maryland,Shoplifting,2023,23400
+Virginia,Robbery,2023,3900
+Virginia,Motor Vehicle Theft,2023,15600
+Virginia,Burglary,2023,23400
+Virginia,Murder,2023,495
+Virginia,Vandalism,2023,12400
+Virginia,DUI,2023,28900
+Virginia,Arson,2023,670
+Virginia,Liquor Law Violations,2023,9800
+Virginia,Disorderly Conduct,2023,12400
+Virginia,Shoplifting,2023,19800
+Colorado,Robbery,2023,3200
+Colorado,Motor Vehicle Theft,2023,28900
+Colorado,Burglary,2023,15600
+Colorado,Murder,2023,324
+Colorado,Vandalism,2023,9800
+Colorado,DUI,2023,19800
+Colorado,Arson,2023,560
+Colorado,Liquor Law Violations,2023,12400
+Colorado,Disorderly Conduct,2023,9800
+Colorado,Shoplifting,2023,15600
+Oregon,Robbery,2023,2800
+Oregon,Motor Vehicle Theft,2023,19800
+Oregon,Burglary,2023,12400
+Oregon,Murder,2023,278
+Oregon,Vandalism,2023,8900
+Oregon,DUI,2023,15600
+Oregon,Arson,2023,450
+Oregon,Liquor Law Violations,2023,6700
+Oregon,Disorderly Conduct,2023,8900
+Oregon,Shoplifting,2023,12400
