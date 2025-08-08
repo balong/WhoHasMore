@@ -8,17 +8,15 @@ export default function ProgressDots() {
   if (gameState === 'idle') return null;
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-6">
+    <div className="w-full max-w-4xl mx-auto">
       <div className="flex justify-center">
-        <div className="card-elevated rounded-full px-8 py-4">
-          <div className="flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-xs text-muted font-medium uppercase tracking-wider mb-1">
-                Question
-              </div>
-              <div className="text-lg font-bold text-primary text-mono">
-                #{currentQuestionIndex + 1}
-              </div>
+        <div className="progress-track">
+          <div className="text-center">
+            <div className="text-caption text-muted uppercase tracking-wider font-medium mb-1">
+              Question
+            </div>
+            <div className="text-heading font-bold text-accent text-mono">
+              #{currentQuestionIndex + 1}
             </div>
           </div>
         </div>

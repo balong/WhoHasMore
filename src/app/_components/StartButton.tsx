@@ -14,17 +14,12 @@ export default function StartButton() {
   return (
     <motion.button
       onClick={handleStart}
-      className="glass-button group relative overflow-hidden rounded-2xl px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400/50"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      className="btn btn-primary text-body-lg px-8 py-4 focus-ring"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
-      <div className="relative z-10 flex items-center gap-3">
-        <Play className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-        <span className="gradient-text font-bold">Start Game</span>
-      </div>
-      
-      {/* Animated background glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-indigo-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <Play className="h-5 w-5" />
+      <span className="font-semibold">Start Game</span>
     </motion.button>
   );
 } 

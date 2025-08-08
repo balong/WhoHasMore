@@ -207,143 +207,193 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-12 py-8">
-      <div className="space-y-20">
-        {/* Category Header */}
-        <div className="flex items-center justify-between px-8">
-          <div className="glass-button rounded-full px-10 py-6 flex items-center gap-5">
-            <span className="text-3xl">{getCategoryIcon(question.category)}</span>
-            <div>
-              <div className="text-xl font-bold text-primary">
-                {question.category}
-              </div>
-              {question.optionA.unit && (
-                <div className="text-base text-muted flex items-center gap-3 mt-2">
-                  <TrendingUp className="h-5 w-5" />
-                  Measured in {question.optionA.unit}
-                </div>
-              )}
-            </div>
+    <div className="w-full max-w-4xl mx-auto">
+      <div className="space-y-8">
+        
+        {/* Category Badge */}
+        <div className="flex justify-center">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-surface border border-glass-border">
+            <span className="text-2xl">{getCategoryIcon(question.category)}</span>
+            <span className="text-caption text-secondary font-medium">{question.category}</span>
           </div>
-          
-          {isAnswered && (
-            <div className="flex items-center gap-4">
-              {wasAnswerCorrect ? (
-                <div className="flex items-center gap-4 text-emerald-300 status-correct">
-                  <CheckCircle2 className="h-8 w-8" />
-                  <span className="font-bold text-2xl">Correct!</span>
-                </div>
-              ) : (
-                <div className="flex items-center gap-4 text-red-300 status-incorrect">
-                  <XCircle className="h-8 w-8" />
-                  <span className="font-bold text-2xl">Incorrect</span>
-                </div>
-              )}
-            </div>
-          )}
         </div>
 
         {/* Question */}
-        <div className="text-center space-y-10 px-8">
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black heading-xl gradient-text-bright leading-tight">
+        <div className="text-center space-y-4">
+          <h2 className="text-display text-primary font-bold leading-tight">
             {formatQuestion(question.category)}
           </h2>
-          <div className="w-40 h-2 bg-gradient-to-r from-transparent via-purple-400 to-transparent mx-auto rounded-full"></div>
         </div>
 
-        {/* Answer Options - 1/3 screen width max with more space */}
-        <div className="flex flex-col items-center px-8">
-          <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl" style={{ maxWidth: 'min(33vw, 28rem)' }}>
-            <div className="space-y-5">
-              <motion.button 
-                onClick={() => handleClick('A')} 
-                className={getButtonClass('A')} 
-                disabled={isAnswered}
-                whileHover={!isAnswered ? { scale: 1.02 } : {}}
-                whileTap={!isAnswered ? { scale: 0.98 } : {}}
-              >
-                {renderBadge('A')}
-                <div className="mb-8 flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-3xl font-bold text-white shadow-lg">
-                    A
-                  </div>
-                  <span className="text-lg font-semibold text-muted uppercase tracking-wider">Option A</span>
-                </div>
-                <div className="text-2xl sm:text-3xl font-bold text-primary mb-6 leading-tight px-4">
+        {/* Answer Options */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          
+          {/* Option A */}
+          <motion.button
+            onClick={() => !isAnswered && onAnswer('A')}
+            className={`answer-option group ${
+              isAnswered 
+                ? selectedAnswer === 'A' 
+                  ? wasAnswerCorrect ? 'answer-correct' : 'answer-incorrect'
+                  : question.correctAnswer === 'A' ? 'answer-correct' : 'answer-disabled'
+                : ''
+            }`}
+            disabled={isAnswered}
+            whileHover={!isAnswered ? { y: -2 } : {}}
+            whileTap={!isAnswered ? { scale: 0.98 } : {}}
+          >
+            <div className="flex items-center gap-4">
+              <div className={`letter-badge ${
+                isAnswered && selectedAnswer === 'A' 
+                  ? wasAnswerCorrect ? 'correct' : 'incorrect'
+                  : isAnswered && question.correctAnswer === 'A' ? 'correct' : ''
+              }`}>
+                A
+              </div>
+              <div className="flex-1 text-left space-y-2">
+                <div className="text-heading text-primary font-semibold">
                   {cleanLocationName(question.optionA.name)}
                 </div>
-                {isAnswered && (
-                  <motion.div 
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    transition={{ delay: 0.2 }}
-                    className="border-t border-white/20 pt-8 px-4"
-                  >
-                    <div className="text-xl sm:text-2xl text-secondary font-bold text-mono">
-                      {formatValue(question.optionA.value, question.optionA.unit)}
-                    </div>
-                  </motion.div>
-                )}
-              </motion.button>
-
-              <motion.button 
-                onClick={() => handleClick('B')} 
-                className={getButtonClass('B')} 
-                disabled={isAnswered}
-                whileHover={!isAnswered ? { scale: 1.02 } : {}}
-                whileTap={!isAnswered ? { scale: 0.98 } : {}}
-              >
-                {renderBadge('B')}
-                <div className="mb-8 flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-3xl font-bold text-white shadow-lg">
-                    B
-                  </div>
-                  <span className="text-lg font-semibold text-muted uppercase tracking-wider">Option B</span>
+                <div className="text-body-lg text-secondary">
+                  <span className="text-mono font-medium text-accent">
+                    {question.optionA.value.toLocaleString()}
+                  </span>
+                  <span className="text-muted ml-1">{question.optionA.unit}</span>
                 </div>
-                <div className="text-2xl sm:text-3xl font-bold text-primary mb-6 leading-tight px-4">
+              </div>
+              {isAnswered && selectedAnswer === 'A' && (
+                <div className="flex-shrink-0">
+                  {wasAnswerCorrect ? (
+                    <CheckCircle2 className="h-6 w-6 text-success" />
+                  ) : (
+                    <XCircle className="h-6 w-6 text-error" />
+                  )}
+                </div>
+              )}
+              {isAnswered && question.correctAnswer === 'A' && selectedAnswer !== 'A' && (
+                <div className="flex-shrink-0">
+                  <CheckCircle2 className="h-6 w-6 text-success" />
+                </div>
+              )}
+            </div>
+          </motion.button>
+
+          {/* Option B */}
+          <motion.button
+            onClick={() => !isAnswered && onAnswer('B')}
+            className={`answer-option group ${
+              isAnswered 
+                ? selectedAnswer === 'B' 
+                  ? wasAnswerCorrect ? 'answer-correct' : 'answer-incorrect'
+                  : question.correctAnswer === 'B' ? 'answer-correct' : 'answer-disabled'
+                : ''
+            }`}
+            disabled={isAnswered}
+            whileHover={!isAnswered ? { y: -2 } : {}}
+            whileTap={!isAnswered ? { scale: 0.98 } : {}}
+          >
+            <div className="flex items-center gap-4">
+              <div className={`letter-badge ${
+                isAnswered && selectedAnswer === 'B' 
+                  ? wasAnswerCorrect ? 'correct' : 'incorrect'
+                  : isAnswered && question.correctAnswer === 'B' ? 'correct' : ''
+              }`}>
+                B
+              </div>
+              <div className="flex-1 text-left space-y-2">
+                <div className="text-heading text-primary font-semibold">
                   {cleanLocationName(question.optionB.name)}
                 </div>
-                {isAnswered && (
-                  <motion.div 
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    transition={{ delay: 0.2 }}
-                    className="border-t border-white/20 pt-8 px-4"
-                  >
-                    <div className="text-xl sm:text-2xl text-secondary font-bold text-mono">
-                      {formatValue(question.optionB.value, question.optionB.unit)}
-                    </div>
-                  </motion.div>
-                )}
-              </motion.button>
+                <div className="text-body-lg text-secondary">
+                  <span className="text-mono font-medium text-accent">
+                    {question.optionB.value.toLocaleString()}
+                  </span>
+                  <span className="text-muted ml-1">{question.optionB.unit}</span>
+                </div>
+              </div>
+              {isAnswered && selectedAnswer === 'B' && (
+                <div className="flex-shrink-0">
+                  {wasAnswerCorrect ? (
+                    <CheckCircle2 className="h-6 w-6 text-success" />
+                  ) : (
+                    <XCircle className="h-6 w-6 text-error" />
+                  )}
+                </div>
+              )}
+              {isAnswered && question.correctAnswer === 'B' && selectedAnswer !== 'B' && (
+                <div className="flex-shrink-0">
+                  <CheckCircle2 className="h-6 w-6 text-success" />
+                </div>
+              )}
             </div>
-          </div>
+          </motion.button>
+
         </div>
 
-        {/* Explanation */}
+        {/* Explanation Card */}
         {isAnswered && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="flex flex-col items-center px-8"
+            transition={{ delay: 0.5 }}
+            className="max-w-3xl mx-auto"
           >
-            <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl" style={{ maxWidth: 'min(33vw, 28rem)' }}>
-              <div className="card-elevated rounded-3xl p-8 border border-purple-400/30">
-                <div className="mb-6 flex items-center gap-4">
-                  <div className="w-4 h-4 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
-                  <div className="font-bold text-primary uppercase tracking-wider text-base flex items-center gap-3">
-                    <span>📝</span>
-                    {question.category.toLowerCase() === 'house price index' ? 'House Price Index' : 'Explanation'}
+            <div className="card p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-accent-primary/10 flex items-center justify-center">
+                    <Trophy className="h-5 w-5 text-accent" />
                   </div>
                 </div>
-                <div className="px-2">
-                  {question.category.toLowerCase() === 'house price index' && (
-                    <p className="text-secondary leading-relaxed text-base mb-4 italic">
-                      How much home prices have changed over time
-                    </p>
-                  )}
-                  <p className="text-secondary leading-relaxed text-base">{question.explanation}</p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-heading text-primary font-semibold">
+                      {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}
+                    </h3>
+                    <div className={`status-indicator ${wasAnswerCorrect ? 'status-correct' : 'status-incorrect'}`}>
+                      {wasAnswerCorrect ? (
+                        <>
+                          <CheckCircle2 className="h-4 w-4" />
+                          <span>Correct</span>
+                        </>
+                      ) : (
+                        <>
+                          <XCircle className="h-4 w-4" />
+                          <span>Incorrect</span>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-body text-secondary leading-relaxed">
+                    {question.category === 'House Price Index' 
+                      ? `${question.explanation} The house price index measures how much home prices have changed over time relative to a base year.`
+                      : question.explanation
+                    }
+                  </p>
+                  
+                  {/* Comparison Stats */}
+                  <div className="mt-4 pt-4 border-t border-glass-border">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-1">
+                        <div className="text-caption text-muted uppercase tracking-wide">
+                          {cleanLocationName(question.optionA.name)}
+                        </div>
+                        <div className="text-body-lg font-semibold text-primary">
+                          <span className="text-mono">{question.optionA.value.toLocaleString()}</span>
+                          <span className="text-muted ml-1 font-normal">{question.optionA.unit}</span>
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        <div className="text-caption text-muted uppercase tracking-wide">
+                          {cleanLocationName(question.optionB.name)}
+                        </div>
+                        <div className="text-body-lg font-semibold text-primary">
+                          <span className="text-mono">{question.optionB.value.toLocaleString()}</span>
+                          <span className="text-muted ml-1 font-normal">{question.optionB.unit}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

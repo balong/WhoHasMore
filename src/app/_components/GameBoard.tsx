@@ -18,54 +18,58 @@ export default function GameBoard() {
 
   if (gameState === 'idle') {
     return (
-      <div className="w-full max-w-4xl mx-auto px-6">
-        <div className="flex justify-center">
-          <div className="w-full max-w-lg">
-            <div className="card-elevated rounded-2xl p-10">
-              <div className="text-center space-y-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 via-blue-500 to-indigo-500 rounded-full mx-auto flex items-center justify-center floating">
-                  <span className="text-4xl">🎯</span>
-                </div>
-                
-                <div className="space-y-6 px-4">
-                  <h3 className="text-2xl font-black gradient-text-bright heading-xl">
-                    Ready to Test Your Knowledge?
-                  </h3>
-                  <p className="text-base text-secondary leading-relaxed">
-                    Compare cities, states, and countries across different metrics. Each question presents two options — choose which one has more.
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-3 text-xs px-2">
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 border border-white/10">
-                    <span>👥</span>
-                    <span className="text-muted">Population</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 border border-white/10">
-                    <span>🚨</span>
-                    <span className="text-muted">Crime Rates</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 border border-white/10">
-                    <span>🌲</span>
-                    <span className="text-muted">National Parks</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 border border-white/10">
-                    <span>🏠</span>
-                    <span className="text-muted">Housing</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 border border-white/10">
-                    <span>🌬️</span>
-                    <span className="text-muted">Air Quality</span>
-                  </div>
-                </div>
-                
-                <div className="pt-6">
-                  <StartButton />
-                </div>
-              </div>
+      <div className="w-full max-w-2xl mx-auto">
+        <motion.div 
+          className="card-elevated p-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center space-y-8">
+            <motion.div 
+              className="w-20 h-20 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-full mx-auto flex items-center justify-center"
+              animate={{ rotate: [0, 5, -5, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <span className="text-4xl">🎯</span>
+            </motion.div>
+            
+            <div className="space-y-4">
+              <h3 className="text-heading-lg text-primary font-bold">
+                Ready to Test Your Knowledge?
+              </h3>
+              <p className="text-body text-secondary leading-relaxed max-w-md mx-auto">
+                Compare cities, states, and countries across different metrics. Each question presents two options — choose which one has more.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { icon: '👥', label: 'Population' },
+                { icon: '🚨', label: 'Crime Rates' },
+                { icon: '🌲', label: 'National Parks' },
+                { icon: '🏠', label: 'Housing' },
+                { icon: '🌬️', label: 'Air Quality' },
+                { icon: '💰', label: 'Economics' }
+              ].map((category, index) => (
+                <motion.div
+                  key={category.label}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-surface border border-glass-border"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  <span className="text-lg">{category.icon}</span>
+                  <span className="text-caption text-muted font-medium">{category.label}</span>
+                </motion.div>
+              ))}
+            </div>
+            
+            <div className="pt-4">
+              <StartButton />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   }
@@ -99,12 +103,10 @@ export default function GameBoard() {
           >
             <button
               onClick={nextQuestion}
-              className="glass-button group rounded-xl px-10 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400/50 interactive-glow"
+              className="btn btn-primary text-body-lg px-8 py-4 focus-ring"
             >
-              <div className="flex items-center gap-4">
-                <span className="gradient-text-bright">Next Question</span>
-                <span className="text-secondary group-hover:translate-x-1 transition-transform text-xl">→</span>
-              </div>
+              <span className="font-semibold">Next Question</span>
+              <span className="text-xl">→</span>
             </button>
           </motion.div>
         )}
