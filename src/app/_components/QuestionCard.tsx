@@ -215,12 +215,9 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
           </h2>
         </div>
 
-        {/* Answer Options - Much narrower width for testing */}
+        {/* Answer Options - Very narrow width */}
         <div className="flex justify-center">
-          <div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-xs" 
-            style={{ maxWidth: '300px', border: '3px solid lime' }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full" style={{ maxWidth: '400px' }}>
             
             {/* Option A */}
             <motion.button
