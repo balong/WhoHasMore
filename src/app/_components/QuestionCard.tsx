@@ -217,7 +217,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
 
         {/* Answer Options - Narrower width (1/3 screen on desktop) */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-lg md:max-w-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-sm md:max-w-lg">
             
             {/* Option A */}
             <motion.button

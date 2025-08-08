@@ -98,7 +98,7 @@ export default function GameBoard() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex justify-center"
+            className="flex justify-center mt-8"
           >
             <button
               onClick={nextQuestion}
