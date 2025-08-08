@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle2, XCircle, Check, Trophy, Target, TrendingUp } from 'lucide-react';
-import { Question } from '../_stores/gameStore';
+import { CheckCircle2, XCircle, Trophy, Target, TrendingUp } from 'lucide-react';
 import { useGameStore } from '../_stores/gameStore';
+import { Question } from '../_stores/gameStore';
 import { cleanLocationName } from '../_utils/stateNames';
 
 interface QuestionCardProps {

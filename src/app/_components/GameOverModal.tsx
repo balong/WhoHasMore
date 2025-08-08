@@ -30,7 +30,7 @@ export default function GameOverModal() {
           text: shareText,
           url: window.location.href,
         });
-      } catch (err) {
+      } catch (_err) {
         // Fallback to clipboard
         navigator.clipboard.writeText(shareText);
       }

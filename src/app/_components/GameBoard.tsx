@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '../_stores/gameStore';
 import QuestionCard from './QuestionCard';
 import StartButton from './StartButton';
-import ScoreDisplay from './ScoreDisplay';
 import GameOverModal from './GameOverModal';
+import ProgressDots from './ProgressDots';
 
 export default function GameBoard() {
   const {

@@ -7,6 +7,41 @@ import { revalidatePath } from 'next/cache';
 
 // NOTE: In a real app, move writing to a DB. Here we persist to the repo folder.
 
+interface Fact {
+  metric_id: string;
+  metric_name: string;
+  unit: string;
+  geography_type: 'state' | 'city';
+  geography_id: string;
+  geography_name: string;
+  year?: number;
+  value: number;
+  source_name: string;
+  source_url: string;
+}
+
+interface Question {
+  id: string;
+  category: string;
+  question: string;
+  optionA: { name: string; value: number; unit: string };
+  optionB: { name: string; value: number; unit: string };
+  correctAnswer: 'A' | 'B';
+  explanation: string;
+}
+
+interface NormalizeOptions {
+  metricId: string;
+  metricName: string;
+  unit: string;
+  geoField: string;
+  valueField: string;
+  yearField?: string;
+  geoType: 'state' | 'city';
+  source: string;
+  sourceUrl: string;
+}
+
 async function ensureDir(dir: string) {
   await fs.mkdir(dir, { recursive: true });
 }
@@ -18,7 +53,7 @@ async function downloadToFile(url: string, filePath: string) {
   await fs.writeFile(filePath, buf);
 }
 
-function normalizeFacts(rows: any[], opts: { metricId: string; metricName: string; unit: string; geoField: string; valueField: string; yearField?: string; geoType: 'state' | 'city'; source: string; sourceUrl: string; }) {
+function normalizeFacts(rows: Record<string, unknown>[], opts: NormalizeOptions): Fact[] {
   const { metricId, metricName, unit, geoField, valueField, yearField, geoType, source, sourceUrl } = opts;
   return rows.map((r) => ({
     metric_id: metricId,
@@ -34,22 +69,22 @@ function normalizeFacts(rows: any[], opts: { metricId: string; metricName: strin
   }));
 }
 
-function buildQuestionPairs(facts: any[]) {
+function buildQuestionPairs(facts: Fact[]): Question[] {
   // Group by metric_id+year
-  const key = (f: any) => `${f.metric_id}|${f.year ?? 'NA'}`;
-  const groups = new Map<string, any[]>();
+  const key = (f: Fact) => `${f.metric_id}|${f.year ?? 'NA'}`;
+  const groups = new Map<string, Fact[]>();
   for (const f of facts) {
     const k = key(f);
     if (!groups.has(k)) groups.set(k, []);
     groups.get(k)!.push(f);
   }
 
-  const pairs: any[] = [];
+  const pairs: Question[] = [];
   for (const [gkey, arr] of groups) {
     // generate all unique pairs randomly limited
     for (let i = 0; i < Math.min(arr.length, 80); i++) {
       const a = arr[Math.floor(Math.random() * arr.length)];
-      let b = arr[Math.floor(Math.random() * arr.length)];
+      const b = arr[Math.floor(Math.random() * arr.length)];
       if (!a || !b || a.geography_id === b.geography_id) continue;
       // canonical order for uniqueness
       const [A, B] = a.geography_name < b.geography_name ? [a, b] : [b, a];
@@ -83,8 +118,8 @@ export async function seedAndStart() {
     {
       url: 'https://www2.census.gov/econ/bps/Place/2023/CY2023-Place.csv',
       path: path.join(rawDir, 'bps_place_2023.csv'),
-      parse: (csv: string) => {
-        const rows = parse(csv, { columns: true, skip_empty_lines: true });
+      parse: (csv: string): Fact[] => {
+        const rows = parse(csv, { columns: true, skip_empty_lines: true }) as Record<string, unknown>[];
         return normalizeFacts(rows, {
           metricId: 'building_permits',
           metricName: 'Building permits (units authorized)',
@@ -101,34 +136,36 @@ export async function seedAndStart() {
     {
       url: 'https://apps.bea.gov/regional/zip/SAGDP2N.zip', // GDP by state current dollars
       path: path.join(rawDir, 'bea_gdp_state.zip'),
-      parse: async (_buf: string) => {
+      parse: async (): Promise<Fact[]> => {
         // Placeholder: assume you unzip externally and drop a CSV named gdp_state.csv in rawDir
         // For demo purposes, skip processing here.
-        return [] as any[];
+        return [];
       }
     },
     {
       url: 'https://static.nhtsa.gov/nhtsa/downloads/FARS/2019/National/FARS2019NatCSV.zip',
       path: path.join(rawDir, 'fars_2019.zip'),
-      parse: async (_buf: string) => {
-        return [] as any[];
+      parse: async (): Promise<Fact[]> => {
+        return [];
       }
     }
   ];
 
-  const allFacts: any[] = [];
+  const allFacts: Fact[] = [];
   for (const f of files) {
     try {
       await downloadToFile(f.url, f.path);
       const buf = await fs.readFile(f.path, 'utf8').catch(() => '');
-      const facts = typeof f.parse === 'function' ? (await (f.parse as any)(buf)) : [];
+      const facts = typeof f.parse === 'function' ? (await (f.parse as (data: string) => Promise<Fact[]> | Fact[])(buf)) : [];
       allFacts.push(...facts);
-    } catch {}
+    } catch {
+      // Silently continue if download/parse fails
+    }
   }
 
   // Fallback: if nothing parsed, seed a tiny synthetic set from existing gameData
   if (allFacts.length === 0) {
-    const fallback = [
+    const fallback: Fact[] = [
       { metric_id: 'population', metric_name: 'Population', unit: 'people', geography_type: 'city', geography_id: 'New York', geography_name: 'New York City', year: 2020, value: 8336817, source_name: 'US Census', source_url: 'https://www.census.gov' },
       { metric_id: 'population', metric_name: 'Population', unit: 'people', geography_type: 'city', geography_id: 'Los Angeles', geography_name: 'Los Angeles', year: 2020, value: 3979576, source_name: 'US Census', source_url: 'https://www.census.gov' }
     ];
