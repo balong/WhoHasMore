@@ -14,7 +14,7 @@ export default function StartButton() {
   return (
     <motion.button
       onClick={handleStart}
-      className="arcade-btn arcade-btn-primary"
+      className="nintendo-btn nintendo-btn-primary"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >

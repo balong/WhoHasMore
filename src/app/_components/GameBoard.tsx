@@ -19,7 +19,7 @@ export default function GameBoard() {
     return (
       <div className="w-full max-w-2xl mx-auto">
         <motion.div 
-          className="arcade-card text-center"
+          className="nintendo-card text-center"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

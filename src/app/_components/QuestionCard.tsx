@@ -214,119 +214,99 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Option A */}
-          <motion.button
-            onClick={() => !isAnswered && onAnswer('A')}
-            className={`answer-option group ${
-              isAnswered
-                ? selectedAnswer === 'A'
-                  ? wasAnswerCorrect ? 'answer-correct' : 'answer-incorrect'
-                  : question.correctAnswer === 'A' ? 'answer-correct' : ''
-                : ''
-            }`}
-            disabled={isAnswered}
-            whileHover={!isAnswered ? { y: -4, scale: 1.02 } : {}}
-            whileTap={!isAnswered ? { scale: 0.98 } : {}}
-          >
-            <div className="flex items-center gap-4">
-              <div className={`letter-badge ${isAnswered && (question.correctAnswer === 'A' || selectedAnswer === 'A') ? (wasAnswerCorrect && selectedAnswer === 'A' ? 'letter-badge-correct' : 'letter-badge-incorrect') : ''}`}>
-                A
-              </div>
-              <div className="flex-1 text-left">
-                <div className="text-heading text-primary font-semibold">
-                  {cleanLocationName(question.optionA.name)}
-                </div>
-                {isAnswered && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    transition={{ delay: 0.2 }}
-                    className="mt-2 text-body text-secondary"
-                  >
-                    <span className="text-mono font-medium text-accent">
-                      {question.optionA.value.toLocaleString()}
-                    </span>
-                    <span className="text-muted ml-1">{question.optionA.unit}</span>
-                  </motion.div>
-                )}
-              </div>
-              {isAnswered && (
-                <div className="flex-shrink-0">
-                  {selectedAnswer === 'A' && (wasAnswerCorrect ? <CheckCircle2 className="h-6 w-6 text-success" /> : <XCircle className="h-6 w-6 text-error" />)}
-                  {question.correctAnswer === 'A' && selectedAnswer !== 'A' && <CheckCircle2 className="h-6 w-6 text-success" />}
-                </div>
-              )}
-            </div>
-          </motion.button>
+        {/* Answer Options */}
+        <div className="w-full max-w-md mx-auto"> {/* Constrain to center 1/3 on desktop */}
+          <div className="grid grid-cols-1 gap-4">
+            {[question.optionA, question.optionB].map((option, index) => {
+              const letter = String.fromCharCode(65 + index) as 'A' | 'B';
+              const isSelected = selectedAnswer === letter;
+              const isCorrect = letter === question.correctAnswer;
+              const showResult = isAnswered;
+              
+              let optionClass = 'answer-option';
+              if (showResult && isCorrect) {
+                optionClass += ' answer-correct';
+              } else if (showResult && isSelected && !isCorrect) {
+                optionClass += ' answer-incorrect';
+              }
+              
+              let badgeClass = 'letter-badge';
+              if (showResult && isCorrect) {
+                badgeClass += ' letter-badge-correct';
+              } else if (showResult && isSelected && !isCorrect) {
+                badgeClass += ' letter-badge-incorrect';
+              }
 
-          {/* Option B */}
-          <motion.button
-            onClick={() => !isAnswered && onAnswer('B')}
-            className={`answer-option group ${
-              isAnswered
-                ? selectedAnswer === 'B'
-                  ? wasAnswerCorrect ? 'answer-correct' : 'answer-incorrect'
-                  : question.correctAnswer === 'B' ? 'answer-correct' : ''
-                : ''
-            }`}
-            disabled={isAnswered}
-            whileHover={!isAnswered ? { y: -4, scale: 1.02 } : {}}
-            whileTap={!isAnswered ? { scale: 0.98 } : {}}
-          >
-            <div className="flex items-center gap-4">
-            <div className={`letter-badge ${isAnswered && (question.correctAnswer === 'B' || selectedAnswer === 'B') ? (wasAnswerCorrect && selectedAnswer === 'B' ? 'letter-badge-correct' : 'letter-badge-incorrect') : ''}`}>
-                B
-              </div>
-              <div className="flex-1 text-left">
-                <div className="text-heading text-primary font-semibold">
-                  {cleanLocationName(question.optionB.name)}
-                </div>
-                {isAnswered && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    transition={{ delay: 0.2 }}
-                    className="mt-2 text-body text-secondary"
-                  >
-                    <span className="text-mono font-medium text-accent">
-                      {question.optionB.value.toLocaleString()}
-                    </span>
-                    <span className="text-muted ml-1">{question.optionB.unit}</span>
-                  </motion.div>
-                )}
-              </div>
-              {isAnswered && (
-                <div className="flex-shrink-0">
-                  {selectedAnswer === 'B' && (wasAnswerCorrect ? <CheckCircle2 className="h-6 w-6 text-success" /> : <XCircle className="h-6 w-6 text-error" />)}
-                  {question.correctAnswer === 'B' && selectedAnswer !== 'B' && <CheckCircle2 className="h-6 w-6 text-success" />}
-                </div>
-              )}
-            </div>
-          </motion.button>
+              return (
+                <motion.button
+                  key={letter}
+                  onClick={() => !isAnswered && onAnswer(letter)}
+                  className={optionClass}
+                  disabled={isAnswered}
+                  whileHover={!isAnswered ? { y: -4, scale: 1.02 } : {}}
+                  whileTap={!isAnswered ? { scale: 0.98 } : {}}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={badgeClass}>
+                      {letter}
+                    </div>
+                    <div className="flex-1 text-left">
+                      <div className="text-heading text-primary font-semibold">
+                        {cleanLocationName(option.name)}
+                      </div>
+                      {isAnswered && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          transition={{ delay: 0.2 }}
+                          className="mt-2 text-body text-secondary"
+                        >
+                          <span className="text-mono font-medium text-accent">
+                            {option.value.toLocaleString()}
+                          </span>
+                          <span className="text-muted ml-1">{option.unit}</span>
+                        </motion.div>
+                      )}
+                    </div>
+                    {isAnswered && (
+                      <div className="flex-shrink-0">
+                        {selectedAnswer === letter && (wasAnswerCorrect ? <CheckCircle2 className="h-6 w-6 text-success" /> : <XCircle className="h-6 w-6 text-error" />)}
+                        {question.correctAnswer === letter && selectedAnswer !== letter && <CheckCircle2 className="h-6 w-6 text-success" />}
+                      </div>
+                    )}
+                  </div>
+                </motion.button>
+              );
+            })}
+          </div>
         </div>
 
+        {/* Explanation Card */}
         {isAnswered && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="w-full max-w-2xl mx-auto"
+            transition={{ delay: 0.3 }}
+            className="mt-8"
           >
-            <div className="arcade-card text-left">
+            <div className="nintendo-card text-left">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${wasAnswerCorrect ? 'bg-green-500/10' : 'bg-red-500/10'}`}>
-                    {wasAnswerCorrect ? <Trophy className="h-5 w-5 text-green-400" /> : <Info className="h-5 w-5 text-red-400" />}
-                  </div>
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
+                  {wasAnswerCorrect ? (
+                    <Trophy className="h-6 w-6 text-white" />
+                  ) : (
+                    <Info className="h-6 w-6 text-white" />
+                  )}
                 </div>
-                <div className="space-y-2">
-                  <h3 className="text-body-lg text-primary font-semibold">
-                    {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}
-                  </h3>
-                  <p className="text-body text-secondary leading-relaxed">
-                    {question.explanation}
-                  </p>
+                <div className="flex-1 space-y-3">
+                  <div>
+                    <h3 className="text-heading font-semibold text-primary mb-2">
+                      {wasAnswerCorrect ? 'Correct!' : 'Not quite right'}
+                    </h3>
+                    <p className="text-body text-secondary">
+                      {question.explanation}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
