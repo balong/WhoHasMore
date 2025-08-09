@@ -19,28 +19,28 @@ export default function GameBoard() {
     return (
       <div className="w-full max-w-4xl mx-auto">
         <motion.div 
-          className="card-elevated p-16 pb-24"
+          className="card-elevated p-12 pb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="text-center space-y-16">
+          <div className="text-center space-y-10">
             
             {/* Simplified Hero Text */}
             <motion.div 
-              className="space-y-8"
+              className="space-y-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <p className="text-heading-lg text-secondary leading-relaxed max-w-xl mx-auto">
+              <p className="text-heading text-secondary leading-relaxed max-w-lg mx-auto">
                 Choose which place has more. Test your intuition against real data.
               </p>
             </motion.div>
             
-            {/* Enhanced Category Grid */}
+            {/* Compact Category Grid */}
             <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -55,46 +55,41 @@ export default function GameBoard() {
               ].map((category, index) => (
                 <motion.div
                   key={category.label}
-                  className="group relative overflow-hidden rounded-2xl bg-surface-card border border-glass-border backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  className="group relative overflow-hidden rounded-xl bg-surface-card border border-glass-border backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300"
+                  initial={{ opacity: 0, scale: 0.9, y: 12 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ 
-                    duration: 0.5, 
-                    delay: 0.6 + (index * 0.1),
+                    duration: 0.4, 
+                    delay: 0.5 + (index * 0.06),
                     type: "spring",
-                    stiffness: 100
+                    stiffness: 120,
+                    damping: 14
                   }}
                   whileHover={{ 
-                    scale: 1.05, 
-                    y: -5
+                    scale: 1.03, 
+                    y: -2
                   }}
                 >
-                  <div className="p-6 text-center">
-                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-200">
+                  <div className="p-4 text-center">
+                    <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">
                       {category.icon}
                     </div>
-                    <div className="text-body font-semibold text-primary tracking-wide">
+                    <div className="text-caption text-primary font-semibold tracking-wide">
                       {category.label}
                     </div>
                   </div>
                   
                   {/* Subtle gradient overlay on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-15 transition-opacity duration-300 rounded-2xl`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`} />
                 </motion.div>
               ))}
             </motion.div>
-            
-            {/* Premium Call-to-Action with More Spacing */}
-            <motion.div 
-              className="pt-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-            >
-              <StartButton />
-            </motion.div>
           </div>
         </motion.div>
+        {/* Start button separated from card box */}
+        <div className="flex justify-center mt-8">
+          <StartButton />
+        </div>
       </div>
     );
   }
