@@ -203,7 +203,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4">
+    <div className="w-full max-w-2xl mx-auto px-4">
       <div className="space-y-6"> {/* Reduced from space-y-10 */}
         <div className="text-center space-y-3"> {/* Reduced from space-y-4 */}
           <p className="text-heading font-bold text-primary">
@@ -215,7 +215,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
         </div>
 
         {/* Answer Options */}
-        <div className="w-full sm:w-80 md:w-72 lg:w-64 xl:w-60 mx-auto"> {/* Responsive narrow widths */}
+        <div className="w-full mx-auto" style={{maxWidth: '350px'}}> {/* Fixed narrow width for desktop */}
           <div className="grid grid-cols-1 gap-4">
             {[question.optionA, question.optionB].map((option, index) => {
               const letter = String.fromCharCode(65 + index) as 'A' | 'B';

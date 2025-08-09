@@ -175,8 +175,6 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  width: 100% !important; /* Force width to respect container */
-  max-width: 100% !important; /* Ensure it doesn't expand beyond container */
 }
 
 .answer-option::before {
