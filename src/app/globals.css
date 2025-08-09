@@ -45,10 +45,105 @@ body {
   letter-spacing: -0.02em;
 }
 
+/* Nintendo-inspired Logo Styling */
+.nintendo-logo {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--nintendo-red) 0%, var(--nintendo-orange) 25%, var(--nintendo-yellow) 50%, var(--nintendo-green) 75%, var(--nintendo-blue) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 0px rgba(44, 62, 80, 0.1);
+  position: relative;
+  display: inline-block;
+}
+
+.nintendo-logo::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--nintendo-red), var(--nintendo-orange), var(--nintendo-yellow), var(--nintendo-green), var(--nintendo-blue));
+  border-radius: 1rem;
+  z-index: -1;
+  opacity: 0.1;
+  filter: blur(8px);
+}
+
+/* Nintendo-inspired Stats Display */
+.nintendo-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.9) 100%);
+  border: 2px solid var(--nintendo-border);
+  border-radius: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.nintendo-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--nintendo-blue), var(--nintendo-green), var(--nintendo-yellow));
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.nintendo-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--nintendo-primary-text);
+}
+
+.nintendo-stat-number {
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: var(--nintendo-blue);
+  text-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+}
+
+.nintendo-stat-label {
+  font-size: 0.875rem;
+  color: var(--nintendo-secondary-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 @media (max-width: 768px) {
   .text-display-lg {
     font-size: 2rem; /* Increased from 1.75rem - split the difference */
     line-height: 1.05;
+  }
+  
+  .nintendo-logo {
+    font-size: 2.25rem; /* Smaller on mobile */
+    line-height: 0.9;
+  }
+  
+  .nintendo-stats {
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border-radius: 1.25rem;
+  }
+  
+  .nintendo-stat-number {
+    font-size: 1rem;
+  }
+  
+  .nintendo-stat-label {
+    font-size: 0.75rem;
   }
 }
 
