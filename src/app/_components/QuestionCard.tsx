@@ -287,7 +287,8 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-4" // Reduced from mt-8
+            className="mt-4 w-full mx-auto"
+            style={{maxWidth: '350px'}} // Match answer boxes width
           >
             <div className="nintendo-card text-left">
               <div className="flex items-start gap-4">

@@ -18,31 +18,16 @@ export default function GameBoard() {
   if (gameState === 'idle') {
     return (
       <div className="w-full max-w-2xl mx-auto">
-        <motion.div 
-          className="nintendo-card text-center"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
+        <div className="nintendo-card text-center">
           <div className="space-y-8">
-            <motion.p 
-              className="text-heading text-secondary"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
+            <p className="text-heading text-secondary">
               Choose which place has more. Test your intuition against real data.
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
+            </p>
+            <div>
               <StartButton />
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     );
   }
