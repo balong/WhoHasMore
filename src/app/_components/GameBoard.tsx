@@ -19,7 +19,7 @@ export default function GameBoard() {
     return (
       <div className="w-full max-w-2xl mx-auto">
         <div className="nintendo-card text-center">
-          <div className="space-y-8">
+          <div className="space-y-6"> {/* Reduced from space-y-8 */}
             <p className="text-heading text-secondary">
               Choose which place has more. Test your intuition against real data.
             </p>
@@ -58,7 +58,7 @@ export default function GameBoard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex justify-center"
-            style={{ marginTop: '1.5rem' }} // Reduced from 3rem to fit on screen
+            style={{ marginTop: '1rem' }} // Reduced from 1.5rem
           >
             <motion.button
               onClick={nextQuestion}

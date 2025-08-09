@@ -11,7 +11,7 @@ export default function Home() {
       
       {/* Content */}
       <div className="relative z-10">
-        <div className="mx-auto px-6 py-8 space-y-8">
+        <div className="mx-auto px-4 py-4 space-y-4"> {/* Reduced padding and spacing */}
           <div className="slide-up">
             <ShowHeader />
           </div>

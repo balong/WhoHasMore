@@ -11,9 +11,9 @@ export default function ShowHeader() {
 
   return (
     <div className="w-full">
-      <div className="space-y-8">
+      <div className="space-y-6">
         {/* Main Title */}
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-4">
           <h1 className="text-display-lg text-primary font-bold leading-tight">
             Who Has More?
           </h1>

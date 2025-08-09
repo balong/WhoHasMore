@@ -203,20 +203,20 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4">
-      <div className="space-y-6"> {/* Reduced from space-y-10 */}
-        <div className="text-center space-y-3"> {/* Reduced from space-y-4 */}
+    <div className="w-full max-w-xl mx-auto px-3"> {/* Reduced from max-w-2xl and px-4 */}
+      <div className="space-y-4"> {/* Reduced from space-y-6 */}
+        <div className="text-center space-y-2"> {/* Reduced from space-y-3 */}
           <p className="text-heading font-bold text-primary">
             {formatQuestion(question.category)}
           </p>
-          <p className="text-body text-secondary">
+          <p className="text-small text-secondary"> {/* Changed from text-body */}
             {question.category}
           </p>
         </div>
 
         {/* Answer Options */}
-        <div className="w-full mx-auto" style={{maxWidth: '450px'}}> {/* Increased from 350px to 450px */}
-          <div className="grid grid-cols-1 gap-4">
+        <div className="w-full mx-auto" style={{maxWidth: '400px'}}> {/* Reduced from 450px */}
+          <div className="grid grid-cols-1 gap-3"> {/* Reduced from gap-4 */}
             {[question.optionA, question.optionB].map((option, index) => {
               const letter = String.fromCharCode(65 + index) as 'A' | 'B';
               const isSelected = selectedAnswer === letter;
@@ -287,24 +287,24 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-4 w-full mx-auto"
-            style={{maxWidth: '450px'}} // Match answer boxes width
+            className="mt-3 w-full mx-auto" // Reduced from mt-4
+            style={{maxWidth: '400px'}} // Reduced from 450px to match answer boxes
           >
             <div className="nintendo-card text-left">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
+              <div className="flex items-start gap-3"> {/* Reduced from gap-4 */}
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center"> {/* Reduced from w-12 h-12 */}
                   {wasAnswerCorrect ? (
-                    <Trophy className="h-6 w-6 text-white" />
+                    <Trophy className="h-5 w-5 text-white" /> {/* Reduced from h-6 w-6 */}
                   ) : (
-                    <Info className="h-6 w-6 text-white" />
+                    <Info className="h-5 w-5 text-white" /> {/* Reduced from h-6 w-6 */}
                   )}
                 </div>
-                <div className="flex-1 space-y-3">
+                <div className="flex-1 space-y-2"> {/* Reduced from space-y-3 */}
                   <div>
-                    <h3 className="text-heading font-semibold text-primary mb-2">
+                    <h3 className="text-body font-semibold text-primary mb-1"> {/* Changed from text-heading and mb-2 */}
                       {wasAnswerCorrect ? 'Correct!' : 'Not quite right'}
                     </h3>
-                    <p className="text-body text-secondary">
+                    <p className="text-small text-secondary"> {/* Changed from text-body */}
                       {question.explanation}
                     </p>
                   </div>
