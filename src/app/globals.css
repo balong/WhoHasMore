@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/****** Spacing tokens ******/
+:root {
+  --space-xs: 0.375rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1.25rem;
+  --space-xl: 2rem;
+}
+
 :root {
   /* Professional Color System */
   --primary-50: #f8fafc;
@@ -161,6 +170,9 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+/* Ensure healthy vertical rhythm inside cards */
+.card > * + * { margin-top: var(--space-lg); }
+
 .card-elevated {
   background: var(--surface-elevated);
   backdrop-filter: blur(24px);
@@ -173,6 +185,9 @@ body {
     inset 0 1px 0 var(--glass-highlight);
   transition: all 0.3s ease-in-out;
 }
+
+/* Ensure healthy vertical rhythm inside elevated cards */
+.card-elevated > * + * { margin-top: var(--space-xl); }
 
 .card-interactive {
   cursor: pointer;
@@ -202,7 +217,13 @@ body {
   outline: none;
   position: relative;
   overflow: hidden;
+  min-height: 2.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
+
+/* Ensure buttons don’t touch neighbors vertically when stacked */
+.btn + * { margin-top: var(--space-md); }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-light));
@@ -253,6 +274,9 @@ body {
   overflow: hidden;
 }
 
+/* Space elements within answer options */
+.answer-option > * + * { margin-top: var(--space-sm); }
+
 .answer-option:hover:not(.answer-disabled) {
   transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.2);
@@ -283,13 +307,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 3.25rem;
+  height: 3.25rem;
   background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
   border-radius: 50%;
   color: white;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -380,11 +404,17 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Subtler shadows and borders for a premium look */
+.card, .card-elevated, .answer-option { border-color: rgba(255,255,255,0.12); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+
 /* Focus States */
 .focus-ring:focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
+
+/* Safer focus states for accessibility */
+.focus-ring:focus-visible { outline-width: 3px; outline-offset: 3px; }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
