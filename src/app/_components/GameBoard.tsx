@@ -17,61 +17,32 @@ export default function GameBoard() {
 
   if (gameState === 'idle') {
     return (
-      <div className="w-full max-w-4xl mx-auto">
+      <div className="w-full max-w-2xl mx-auto">
         <motion.div 
-          className="relative p-[2px] rounded-2xl"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ background: 'linear-gradient(135deg, rgba(59,130,246,.4), rgba(139,92,246,.4))' }}
+          className="arcade-card text-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <div className="card-elevated rounded-2xl p-10">
-            <div className="text-center space-y-8">
-              <motion.p 
-                className="text-heading text-secondary max-w-xl mx-auto"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                Choose which place has more. Test your intuition against real data.
-              </motion.p>
-
-              {/* Dramatic Category Chips */}
-              <motion.div 
-                className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                {[
-                  { icon: '👥', label: 'Population' },
-                  { icon: '🚨', label: 'Crime Stats' },
-                  { icon: '🌲', label: 'Environment' },
-                  { icon: '🏠', label: 'Housing' },
-                  { icon: '💰', label: 'Economics' },
-                  { icon: '🎓', label: 'Education' }
-                ].map((c, i) => (
-                  <motion.div
-                    key={c.label}
-                    className="px-4 py-2 rounded-full border border-glass-border bg-surface/60 backdrop-blur-md shadow hover:shadow-lg text-caption text-primary flex items-center gap-2"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.25 + i * 0.05 }}
-                    whileHover={{ y: -2 }}
-                  >
-                    <span className="text-lg">{c.icon}</span>
-                    <span className="font-semibold tracking-wide">{c.label}</span>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
+          <div className="space-y-8">
+            <motion.p 
+              className="text-heading text-secondary"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              Choose which place has more. Test your intuition against real data.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <StartButton />
+            </motion.div>
           </div>
         </motion.div>
-
-        {/* Glowing Start button below panel */}
-        <div className="flex justify-center mt-10">
-          <StartButton />
-        </div>
       </div>
     );
   }
