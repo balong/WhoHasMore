@@ -204,8 +204,8 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4">
-      <div className="space-y-10">
-        <div className="text-center space-y-4">
+      <div className="space-y-6"> {/* Reduced from space-y-10 */}
+        <div className="text-center space-y-3"> {/* Reduced from space-y-4 */}
           <p className="text-heading font-bold text-primary">
             {formatQuestion(question.category)}
           </p>
@@ -287,7 +287,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-8"
+            className="mt-4" // Reduced from mt-8
           >
             <div className="nintendo-card text-left">
               <div className="flex items-start gap-4">

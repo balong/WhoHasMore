@@ -73,15 +73,17 @@ export default function GameBoard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex justify-center"
-            style={{ marginTop: '3rem' }}
+            style={{ marginTop: '1.5rem' }} // Reduced from 3rem to fit on screen
           >
-            <button
+            <motion.button
               onClick={nextQuestion}
-              className="btn btn-primary text-body-lg px-8 py-4 focus-ring"
+              className="nintendo-btn nintendo-btn-secondary focus-ring"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <span className="font-semibold">Next Question</span>
               <span className="text-xl">→</span>
-            </button>
+            </motion.button>
           </motion.div>
         )}
       </div>
