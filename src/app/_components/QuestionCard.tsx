@@ -13,14 +13,9 @@ interface QuestionCardProps {
 }
 
 export default function QuestionCard({ question, onAnswer }: QuestionCardProps) {
-  const { isAnswered, selectedAnswer, wasAnswerCorrect } = useGameStore(
-    state => ({
-      isAnswered: state.gameState === 'answered',
-      selectedAnswer: state.selectedAnswer,
-      wasAnswerCorrect: state.wasAnswerCorrect,
-    }),
-    shallow
-  );
+  const isAnswered = useGameStore(state => state.gameState === 'answered');
+  const selectedAnswer = useGameStore(state => state.selectedAnswer);
+  const wasAnswerCorrect = useGameStore(state => state.wasAnswerCorrect);
 
   const formatQuestion = (category: string) => {
     switch (category.toLowerCase()) {
