@@ -215,7 +215,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
         </div>
 
         {/* Answer Options */}
-        <div className="w-full mx-auto" style={{maxWidth: '350px'}}> {/* Fixed narrow width for desktop */}
+        <div className="w-full mx-auto" style={{maxWidth: '450px'}}> {/* Increased from 350px to 450px */}
           <div className="grid grid-cols-1 gap-4">
             {[question.optionA, question.optionB].map((option, index) => {
               const letter = String.fromCharCode(65 + index) as 'A' | 'B';
@@ -288,7 +288,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="mt-4 w-full mx-auto"
-            style={{maxWidth: '350px'}} // Match answer boxes width
+            style={{maxWidth: '450px'}} // Match answer boxes width
           >
             <div className="nintendo-card text-left">
               <div className="flex items-start gap-4">
