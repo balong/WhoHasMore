@@ -11,7 +11,7 @@ export default function Home() {
       
       {/* Content */}
       <div className="relative z-10">
-        <div className="mx-auto px-2 py-2 space-y-2 md:px-4 md:py-4 md:space-y-4">
+        <div className="mx-auto px-3 py-3 space-y-3 md:px-4 md:py-4 md:space-y-4">
           <div className="slide-up">
             <ShowHeader />
           </div>
