@@ -19,75 +19,57 @@ export default function GameBoard() {
     return (
       <div className="w-full max-w-4xl mx-auto">
         <motion.div 
-          className="card-elevated p-12 pb-12"
+          className="relative p-[2px] rounded-2xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          style={{ background: 'linear-gradient(135deg, rgba(59,130,246,.4), rgba(139,92,246,.4))' }}
         >
-          <div className="text-center space-y-10">
-            
-            {/* Simplified Hero Text */}
-            <motion.div 
-              className="space-y-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <p className="text-heading text-secondary leading-relaxed max-w-lg mx-auto">
+          <div className="card-elevated rounded-2xl p-10">
+            <div className="text-center space-y-8">
+              <motion.p 
+                className="text-heading text-secondary max-w-xl mx-auto"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 Choose which place has more. Test your intuition against real data.
-              </p>
-            </motion.div>
-            
-            {/* Compact Category Grid */}
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              {[
-                { icon: '👥', label: 'Population', color: 'from-blue-500 to-cyan-400' },
-                { icon: '🚨', label: 'Crime Stats', color: 'from-red-500 to-orange-400' },
-                { icon: '🌲', label: 'Environment', color: 'from-green-500 to-emerald-400' },
-                { icon: '🏠', label: 'Housing', color: 'from-purple-500 to-pink-400' },
-                { icon: '💰', label: 'Economics', color: 'from-yellow-500 to-amber-400' },
-                { icon: '🎓', label: 'Education', color: 'from-indigo-500 to-blue-400' }
-              ].map((category, index) => (
-                <motion.div
-                  key={category.label}
-                  className="group relative overflow-hidden rounded-xl bg-surface-card border border-glass-border backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, scale: 0.9, y: 12 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ 
-                    duration: 0.4, 
-                    delay: 0.5 + (index * 0.06),
-                    type: "spring",
-                    stiffness: 120,
-                    damping: 14
-                  }}
-                  whileHover={{ 
-                    scale: 1.03, 
-                    y: -2
-                  }}
-                >
-                  <div className="p-4 text-center">
-                    <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">
-                      {category.icon}
-                    </div>
-                    <div className="text-caption text-primary font-semibold tracking-wide">
-                      {category.label}
-                    </div>
-                  </div>
-                  
-                  {/* Subtle gradient overlay on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl`} />
-                </motion.div>
-              ))}
-            </motion.div>
+              </motion.p>
+
+              {/* Dramatic Category Chips */}
+              <motion.div 
+                className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                {[
+                  { icon: '👥', label: 'Population' },
+                  { icon: '🚨', label: 'Crime Stats' },
+                  { icon: '🌲', label: 'Environment' },
+                  { icon: '🏠', label: 'Housing' },
+                  { icon: '💰', label: 'Economics' },
+                  { icon: '🎓', label: 'Education' }
+                ].map((c, i) => (
+                  <motion.div
+                    key={c.label}
+                    className="px-4 py-2 rounded-full border border-glass-border bg-surface/60 backdrop-blur-md shadow hover:shadow-lg text-caption text-primary flex items-center gap-2"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.25 + i * 0.05 }}
+                    whileHover={{ y: -2 }}
+                  >
+                    <span className="text-lg">{c.icon}</span>
+                    <span className="font-semibold tracking-wide">{c.label}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </motion.div>
-        {/* Start button separated from card box */}
-        <div className="flex justify-center mt-8">
+
+        {/* Glowing Start button below panel */}
+        <div className="flex justify-center mt-10">
           <StartButton />
         </div>
       </div>
