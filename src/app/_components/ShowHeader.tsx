@@ -28,7 +28,7 @@ export default function ShowHeader() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Test your knowledge of geography, demographics, and statistics across cities and states
+            Test your knowledge across cities and states
           </motion.p>
         </div>
 
