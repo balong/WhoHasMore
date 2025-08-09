@@ -203,9 +203,9 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto px-3">
-      <div className="space-y-4">
-        <div className="text-center space-y-2">
+    <div className="w-full max-w-xl mx-auto px-2 md:px-3">
+      <div className="space-y-2 md:space-y-4">
+        <div className="text-center space-y-1 md:space-y-2">
           <p className="text-heading font-bold text-primary">
             {formatQuestion(question.category)}
           </p>
@@ -216,7 +216,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
 
         {/* Answer Options */}
         <div className="w-full mx-auto" style={{maxWidth: '400px'}}>
-          <div className="grid grid-cols-1 gap-3">
+          <div className="grid grid-cols-1 gap-2 md:gap-3">
             {[question.optionA, question.optionB].map((option, index) => {
               const letter = String.fromCharCode(65 + index) as 'A' | 'B';
               const isSelected = selectedAnswer === letter;
@@ -287,7 +287,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-3 w-full mx-auto"
+            className="mt-2 md:mt-3 w-full mx-auto"
             style={{maxWidth: '400px'}}
           >
             <div className="nintendo-card text-left">
