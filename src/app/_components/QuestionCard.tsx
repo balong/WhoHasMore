@@ -5,6 +5,7 @@ import { CheckCircle2, XCircle, Trophy, Target, TrendingUp, Info } from 'lucide-
 import { useGameStore } from '../_stores/gameStore';
 import { Question } from '../_stores/gameStore';
 import { cleanLocationName } from '../_utils/stateNames';
+import { shallow } from 'zustand/shallow';
 
 interface QuestionCardProps {
   question: Question;
@@ -12,11 +13,14 @@ interface QuestionCardProps {
 }
 
 export default function QuestionCard({ question, onAnswer }: QuestionCardProps) {
-  const { isAnswered, selectedAnswer, wasAnswerCorrect } = useGameStore(state => ({
-    isAnswered: state.gameState === 'answered',
-    selectedAnswer: state.selectedAnswer,
-    wasAnswerCorrect: state.wasAnswerCorrect,
-  }));
+  const { isAnswered, selectedAnswer, wasAnswerCorrect } = useGameStore(
+    state => ({
+      isAnswered: state.gameState === 'answered',
+      selectedAnswer: state.selectedAnswer,
+      wasAnswerCorrect: state.wasAnswerCorrect,
+    }),
+    shallow
+  );
 
   const formatQuestion = (category: string) => {
     switch (category.toLowerCase()) {

@@ -31,7 +31,7 @@
 body {
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--arcade-primary-text);
-  background: var(--arcade-background);
+  background: linear-gradient(135deg, #1a1a1d 0%, #1f2128 100%); /* New Gradient */
   background-attachment: fixed;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
