@@ -215,7 +215,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
         </div>
 
         {/* Answer Options */}
-        <div className="w-full mx-auto" style={{ maxWidth: '300px' }}> {/* Custom narrow width for true 1/3 screen */}
+        <div className="w-full sm:w-80 md:w-72 lg:w-64 xl:w-60 mx-auto"> {/* Responsive narrow widths */}
           <div className="grid grid-cols-1 gap-4">
             {[question.optionA, question.optionB].map((option, index) => {
               const letter = String.fromCharCode(65 + index) as 'A' | 'B';
