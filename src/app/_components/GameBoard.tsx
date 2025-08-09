@@ -19,59 +19,31 @@ export default function GameBoard() {
     return (
       <div className="w-full max-w-4xl mx-auto">
         <motion.div 
-          className="card-elevated p-16 pb-20"
+          className="card-elevated p-16 pb-24"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="text-center space-y-12">
-            
-            {/* Hero Icon */}
-            <motion.div 
-              className="w-32 h-32 bg-gradient-to-br from-accent-primary via-accent-secondary to-purple-500 rounded-full mx-auto flex items-center justify-center shadow-2xl"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <motion.span 
-                className="text-6xl"
-                animate={{ 
-                  rotate: [0, 10, -10, 0],
-                  scale: [1, 1.1, 1, 1.1, 1]
-                }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut",
-                  repeatDelay: 2
-                }}
-              >
-                🎯
-              </motion.span>
-            </motion.div>
+          <div className="text-center space-y-16">
             
             {/* Simplified Hero Text */}
             <motion.div 
-              className="space-y-6"
+              className="space-y-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-display text-primary font-bold leading-tight">
-                Ready to Play?
-              </h2>
-              <p className="text-body-lg text-secondary leading-relaxed max-w-lg mx-auto">
+              <p className="text-heading-lg text-secondary leading-relaxed max-w-xl mx-auto">
                 Choose which place has more. Test your intuition against real data.
               </p>
             </motion.div>
             
             {/* Enhanced Category Grid */}
             <motion.div 
-              className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
               {[
                 { icon: '👥', label: 'Population', color: 'from-blue-500 to-cyan-400' },
@@ -83,44 +55,41 @@ export default function GameBoard() {
               ].map((category, index) => (
                 <motion.div
                   key={category.label}
-                  className="group relative overflow-hidden rounded-2xl bg-gradient-to-br border border-glass-border backdrop-blur-sm"
-                  style={{
-                    background: `linear-gradient(135deg, rgba(var(--surface-card-rgb), 0.8), rgba(var(--surface-card-rgb), 0.6))`
-                  }}
+                  className="group relative overflow-hidden rounded-2xl bg-surface-card border border-glass-border backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ 
                     duration: 0.5, 
-                    delay: 0.8 + (index * 0.1),
+                    delay: 0.6 + (index * 0.1),
                     type: "spring",
                     stiffness: 100
                   }}
                   whileHover={{ 
                     scale: 1.05, 
-                    boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)"
+                    y: -5
                   }}
                 >
-                  <div className="p-4 text-center">
-                    <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-200">
+                  <div className="p-6 text-center">
+                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-200">
                       {category.icon}
                     </div>
-                    <div className="text-caption text-primary font-medium tracking-wide">
+                    <div className="text-body font-semibold text-primary tracking-wide">
                       {category.label}
                     </div>
                   </div>
                   
                   {/* Subtle gradient overlay on hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-2xl`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-15 transition-opacity duration-300 rounded-2xl`} />
                 </motion.div>
               ))}
             </motion.div>
             
-            {/* Premium Call-to-Action */}
+            {/* Premium Call-to-Action with More Spacing */}
             <motion.div 
-              className="pt-8"
+              className="pt-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
             >
               <StartButton />
             </motion.div>

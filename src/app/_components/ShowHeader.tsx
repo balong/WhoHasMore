@@ -13,23 +13,15 @@ export default function ShowHeader() {
     <div className="w-full">
       <div className="space-y-8">
         {/* Main Title */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-6">
           <motion.h1 
-            className="text-display-lg gradient-text font-bold"
+            className="text-display-lg text-primary font-bold leading-tight"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             Who Has More?
           </motion.h1>
-          <motion.p 
-            className="text-body-lg text-secondary max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Test your knowledge across cities and states
-          </motion.p>
         </div>
 
         {/* Score Display - Only show when game is active */}
