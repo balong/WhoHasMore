@@ -242,16 +242,16 @@ export default function QuestionCard() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-3 md:py-6 relative z-10">
+    <div className="w-full max-w-4xl mx-auto p-4 relative z-10">
       {/* Question Header */}
-      <div className="text-center mb-4 md:mb-8">
+      <div className="text-center mb-4">
         <h2 className="text-question">
           {formatQuestion(question.category)}
         </h2>
       </div>
 
       {/* Answer Options */}
-      <div className="w-full mx-auto mb-4 md:mb-8" style={{maxWidth: '760px'}}>
+      <div className="w-full mx-auto mb-4" style={{maxWidth: '760px'}}>
         <div className="flex flex-col">
           {(['A', 'B'] as const).map((letter, index) => {
             const option = letter === 'A' ? question.optionA : question.optionB;
