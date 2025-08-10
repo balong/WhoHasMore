@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useGameStore } from '../_stores/gameStore';
 import { cleanLocationName } from '../_utils/stateNames';
 import { Check, X, Trophy, Info } from 'lucide-react';
-import { useState } from 'react';
 
 const formatQuestion = (category: string): string => {
   // Get emoji for category
@@ -194,8 +193,6 @@ export default function QuestionCard() {
     submitAnswer 
   } = useGameStore();
 
-  const [hoveredOption, setHoveredOption] = useState<string | null>(null);
-
   if (!question) return null;
 
   const isAnswered = gameState === 'answered';
@@ -262,8 +259,6 @@ export default function QuestionCard() {
                 key={letter}
                 className={`${getAnswerCardClass(letter)} ${letter === 'A' ? 'answer-spacing' : ''}`}
                 onClick={() => handleAnswerSelect(letter)}
-                onHoverStart={() => setHoveredOption(letter)}
-                onHoverEnd={() => setHoveredOption(null)}
                 whileHover={!isAnswered ? { scale: 1.01 } : {}}
                 whileTap={!isAnswered ? { scale: 0.99 } : {}}
                 layout
