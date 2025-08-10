@@ -19,8 +19,8 @@ export default function GameBoard() {
 
   if (gameState === 'idle') {
     return (
-      <div className="w-full max-w-4xl mx-auto px-4">
-        <div className="nintendo-card text-center space-y-4 md:space-y-6 lg:space-y-8">
+      <div className="w-full max-w-4xl mx-auto h-full flex items-center px-4">
+        <div className="arcade-card w-full text-center space-y-4 md:space-y-6 lg:space-y-8">
           {/* Hero Section */}
           <div className="space-y-3 md:space-y-4 lg:space-y-6">
             <h2 className="text-display-lg md:text-display-hero text-white font-bold leading-tight">
@@ -32,7 +32,7 @@ export default function GameBoard() {
           </div>
           
           {/* Category Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 py-4 md:py-6 lg:py-8 mb-6 md:mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6 py-4 md:py-6 lg:py-8 mb-6 md:mb-8">
             <div className="category-chip">
               <span className="category-chip-icon">👥</span>
               <span>Population</span>
@@ -57,14 +57,6 @@ export default function GameBoard() {
               <span className="category-chip-icon">🏥</span>
               <span>Health</span>
             </div>
-            <div className="category-chip">
-              <span className="category-chip-icon">🚗</span>
-              <span>Transport</span>
-            </div>
-            <div className="category-chip">
-              <span className="category-chip-icon">🎨</span>
-              <span>Culture</span>
-            </div>
           </div>
           
           {/* Start Button Section */}
@@ -77,24 +69,21 @@ export default function GameBoard() {
   }
 
   return (
-    <div className="w-full space-y-4 md:space-y-6">
+    <div className="w-full max-w-4xl mx-auto h-full flex flex-col justify-center space-y-4 md:space-y-6">
       <QuestionCard />
-    
+
       {gameState === 'answered' && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, type: "spring", stiffness: 300, damping: 30 }}
+          transition={{ delay: 0.8, type: 'spring', stiffness: 300, damping: 30 }}
           className="flex justify-center next-button-spacing"
         >
-          <button
-            onClick={handleNextQuestion}
-            className="nintendo-btn nintendo-btn-primary"
-          >
+          <button onClick={handleNextQuestion} className="arcade-btn arcade-btn-primary">
             Next Question
           </button>
         </motion.div>
       )}
     </div>
   );
-} 
+}
