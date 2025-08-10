@@ -9,10 +9,10 @@ export default function Home() {
   const { showConfetti, showStarburst } = useGameStore();
 
   return (
-    <main className="min-h-screen relative">
+    <main className="relative flex min-h-screen items-center justify-center p-4 md:p-8">
       <ConfettiEffect trigger={showConfetti} type="confetti" />
       <ConfettiEffect trigger={showStarburst} type="starburst" />
-      <div className="px-4 py-4 space-y-4 md:px-6 md:py-8 md:space-y-8">
+      <div className="w-full max-w-5xl space-y-6 rounded-3xl bg-white/30 p-6 shadow-xl backdrop-blur-lg md:space-y-10 md:p-12">
         <ShowHeader />
         <GameBoard />
       </div>
