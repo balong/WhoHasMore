@@ -32,7 +32,7 @@ export default function GameBoard() {
           </div>
           
           {/* Category Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 py-4 md:py-6 lg:py-8 mb-6 md:mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 py-2 md:py-3 lg:py-4 mb-4 md:mb-6">
             <div className="category-chip">
               <span className="category-chip-icon">👥</span>
               <span>Population</span>
@@ -77,9 +77,9 @@ export default function GameBoard() {
   }
 
   return (
-    <div className="w-full space-y-4 md:space-y-6">
+    <div className="w-full max-w-4xl mx-auto px-4 flex flex-col items-center justify-center gap-4 md:gap-6">
       <QuestionCard />
-    
+
       {gameState === 'answered' && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -97,4 +97,4 @@ export default function GameBoard() {
       )}
     </div>
   );
-} 
+}

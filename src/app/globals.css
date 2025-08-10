@@ -5,28 +5,28 @@
 /* Import modern font pairings */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Nintendo-Inspired Bright & Playful Design System */
+/* Professional, neutral design system */
 :root {
-  --nintendo-red: #e60012;
-  --nintendo-blue: #0066cc;
-  --nintendo-yellow: #ffcc00;
-  --nintendo-green: #00a652;
-  --nintendo-purple: #8b5fbf;
-  --nintendo-orange: #ff6600;
-  --nintendo-pink: #ff69b4;
-  
+  --nintendo-red: #dc2626;
+  --nintendo-blue: #2563eb;
+  --nintendo-yellow: #eab308;
+  --nintendo-green: #16a34a;
+  --nintendo-purple: #7c3aed;
+  --nintendo-orange: #f97316;
+  --nintendo-pink: #ec4899;
+
   /* Background colors */
-  --nintendo-bg-primary: #e8f4fd;
-  --nintendo-bg-secondary: #f0f8ff;
-  
+  --nintendo-bg-primary: #f8fafc;
+  --nintendo-bg-secondary: #e2e8f0;
+
   /* Text colors */
-  --nintendo-primary-text: #1a365d;
-  --nintendo-secondary-text: #4a5568;
-  --nintendo-tertiary-text: #718096;
-  
+  --nintendo-primary-text: #1f2937;
+  --nintendo-secondary-text: #4b5563;
+  --nintendo-tertiary-text: #6b7280;
+
   /* Card colors */
-  --nintendo-card-bg: rgba(255, 255, 255, 0.95);
-  --nintendo-card-border: rgba(255, 255, 255, 0.6);
+  --nintendo-card-bg: rgba(255, 255, 255, 0.9);
+  --nintendo-card-border: rgba(0, 0, 0, 0.05);
   
   /* Spacing grid - 8pt system */
   --space-1: 0.125rem; /* 2px */
@@ -120,8 +120,7 @@
 /* Enhanced body styling - Static background */
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(ellipse at center, #87ceeb 0%, #4682b4 50%, #1e3a8a 100%);
-  background-attachment: fixed;
+  background: linear-gradient(to bottom right, var(--nintendo-bg-primary), var(--nintendo-bg-secondary));
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
