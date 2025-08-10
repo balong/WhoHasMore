@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle2, XCircle, Trophy, Info } from 'lucide-react';
+import { CheckCircle2, XCircle, Trophy, Target, TrendingUp, Info } from 'lucide-react';
 import { useGameStore } from '../_stores/gameStore';
 import { Question } from '../_stores/gameStore';
 import { cleanLocationName } from '../_utils/stateNames';
@@ -206,7 +206,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
     <div className="w-full max-w-xl mx-auto px-2.5 md:px-3">
       <div className="space-y-3 md:space-y-4">
         <div className="text-center space-y-1.5 md:space-y-2">
-          <p className="text-2xl md:text-3xl font-black text-primary leading-tight">
+          <p className="text-question font-bold text-primary">
             {formatQuestion(question.category)}
           </p>
           <p className="text-small text-secondary">
@@ -242,26 +242,38 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
                   key={letter}
                   onClick={() => !isAnswered && onAnswer(letter)}
                   className={optionClass}
-                  whileHover={!isAnswered ? { scale: 1.02 } : undefined}
-                  whileTap={!isAnswered ? { scale: 0.98 } : undefined}
+                  disabled={isAnswered}
+                  whileHover={!isAnswered ? { y: -4, scale: 1.02 } : {}}
+                  whileTap={!isAnswered ? { scale: 0.98 } : {}}
                 >
-                  <div className="flex items-center gap-5">
+                  <div className="flex items-center gap-4">
                     <div className={badgeClass}>
                       {letter}
                     </div>
                     <div className="flex-1 text-left">
-                      <div className="text-body font-bold text-primary">
-                        {option.name}
+                      <div className="text-heading text-primary font-semibold">
+                        {cleanLocationName(option.name)}
                       </div>
                       {isAnswered && (
-                        <div className="text-small text-secondary mt-1">
-                          <span className="font-medium">
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          transition={{ delay: 0.2 }}
+                          className="mt-2 text-body text-secondary"
+                        >
+                          <span className="text-mono font-medium text-accent">
                             {option.value.toLocaleString()}
                           </span>
-                          <span className="ml-1 opacity-75">{option.unit}</span>
-                        </div>
+                          <span className="text-muted ml-1">{option.unit}</span>
+                        </motion.div>
                       )}
                     </div>
+                    {isAnswered && (
+                      <div className="flex-shrink-0">
+                        {selectedAnswer === letter && (wasAnswerCorrect ? <CheckCircle2 className="h-6 w-6 text-success" /> : <XCircle className="h-6 w-6 text-error" />)}
+                        {question.correctAnswer === letter && selectedAnswer !== letter && <CheckCircle2 className="h-6 w-6 text-success" />}
+                      </div>
+                    )}
                   </div>
                 </motion.button>
               );
