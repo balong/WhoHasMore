@@ -282,7 +282,7 @@ export default function QuestionCard() {
                     )}
                   </div>
                   <div className="flex-1 text-left">
-                    <div className="text-body-lg font-semibold text-nintendo-primary-text">
+                    <div className="text-body-lg font-semibold text-arcade-primary-text">
                       {cleanedOption}
                     </div>
                     {isAnswered && (
@@ -292,7 +292,7 @@ export default function QuestionCard() {
                         transition={{ delay: 0.3 }}
                         className="mt-2"
                       >
-                        <div className="text-small text-nintendo-secondary-text">
+                        <div className="text-small text-arcade-secondary-text">
                           Value: {option.value?.toLocaleString()} {option.unit}
                         </div>
                       </motion.div>
@@ -314,9 +314,12 @@ export default function QuestionCard() {
           className="w-full mx-auto explanation-spacing"
           style={{maxWidth: '760px'}}
         >
-          <div className="nintendo-card text-left">
+          <div className="arcade-card text-left">
             <div className="flex items-start gap-3 md:gap-4">
-              <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
+              <div
+                className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center"
+                style={{ background: 'linear-gradient(to bottom right, var(--arcade-blue), var(--arcade-purple))' }}
+              >
                 {wasAnswerCorrect ? (
                   <Trophy className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white" />
                 ) : (
@@ -325,7 +328,7 @@ export default function QuestionCard() {
               </div>
               <div className="flex-1 space-y-1.5 md:space-y-2 lg:space-y-3">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-heading font-bold text-nintendo-primary-text">
+                  <h3 className="text-heading font-bold text-arcade-primary-text">
                     {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}
                   </h3>
                   {wasAnswerCorrect && (
@@ -333,13 +336,13 @@ export default function QuestionCard() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.7, type: "spring", stiffness: 500, damping: 20 }}
-                      className="text-nintendo-green"
+                      className="text-arcade-green"
                     >
                       ✨
                     </motion.div>
                   )}
                 </div>
-                <p className="text-body text-nintendo-secondary-text leading-relaxed">
+                <p className="text-body text-arcade-secondary-text leading-relaxed">
                   {question.explanation}
                 </p>
               </div>
