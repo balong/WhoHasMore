@@ -29,6 +29,10 @@ interface GameStore {
   answeredQuestions: Set<string>;
   selectedAnswer: 'A' | 'B' | null;
   wasAnswerCorrect: boolean | null;
+  currentStreak: number;
+  bestAccuracy: number;
+  showConfetti: boolean;
+  showStarburst: boolean;
   startGame: () => void;
   submitAnswer: (answer: 'A' | 'B') => void;
   nextQuestion: () => void;
@@ -127,6 +131,10 @@ export const useGameStore = create<GameStore>((set, get) => ({
   answeredQuestions: new Set(),
   selectedAnswer: null,
   wasAnswerCorrect: null,
+  currentStreak: 0,
+  bestAccuracy: 0,
+  showConfetti: false,
+  showStarburst: false,
 
   startGame: () => {
     if (typeof window === 'undefined') return;
@@ -158,18 +166,33 @@ export const useGameStore = create<GameStore>((set, get) => ({
         answeredQuestions: new Set(),
         selectedAnswer: null,
         wasAnswerCorrect: null,
+        currentStreak: 0,
+        bestAccuracy: 0,
+        showConfetti: false,
+        showStarburst: false,
       });
     })();
   },
 
   submitAnswer: (answer: 'A' | 'B') => {
-    const { currentQuestion, answeredQuestions } = get();
+    const { currentQuestion, answeredQuestions, currentStreak, bestAccuracy } = get();
     if (!currentQuestion) return;
 
     const isCorrect = answer === currentQuestion.correctAnswer;
     const newScore = isCorrect ? get().score + 1 : get().score;
     const newAnsweredQuestions = new Set(answeredQuestions);
     newAnsweredQuestions.add(currentQuestion.id);
+    
+    // Calculate new streak
+    const newStreak = isCorrect ? currentStreak + 1 : 0;
+    
+    // Calculate accuracy and check for new best
+    const newAccuracy = newAnsweredQuestions.size > 0 ? Math.round((newScore / newAnsweredQuestions.size) * 100) : 0;
+    const isNewBest = newAccuracy > bestAccuracy && newAnsweredQuestions.size >= 3; // Only count best after 3+ questions
+    
+    // Trigger celebrations
+    const shouldShowConfetti = newStreak >= 3 && isCorrect;
+    const shouldShowStarburst = isNewBest;
 
     set({
       score: newScore,
@@ -177,7 +200,22 @@ export const useGameStore = create<GameStore>((set, get) => ({
       answeredQuestions: newAnsweredQuestions,
       selectedAnswer: answer,
       wasAnswerCorrect: isCorrect,
+      currentStreak: newStreak,
+      bestAccuracy: Math.max(bestAccuracy, newAccuracy),
+      showConfetti: shouldShowConfetti,
+      showStarburst: shouldShowStarburst,
     });
+    
+    // Reset celebration flags after a short delay
+    if (shouldShowConfetti || shouldShowStarburst) {
+      setTimeout(() => {
+        set(state => ({
+          ...state,
+          showConfetti: false,
+          showStarburst: false,
+        }));
+      }, 100);
+    }
   },
 
   nextQuestion: () => {
@@ -209,6 +247,10 @@ export const useGameStore = create<GameStore>((set, get) => ({
       answeredQuestions: new Set(),
       selectedAnswer: null,
       wasAnswerCorrect: null,
+      currentStreak: 0,
+      bestAccuracy: 0,
+      showConfetti: false,
+      showStarburst: false,
     });
   },
 })); 

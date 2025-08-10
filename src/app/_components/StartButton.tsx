@@ -1,25 +1,22 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
 import { useGameStore } from '../_stores/gameStore';
 
 export default function StartButton() {
-  const { startGame } = useGameStore();
-  
-  const handleStart = () => {
-    startGame();
-  };
+  const startGame = useGameStore(state => state.startGame);
 
   return (
     <motion.button
-      onClick={handleStart}
-      className="nintendo-btn nintendo-btn-primary"
+      onClick={startGame}
+      className="nintendo-btn nintendo-btn-primary text-xl px-12 py-4"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, type: "spring", stiffness: 300, damping: 30 }}
     >
-      <Play className="h-6 w-6" />
-      <span>Start Game</span>
+      Start Playing
     </motion.button>
   );
 } 

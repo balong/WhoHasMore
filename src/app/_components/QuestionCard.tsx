@@ -1,319 +1,352 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle2, XCircle, Trophy, Target, TrendingUp, Info } from 'lucide-react';
 import { useGameStore } from '../_stores/gameStore';
-import { Question } from '../_stores/gameStore';
 import { cleanLocationName } from '../_utils/stateNames';
+import { Check, X, Trophy, Info } from 'lucide-react';
+import { useState } from 'react';
 
-interface QuestionCardProps {
-  question: Question;
-  onAnswer: (answer: 'A' | 'B') => void;
-}
+const formatQuestion = (category: string): string => {
+  // Get emoji for category
+  const getEmoji = (cat: string) => {
+    const categoryKey = cat.toLowerCase();
+    if (categoryKey.includes('population')) return '👥 ';
+    if (categoryKey.includes('robbery')) return '🚔 ';
+    if (categoryKey.includes('motor vehicle theft') || categoryKey.includes('theft')) return '🚗 ';
+    if (categoryKey.includes('burglary')) return '🏠 ';
+    if (categoryKey.includes('murder')) return '🚔 ';
+    if (categoryKey.includes('vandalism')) return '🚔 ';
+    if (categoryKey.includes('dui')) return '🚔 ';
+    if (categoryKey.includes('arson')) return '🚔 ';
+    if (categoryKey.includes('liquor')) return '🚔 ';
+    if (categoryKey.includes('disorderly')) return '🚔 ';
+    if (categoryKey.includes('shoplifting')) return '🚔 ';
+    if (categoryKey.includes('house price') || categoryKey.includes('housing')) return '🏠 ';
+    if (categoryKey.includes('income') || categoryKey.includes('wage') || categoryKey.includes('unemployment') || categoryKey.includes('cost of living')) return '💰 ';
+    if (categoryKey.includes('education') || categoryKey.includes('school') || categoryKey.includes('graduation') || categoryKey.includes('college') || categoryKey.includes('sat')) return '📚 ';
+    if (categoryKey.includes('health') || categoryKey.includes('life expectancy') || categoryKey.includes('obesity') || categoryKey.includes('mortality') || categoryKey.includes('healthcare')) return '🏥 ';
+    if (categoryKey.includes('highway') || categoryKey.includes('bridges') || categoryKey.includes('ev charging') || categoryKey.includes('transit')) return '🚗 ';
+    if (categoryKey.includes('voter') || categoryKey.includes('tax') || categoryKey.includes('government')) return '🏛️ ';
+    if (categoryKey.includes('corn') || categoryKey.includes('farmland') || categoryKey.includes('renewable') || categoryKey.includes('forest') || categoryKey.includes('air quality')) return '🌾 ';
+    if (categoryKey.includes('museums') || categoryKey.includes('restaurants') || categoryKey.includes('breweries') || categoryKey.includes('entertainment') || categoryKey.includes('national park')) return '🎨 ';
+    return '📊 ';
+  };
 
-export default function QuestionCard({ question, onAnswer }: QuestionCardProps) {
-  const gameState = useGameStore(state => state.gameState);
-  const selectedAnswer = useGameStore(state => state.selectedAnswer);
-  const wasAnswerCorrect = useGameStore(state => state.wasAnswerCorrect);
+  const emoji = getEmoji(category);
   
+  // Population questions
+  if (category.includes('Population')) {
+    return `${emoji}Which location has a higher population?`;
+  }
+  
+  // Crime questions  
+  if (category.includes('Robbery')) {
+    return `${emoji}Which state has more robberies per capita?`;
+  }
+  if (category.includes('Motor Vehicle Theft')) {
+    return `${emoji}Which state has more motor vehicle thefts per capita?`;
+  }
+  if (category.includes('Burglary')) {
+    return `${emoji}Which state has more burglaries per capita?`;
+  }
+  if (category.includes('Murder')) {
+    return `${emoji}Which state has more murders per capita?`;
+  }
+  if (category.includes('Vandalism')) {
+    return `${emoji}Which state has more vandalism incidents per capita?`;
+  }
+  if (category.includes('DUI')) {
+    return `${emoji}Which state has more DUI arrests per capita?`;
+  }
+  if (category.includes('Arson')) {
+    return `${emoji}Which state has more arson incidents per capita?`;
+  }
+  if (category.includes('Liquor Law Violations')) {
+    return `${emoji}Which state has more liquor law violations per capita?`;
+  }
+  if (category.includes('Disorderly Conduct')) {
+    return `${emoji}Which state has more disorderly conduct arrests per capita?`;
+  }
+  if (category.includes('Shoplifting')) {
+    return `${emoji}Which state has more shoplifting incidents per capita?`;
+  }
+  
+  // Housing and Economics
+  if (category.includes('House Price Index')) {
+    return `${emoji}Which state has a higher house price index?`;
+  }
+  if (category.includes('Median Household Income')) {
+    return `${emoji}Which state has a higher median household income?`;
+  }
+  if (category.includes('Unemployment Rate')) {
+    return `${emoji}Which state has a higher unemployment rate?`;
+  }
+  if (category.includes('Minimum Wage')) {
+    return `${emoji}Which state has a higher minimum wage?`;
+  }
+  if (category.includes('Cost of Living')) {
+    return `${emoji}Which state has a higher cost of living index?`;
+  }
+  
+  // Education
+  if (category.includes('High School Graduation')) {
+    return `${emoji}Which state has a higher high school graduation rate?`;
+  }
+  if (category.includes('College Attainment')) {
+    return `${emoji}Which state has a higher college attainment rate?`;
+  }
+  if (category.includes('Average SAT Score')) {
+    return `${emoji}Which state has higher average SAT scores?`;
+  }
+  if (category.includes('Education Spending')) {
+    return `${emoji}Which state spends more on education per pupil?`;
+  }
+  
+  // Health
+  if (category.includes('Life Expectancy')) {
+    return `${emoji}Which state has higher life expectancy?`;
+  }
+  if (category.includes('Obesity Rate')) {
+    return `${emoji}Which state has a higher obesity rate?`;
+  }
+  if (category.includes('Infant Mortality')) {
+    return `${emoji}Which state has a higher infant mortality rate?`;
+  }
+  if (category.includes('Healthcare Spending')) {
+    return `${emoji}Which state spends more on healthcare per capita?`;
+  }
+  
+  // Transportation and Infrastructure  
+  if (category.includes('Highway Miles')) {
+    return `${emoji}Which state has more highway miles per capita?`;
+  }
+  if (category.includes('Structurally Deficient Bridges')) {
+    return `${emoji}Which state has a higher percentage of structurally deficient bridges?`;
+  }
+  if (category.includes('EV Charging Stations')) {
+    return `${emoji}Which state has more EV charging stations per capita?`;
+  }
+  if (category.includes('Public Transit Ridership')) {
+    return `${emoji}Which state has higher public transit ridership per capita?`;
+  }
+  
+  // Government and Politics
+  if (category.includes('Voter Turnout')) {
+    return `${emoji}Which state has higher voter turnout?`;
+  }
+  if (category.includes('State Income Tax')) {
+    return `${emoji}Which state has a higher state income tax rate?`;
+  }
+  if (category.includes('Government Employment')) {
+    return `${emoji}Which state has a higher government employment rate?`;
+  }
+  if (category.includes('Property Tax')) {
+    return `${emoji}Which state has higher property tax rates?`;
+  }
+  
+  // Agriculture and Environment
+  if (category.includes('Corn Production')) {
+    return `${emoji}Which state produces more corn?`;
+  }
+  if (category.includes('Farmland Percentage')) {
+    return `${emoji}Which state has a higher percentage of farmland?`;
+  }
+  if (category.includes('Renewable Energy')) {
+    return `${emoji}Which state has a higher percentage of renewable energy?`;
+  }
+  if (category.includes('Forest Coverage')) {
+    return `${emoji}Which state has more forest coverage?`;
+  }
+  if (category.includes('Good air quality days')) {
+    return `${emoji}Which state has more good air quality days?`;
+  }
+  if (category.includes('Unhealthy air quality days')) {
+    return `${emoji}Which state has more unhealthy air quality days?`;
+  }
+  
+  // Culture and Lifestyle
+  if (category.includes('Museums Per Capita')) {
+    return `${emoji}Which state has more museums per capita?`;
+  }
+  if (category.includes('Restaurants Per Capita')) {
+    return `${emoji}Which state has more restaurants per capita?`;
+  }
+  if (category.includes('Breweries Per Capita')) {
+    return `${emoji}Which state has more breweries per capita?`;
+  }
+  if (category.includes('Entertainment Venues')) {
+    return `${emoji}Which state has more entertainment venues per capita?`;
+  }
+  if (category.includes('National Park visitors')) {
+    return `${emoji}Which state has more National Park visitors?`;
+  }
+  
+  // Fallback for any unmatched categories
+  return `${emoji}Which location has a higher ${category.toLowerCase()}?`;
+};
+
+export default function QuestionCard() {
+  const { 
+    currentQuestion: question, 
+    gameState, 
+    selectedAnswer, 
+    wasAnswerCorrect,
+    submitAnswer 
+  } = useGameStore();
+
+  const [hoveredOption, setHoveredOption] = useState<string | null>(null);
+
+  if (!question) return null;
+
   const isAnswered = gameState === 'answered';
 
-  const formatQuestion = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'population':
-        return 'Which city has a higher population?';
-      case 'robbery':
-        return 'Which state has more robberies per capita?';
-      case 'motor vehicle theft':
-        return 'Which state has more instances of motor vehicle theft per capita?';
-      case 'burglary':
-        return 'Which state has more burglaries per capita?';
-      case 'murder':
-        return 'Which state has more murders per capita?';
-      case 'vandalism':
-        return 'Which state has more vandalism incidents per capita?';
-      case 'dui':
-        return 'Which state has more DUI arrests per capita?';
-      case 'arson':
-        return 'Which state has more arson incidents per capita?';
-      case 'liquor law violations':
-        return 'Which state has more liquor law violations per capita?';
-      case 'disorderly conduct':
-        return 'Which state has more disorderly conduct arrests per capita?';
-      case 'shoplifting':
-        return 'Which state has more shoplifting incidents per capita?';
-      case 'public intoxication':
-        return 'Which state has more public intoxication arrests per capita?';
-      case 'gambling':
-        return 'Which state has more gambling violations per capita?';
-      case 'median household income':
-        return 'Which state has a higher median household income?';
-      case 'unemployment rate':
-        return 'Which state has a higher unemployment rate?';
-      case 'minimum wage':
-        return 'Which state has a higher minimum wage?';
-      case 'cost of living index':
-        return 'Which state has a higher cost of living?';
-      case 'high school graduation rate':
-        return 'Which state has a higher high school graduation rate?';
-      case 'college attainment rate':
-        return 'Which state has a higher college attainment rate?';
-      case 'average sat score':
-        return 'Which state has higher average SAT scores?';
-      case 'education spending per pupil':
-        return 'Which state spends more on education per student?';
-      case 'life expectancy':
-        return 'Which state has higher life expectancy?';
-      case 'obesity rate':
-        return 'Which state has a higher obesity rate?';
-      case 'infant mortality rate':
-        return 'Which state has a higher infant mortality rate?';
-      case 'healthcare spending per capita':
-        return 'Which state spends more on healthcare per person?';
-      case 'highway miles per capita':
-        return 'Which state has more highway miles per person?';
-      case 'structurally deficient bridges':
-        return 'Which state has a higher percentage of structurally deficient bridges?';
-      case 'ev charging stations':
-        return 'Which state has more EV charging stations?';
-      case 'public transit ridership per capita':
-        return 'Which state has higher public transit ridership per person?';
-      case 'voter turnout':
-        return 'Which state has higher voter turnout?';
-      case 'state income tax rate':
-        return 'Which state has a higher state income tax rate?';
-      case 'government employment rate':
-        return 'Which state has a higher government employment rate?';
-      case 'property tax rate':
-        return 'Which state has higher property tax rates?';
-      case 'corn production':
-        return 'Which state produces more corn?';
-      case 'farmland percentage':
-        return 'Which state has a higher percentage of farmland?';
-      case 'renewable energy percentage':
-        return 'Which state has a higher percentage of renewable energy?';
-      case 'forest coverage percentage':
-        return 'Which state has more forest coverage?';
-      case 'museums per capita':
-        return 'Which state has more museums per capita?';
-      case 'restaurants per capita':
-        return 'Which state has more restaurants per capita?';
-      case 'breweries per capita':
-        return 'Which state has more breweries per capita?';
-      case 'entertainment venues per capita':
-        return 'Which state has more entertainment venues per capita?';
-      case 'house price index':
-        return 'Which state has a higher house price index?';
-      default:
-        return `Which place has a higher ${category.toLowerCase()}?`;
-    }
+  const handleAnswerSelect = (option: 'A' | 'B') => {
+    if (isAnswered) return;
+    submitAnswer(option);
   };
 
-  const formatValue = (value: number, unit: string) => {
-    if (unit.includes('%') || unit.includes('percent')) {
-      return `${value.toLocaleString(undefined, { maximumFractionDigits: 1 })} ${unit}`;
+  const getAnswerCardClass = (option: 'A' | 'B') => {
+    let classes = 'answer-card';
+    
+    if (selectedAnswer === option) {
+      classes += ' answer-card-selected';
     }
-    if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M ${unit}`;
-    if (value >= 1000) return `${(value / 1000).toFixed(1)}K ${unit}`;
-    return `${value.toLocaleString()} ${unit}`;
-  };
-
-  const getButtonClass = (option: 'A' | 'B') => {
-    let classes = 'answer-option group transition-all duration-300 ease-in-out';
     
     if (isAnswered) {
-      if (selectedAnswer === option) {
-        classes += wasAnswerCorrect ? ' answer-correct' : ' answer-incorrect';
-      } else if (question.correctAnswer === option) {
-        classes += ' answer-correct';
+      const isCorrect = question.correctAnswer === option;
+      if (isCorrect) {
+        classes += ' answer-card-correct';
       } else {
-        classes += ' answer-disabled';
+        // Show incorrect answer as red regardless of whether it was selected
+        classes += ' answer-card-incorrect';
       }
     }
     
     return classes;
   };
 
-  const handleClick = (option: 'A' | 'B') => {
-    if (isAnswered) return;
-    onAnswer(option);
-  };
-
-  const renderBadge = (option: 'A' | 'B') => {
-    if (!isAnswered) return null;
+  const getLetterBadgeClass = (option: 'A' | 'B') => {
+    let classes = 'letter-badge';
     
-    const isCorrect = question.correctAnswer === option;
-    const isSelected = selectedAnswer === option;
-    
-    if (!isCorrect && !isSelected) return null;
-    
-    return (
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-        className="absolute top-3 right-3"
-      >
-        {isCorrect ? (
-          <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center">
-            <CheckCircle2 className="h-5 w-5 text-white" />
-          </div>
-        ) : (
-          <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center">
-            <XCircle className="h-5 w-5 text-white" />
-          </div>
-        )}
-      </motion.div>
-    );
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Population': return '👥';
-      case 'Robbery':
-      case 'Motor vehicle theft':
-      case 'Burglary':
-      case 'Larceny-theft':
-      case 'Violent crime':
-        return '🚨';
-      case 'House Price Index': return '🏠';
-      case 'Median Household Income':
-      case 'Per Capita Income':
-      case 'Civilian Labor Force':
-      case 'Unemployment Rate':
-        return '💰';
-      case 'High School Graduate or Higher':
-      case 'Bachelor\'s Degree or Higher':
-        return '🎓';
-      case 'Health Insurance Coverage':
-      case 'Life Expectancy':
-        return '🏥';
-      case 'Mean Commute Time':
-      case 'Means of Transportation to Work: Drove Alone':
-        return '🚗';
-      case 'Voter Turnout':
-        return '🏛️';
-      case 'Corn Production':
-      case 'Soybean Production':
-      case 'Wheat Production':
-      case 'Cotton Production':
-        return '🌾';
-      default: return '❓';
+    if (isAnswered) {
+      const isCorrect = question.correctAnswer === option;
+      if (isCorrect) {
+        classes += ' letter-badge-correct';
+      } else {
+        // Show incorrect answer badge as red regardless of whether it was selected
+        classes += ' letter-badge-incorrect';
+      }
     }
+    
+    return classes;
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto px-2.5 md:px-3">
-      <div className="space-y-3 md:space-y-4">
-        <div className="text-center space-y-1.5 md:space-y-2">
-          <p className="text-question font-bold text-primary">
-            {formatQuestion(question.category)}
-          </p>
-          <p className="text-small text-secondary">
-            {question.category}
-          </p>
-        </div>
+    <div className="w-full max-w-4xl mx-auto px-4 py-6 relative z-10">
+      {/* Question Header */}
+      <div className="text-center mb-8">
+        <h2 className="text-question">
+          {formatQuestion(question.category)}
+        </h2>
+      </div>
 
-        {/* Answer Options */}
-        <div className="w-full mx-auto" style={{maxWidth: '400px'}}>
-          <div className="grid grid-cols-1 gap-2.5 md:gap-3">
-            {[question.optionA, question.optionB].map((option, index) => {
-              const letter = String.fromCharCode(65 + index) as 'A' | 'B';
-              const isSelected = selectedAnswer === letter;
-              const isCorrect = letter === question.correctAnswer;
-              const showResult = isAnswered;
-              
-              let optionClass = 'answer-option';
-              if (showResult && isCorrect) {
-                optionClass += ' answer-correct';
-              } else if (showResult && isSelected && !isCorrect) {
-                optionClass += ' answer-incorrect';
-              }
-              
-              let badgeClass = 'letter-badge';
-              if (showResult && isCorrect) {
-                badgeClass += ' letter-badge-correct';
-              } else if (showResult && isSelected && !isCorrect) {
-                badgeClass += ' letter-badge-incorrect';
-              }
-
-              return (
-                <motion.button
-                  key={letter}
-                  onClick={() => !isAnswered && onAnswer(letter)}
-                  className={optionClass}
-                  disabled={isAnswered}
-                  whileHover={!isAnswered ? { y: -4, scale: 1.02 } : {}}
-                  whileTap={!isAnswered ? { scale: 0.98 } : {}}
-                >
-                  <div className="flex items-center" style={{gap: '10px'}}>
-                    <div className={badgeClass}>
-                      {letter}
-                    </div>
-                    <div className="flex-1 text-left">
-                      <div className="text-heading text-primary font-semibold">
-                        {cleanLocationName(option.name)}
-                      </div>
-                      {isAnswered && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          transition={{ delay: 0.2 }}
-                          className="mt-2 text-body text-secondary"
-                        >
-                          <span className="text-mono font-medium text-accent">
-                            {option.value.toLocaleString()}
-                          </span>
-                          <span className="text-muted ml-1">{option.unit}</span>
-                        </motion.div>
-                      )}
-                    </div>
-                    {isAnswered && (
-                      <div className="flex-shrink-0">
-                        {selectedAnswer === letter && (wasAnswerCorrect ? <CheckCircle2 className="h-6 w-6 text-success" /> : <XCircle className="h-6 w-6 text-error" />)}
-                        {question.correctAnswer === letter && selectedAnswer !== letter && <CheckCircle2 className="h-6 w-6 text-success" />}
-                      </div>
+      {/* Answer Options */}
+      <div className="w-full mx-auto mb-8" style={{maxWidth: '760px'}}>
+        <div className="flex flex-col">
+          {(['A', 'B'] as const).map((letter, index) => {
+            const option = letter === 'A' ? question.optionA : question.optionB;
+            const cleanedOption = cleanLocationName(option.name);
+            
+            return (
+              <motion.div
+                key={letter}
+                className={`${getAnswerCardClass(letter)} ${letter === 'A' ? 'answer-spacing' : ''}`}
+                onClick={() => handleAnswerSelect(letter)}
+                onHoverStart={() => setHoveredOption(letter)}
+                onHoverEnd={() => setHoveredOption(null)}
+                whileHover={!isAnswered ? { scale: 1.01 } : {}}
+                whileTap={!isAnswered ? { scale: 0.99 } : {}}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, type: "spring", stiffness: 300, damping: 30 }}
+              >
+                <div className="flex items-center" style={{gap: '10px'}}>
+                  <div className={getLetterBadgeClass(letter)}>
+                    {isAnswered && question.correctAnswer === letter ? (
+                      <Check className="w-4 h-4" />
+                    ) : isAnswered && selectedAnswer === letter && question.correctAnswer !== letter ? (
+                      <X className="w-4 h-4" />
+                    ) : (
+                      letter
                     )}
                   </div>
-                </motion.button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Explanation Card */}
-        {isAnswered && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="mt-3 md:mt-3 w-full mx-auto"
-            style={{maxWidth: '400px'}}
-          >
-            <div className="nintendo-card text-left">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
-                  {wasAnswerCorrect ? (
-                    <Trophy className="h-5 w-5 text-white" />
-                  ) : (
-                    <Info className="h-5 w-5 text-white" />
-                  )}
-                </div>
-                <div className="flex-1 space-y-2">
-                  <div>
-                    <h3 className="text-body font-semibold text-primary mb-1">
-                      {wasAnswerCorrect ? 'Correct!' : 'Not quite right'}
-                    </h3>
-                    <p className="text-small text-secondary">
-                      {question.explanation}
-                    </p>
+                  <div className="flex-1 text-left">
+                    <div className="text-body-lg font-semibold text-nintendo-primary-text">
+                      {cleanedOption}
+                    </div>
+                    {isAnswered && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        transition={{ delay: 0.3 }}
+                        className="mt-2"
+                      >
+                        <div className="text-small text-nintendo-secondary-text">
+                          Value: {option.value?.toLocaleString()} {option.unit}
+                        </div>
+                      </motion.div>
+                    )}
                   </div>
                 </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Explanation Card */}
+      {isAnswered && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, type: "spring", stiffness: 300, damping: 30 }}
+          className="w-full mx-auto explanation-spacing"
+          style={{maxWidth: '760px'}}
+        >
+          <div className="nintendo-card text-left">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
+                {wasAnswerCorrect ? (
+                  <Trophy className="h-6 w-6 text-white" />
+                ) : (
+                  <Info className="h-6 w-6 text-white" />
+                )}
+              </div>
+              <div className="flex-1 space-y-3">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-heading font-bold text-nintendo-primary-text">
+                    {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}
+                  </h3>
+                  {wasAnswerCorrect && (
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ delay: 0.7, type: "spring", stiffness: 500, damping: 20 }}
+                      className="text-nintendo-green"
+                    >
+                      ✨
+                    </motion.div>
+                  )}
+                </div>
+                <p className="text-body text-nintendo-secondary-text leading-relaxed">
+                  {question.explanation}
+                </p>
               </div>
             </div>
-          </motion.div>
-        )}
-      </div>
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 }
