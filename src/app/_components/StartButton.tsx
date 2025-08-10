@@ -9,7 +9,7 @@ export default function StartButton() {
   return (
     <motion.button
       onClick={startGame}
-      className="nintendo-btn nintendo-btn-primary text-xl px-12 py-4"
+      className="arcade-btn arcade-btn-primary text-xl px-12 py-4"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: 20 }}

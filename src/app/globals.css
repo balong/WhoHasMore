@@ -5,29 +5,30 @@
 /* Import modern font pairings */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Nintendo-Inspired Bright & Playful Design System */
+/* Apple Arcade inspired polished design system */
 :root {
-  --nintendo-red: #e60012;
-  --nintendo-blue: #0066cc;
-  --nintendo-yellow: #ffcc00;
-  --nintendo-green: #00a652;
-  --nintendo-purple: #8b5fbf;
-  --nintendo-orange: #ff6600;
-  --nintendo-pink: #ff69b4;
-  
+  /* Core palette */
+  --arcade-blue: #4f46e5;
+  --arcade-purple: #9333ea;
+  --arcade-pink: #ec4899;
+  --arcade-green: #10b981;
+  --arcade-red: #ef4444;
+  --arcade-orange: #f97316;
+  --arcade-yellow: #eab308;
+
   /* Background colors */
-  --nintendo-bg-primary: #e8f4fd;
-  --nintendo-bg-secondary: #f0f8ff;
-  
+  --arcade-bg-primary: #0f172a;
+  --arcade-bg-secondary: #1e293b;
+
   /* Text colors */
-  --nintendo-primary-text: #1a365d;
-  --nintendo-secondary-text: #4a5568;
-  --nintendo-tertiary-text: #718096;
-  
+  --arcade-primary-text: #f1f5f9;
+  --arcade-secondary-text: #cbd5e1;
+  --arcade-tertiary-text: #94a3b8;
+
   /* Card colors */
-  --nintendo-card-bg: rgba(255, 255, 255, 0.95);
-  --nintendo-card-border: rgba(255, 255, 255, 0.6);
-  
+  --arcade-card-bg: rgba(255, 255, 255, 0.08);
+  --arcade-card-border: rgba(255, 255, 255, 0.15);
+
   /* Spacing grid - 8pt system */
   --space-1: 0.125rem; /* 2px */
   --space-2: 0.25rem;  /* 4px */
@@ -84,7 +85,7 @@
   font-size: 1rem; /* 16px */
   font-weight: 500;
   line-height: 1.5;
-  color: var(--nintendo-primary-text);
+  color: var(--arcade-primary-text);
 }
 
 .text-small {
@@ -92,7 +93,7 @@
   font-size: 0.875rem; /* 14px */
   font-weight: 500;
   line-height: 1.4;
-  color: var(--nintendo-secondary-text);
+  color: var(--arcade-secondary-text);
 }
 
 .text-caption {
@@ -100,7 +101,7 @@
   font-size: 0.75rem; /* 12px */
   font-weight: 500;
   line-height: 1.3;
-  color: var(--nintendo-tertiary-text);
+  color: var(--arcade-tertiary-text);
 }
 
 /* Question text - hero treatment */
@@ -117,11 +118,13 @@
   text-align: center;
 }
 
-/* Enhanced body styling - Static background */
+/* Global body styling with rich arcade gradient */
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(ellipse at center, #87ceeb 0%, #4682b4 50%, #1e3a8a 100%);
+  background: radial-gradient(circle at 20% 20%, var(--arcade-blue) 0%, var(--arcade-bg-primary) 80%);
+  background-color: var(--arcade-bg-primary);
   background-attachment: fixed;
+  color: var(--arcade-primary-text);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -136,22 +139,21 @@ body::after {
   display: none;
 }
 
-/* Enhanced logo with better contrast */
+/* Clean title styling */
 .logo-text {
   font-family: 'Sora', sans-serif;
   font-size: 3rem;
   font-weight: 900;
   line-height: 0.9;
   letter-spacing: -0.05em;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #ffffff 100%);
+  background: linear-gradient(135deg, var(--arcade-blue), var(--arcade-purple));
   background-size: 200% 200%;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 2px 4px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   position: relative;
   display: inline-block;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
 }
 
 .logo-text::after {
@@ -160,56 +162,11 @@ body::after {
   bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--nintendo-yellow), transparent);
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--arcade-blue), var(--arcade-purple));
   border-radius: 2px;
-}
-
-/* Compact score container for top-right placement */
-.score-container-compact {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-  padding: var(--space-8) var(--space-12);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
-}
-
-/* Separated score containers */
-.score-container-separated {
-  display: flex;
-  gap: var(--space-4);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
-}
-
-/* Desktop score display - positioned on the right */
-.score-container-separated {
-  position: fixed;
-  top: var(--space-4);
-  right: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  z-index: 100;
-}
-
-.score-item {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  padding: var(--space-4) var(--space-6);
-  text-align: center;
-  min-width: 100px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
 }
 
 /* Category chip styling */
@@ -217,70 +174,65 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: var(--arcade-card-bg);
+  border: 1px solid var(--arcade-card-border);
   border-radius: 20px;
   padding: var(--space-2) var(--space-6);
   backdrop-filter: blur(8px);
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--nintendo-secondary-text);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: var(--arcade-primary-text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .category-chip-icon {
   width: 16px;
   height: 16px;
-  opacity: 0.8;
 }
 
 /* Enhanced answer cards with tactile design */
 .answer-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: var(--arcade-card-bg);
+  border: 1px solid var(--arcade-card-border);
   border-radius: 16px;
   padding: var(--space-6) var(--space-8);
   cursor: pointer;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(8px);
+  color: var(--arcade-primary-text);
 }
 
 .answer-card:hover {
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 
-    0 8px 24px rgba(0, 0, 0, 0.12),
-    0 4px 8px rgba(0, 0, 0, 0.06);
-  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .answer-card:active {
   transform: translateY(-1px) scale(1.005);
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.1),
-    0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .answer-card-selected {
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(139, 95, 191, 0.15));
-  border-color: var(--nintendo-blue);
-  box-shadow: 
-    0 4px 16px rgba(0, 102, 204, 0.2),
-    0 2px 8px rgba(0, 102, 204, 0.1);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(147, 51, 234, 0.15));
+  border-color: var(--arcade-purple);
+  box-shadow: 0 4px 16px rgba(147, 51, 234, 0.3);
 }
 
 /* Answer card reveal states - full opacity colors */
 .answer-card-correct {
-  background: #00a652 !important;
-  border-color: #00a652 !important;
+  background: var(--arcade-green) !important;
+  border-color: var(--arcade-green) !important;
   color: white !important;
   animation: correctReveal 300ms ease-out;
 }
 
 .answer-card-incorrect {
-  background: #e60012 !important;
-  border-color: #e60012 !important;
+  background: var(--arcade-red) !important;
+  border-color: var(--arcade-red) !important;
   color: white !important;
   animation: incorrectShake 400ms ease-out;
 }
@@ -317,7 +269,7 @@ body::after {
   font-size: 1rem;
   font-weight: 700;
   color: white;
-  background: linear-gradient(135deg, var(--nintendo-blue), var(--nintendo-purple));
+  background: linear-gradient(135deg, var(--arcade-blue), var(--arcade-purple));
   border: 2px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 200ms ease;
@@ -326,12 +278,12 @@ body::after {
 }
 
 .letter-badge-correct {
-  background: linear-gradient(135deg, var(--nintendo-green), #00d26a);
+  background: linear-gradient(135deg, var(--arcade-green), #00d26a);
   animation: badgeCorrect 300ms ease-out;
 }
 
 .letter-badge-incorrect {
-  background: linear-gradient(135deg, var(--nintendo-red), #ff4757);
+  background: linear-gradient(135deg, var(--arcade-red), #ff4757);
   animation: badgeIncorrect 400ms ease-out;
 }
 
@@ -346,68 +298,66 @@ body::after {
   25%, 75% { transform: scale(1.05); }
 }
 
-/* Nintendo card updates */
-.nintendo-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  border: 2px solid rgba(255, 255, 255, 0.6);
+/* Arcade card updates */
+.arcade-card {
+  background: var(--arcade-card-bg);
+  border: 1px solid var(--arcade-card-border);
   border-radius: 20px;
   padding: 0 var(--space-8) var(--space-8) var(--space-8);
   backdrop-filter: blur(12px);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 4px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nintendo-card::before {
+.arcade-card::before {
   content: '';
   position: absolute;
   top: -1px;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--nintendo-red), var(--nintendo-yellow), var(--nintendo-green), var(--nintendo-blue), var(--nintendo-purple));
+  height: 3px;
+  background: linear-gradient(90deg, var(--arcade-blue), var(--arcade-purple));
   border-radius: 20px 20px 0 0;
 }
 
 /* Button enhancements */
-.nintendo-btn {
+.arcade-btn {
   font-family: 'Inter', sans-serif;
   padding: var(--space-6) var(--space-12);
   font-size: 1rem;
   font-weight: 600;
   border-radius: 12px;
   border: none;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  transition: transform 200ms, box-shadow 200ms;
   position: relative;
   overflow: hidden;
 }
 
-.nintendo-btn-primary {
-  background: linear-gradient(135deg, var(--nintendo-blue), var(--nintendo-purple));
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+.arcade-btn-primary {
+  background: linear-gradient(135deg, var(--arcade-blue), var(--arcade-purple));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(147, 51, 234, 0.4);
 }
 
-.nintendo-btn-primary:hover {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+.arcade-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(147, 51, 234, 0.5);
 }
 
-.nintendo-btn-secondary {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
-  color: var(--nintendo-primary-text);
-  border: 2px solid rgba(255, 255, 255, 0.6);
+.arcade-btn-secondary {
+  background: var(--arcade-card-bg);
+  color: var(--arcade-primary-text);
+  border: 1px solid var(--arcade-card-border);
   backdrop-filter: blur(8px);
 }
 
-.nintendo-btn-secondary:hover {
-  transform: translateY(-1px) scale(1.02);
-  border-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+.arcade-btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Mobile responsive adjustments */
@@ -428,22 +378,6 @@ body::after {
     filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
   }
   
-  .score-container-compact {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: var(--space-8) auto;
-  }
-  
-  .score-container-separated {
-    display: none; /* Hide desktop score display on mobile */
-  }
-  
-  .score-item {
-    min-width: 70px;
-    padding: var(--space-4) var(--space-6);
-  }
-  
   .answer-card {
     padding: var(--space-6) var(--space-8);
   }
@@ -456,97 +390,88 @@ body::after {
 }
 
 /* Color utilities */
-.text-nintendo-red { color: var(--nintendo-red); }
-.text-nintendo-blue { color: var(--nintendo-blue); }
-.text-nintendo-yellow { color: var(--nintendo-yellow); }
-.text-nintendo-green { color: var(--nintendo-green); }
-.text-nintendo-purple { color: var(--nintendo-purple); }
-.text-nintendo-orange { color: var(--nintendo-orange); }
-.text-nintendo-pink { color: var(--nintendo-pink); }
+.text-arcade-red { color: var(--arcade-red); }
+.text-arcade-blue { color: var(--arcade-blue); }
+.text-arcade-yellow { color: var(--arcade-yellow); }
+.text-arcade-green { color: var(--arcade-green); }
+.text-arcade-purple { color: var(--arcade-purple); }
+.text-arcade-orange { color: var(--arcade-orange); }
+.text-arcade-pink { color: var(--arcade-pink); }
+.text-arcade-primary-text { color: var(--arcade-primary-text); }
+.text-arcade-secondary-text { color: var(--arcade-secondary-text); }
+.text-arcade-tertiary-text { color: var(--arcade-tertiary-text); }
 
-.bg-nintendo-red { background-color: var(--nintendo-red); }
-.bg-nintendo-blue { background-color: var(--nintendo-blue); }
-.bg-nintendo-yellow { background-color: var(--nintendo-yellow); }
-.bg-nintendo-green { background-color: var(--nintendo-green); }
-.bg-nintendo-purple { background-color: var(--nintendo-purple); }
-.bg-nintendo-orange { background-color: var(--nintendo-orange); }
-.bg-nintendo-pink { background-color: var(--nintendo-pink); }
+.bg-arcade-red { background-color: var(--arcade-red); }
+.bg-arcade-blue { background-color: var(--arcade-blue); }
+.bg-arcade-yellow { background-color: var(--arcade-yellow); }
+.bg-arcade-green { background-color: var(--arcade-green); }
+.bg-arcade-purple { background-color: var(--arcade-purple); }
+.bg-arcade-orange { background-color: var(--arcade-orange); }
+.bg-arcade-pink { background-color: var(--arcade-pink); }
 
 /* Focus ring */
 .focus-ring {
-  outline: 2px solid var(--nintendo-blue);
+  outline: 2px solid var(--arcade-blue);
   outline-offset: 2px;
 }
 
-/* Mobile score display - inline with title */
-.mobile-score-display {
+/* Refreshed scoreboard styling */
+.score-board {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 40px;
+  padding: var(--space-2) var(--space-6);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 100;
+}
+
+.score-segment {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: 'Sora', sans-serif;
+  color: #ffffff;
+}
+
+.score-icon {
+  font-size: 0.875rem;
+}
+
+.score-number {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.score-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.score-board-mobile {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
 }
 
-/* Hide mobile score display on desktop */
-@media (min-width: 769px) {
-  .mobile-score-display {
+@media (max-width: 768px) {
+  .score-board {
     display: none;
   }
-}
 
-.score-inline {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.score-label {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.score-value {
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-.score-blue {
-  color: var(--nintendo-blue);
-  text-shadow: 0 0 4px rgba(0, 102, 204, 0.4);
-}
-
-.score-purple {
-  color: var(--nintendo-purple);
-  text-shadow: 0 0 4px rgba(139, 95, 191, 0.4);
-}
-
-.score-text {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
-}
-
-/* Mobile-specific score colors for better readability */
-.score-blue-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(0, 102, 204, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-purple-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(139, 95, 191, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-text-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
+  .score-board-mobile {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
+    padding: var(--space-2) var(--space-6);
+  }
 }
 
 /* Enhanced Text-Question: THE HERO ELEMENT */
@@ -600,7 +525,7 @@ body::after {
   filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3)) !important;
   text-transform: uppercase;
   opacity: 0.9 !important;
-  margin-bottom: 2rem !important;
+  margin-bottom: 0 !important;
 }
 
 /* Refined logo underline */
@@ -632,13 +557,7 @@ body::after {
 }
 
 /* Enhanced next button text readability */
-.nintendo-btn-primary {
-  background: linear-gradient(135deg, var(--nintendo-red), var(--nintendo-orange));
-  color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(230, 0, 18, 0.3);
-}
+/* Primary button styles defined above are reused here */
 
 /* Mobile responsive enhancements */
 @media (max-width: 768px) {
@@ -657,23 +576,6 @@ body::after {
     font-size: 1.5rem !important; /* Smaller on mobile to preserve question prominence */
     opacity: 0.8 !important;
     margin-bottom: 1rem !important; /* Reduced from 1.5rem */
-  }
-
-  .mobile-score-display {
-    gap: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .score-inline {
-    font-size: 0.75rem;
-  }
-
-  .score-label {
-    font-size: 0.625rem;
-  }
-
-  .score-value {
-    font-size: 0.75rem;
   }
 
   /* Make answer cards more compact on mobile */

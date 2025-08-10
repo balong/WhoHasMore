@@ -1,6 +1,7 @@
 'use client';
 
 import { useGameStore } from '../_stores/gameStore';
+import LogoIcon from './LogoIcon';
 
 export default function ShowHeader() {
   const { gameState, score, answeredQuestions } = useGameStore();
@@ -10,37 +11,38 @@ export default function ShowHeader() {
 
   return (
     <>
-      {/* Desktop Score Display - Top Right */}
+      {/* Desktop Score Display */}
       {gameState !== 'idle' && (
-        <div className="score-container-separated">
-          <div className="score-item">
-            <span className="text-caption">SCORE</span>
-            <span className="text-heading-xl text-nintendo-blue">{score}</span>
+        <div className="score-board">
+          <div className="score-segment">
+            <span className="score-icon">★</span>
+            <span className="score-number">{score}</span>
           </div>
-          <div className="score-item">
-            <span className="text-caption">ACCURACY</span>
-            <span className="text-heading-xl text-nintendo-purple">{accuracyPercentage}%</span>
+          <div className="score-divider" />
+          <div className="score-segment">
+            <span className="score-icon">🎯</span>
+            <span className="score-number">{accuracyPercentage}%</span>
           </div>
         </div>
       )}
 
-      {/* Main Title with inline score info for mobile */}
+      {/* Logo and mobile score display */}
       <div className="w-full">
         <div className="text-center">
-          <h1 className="logo-text">
-            Who Has More?
-          </h1>
-          
-          {/* Inline score display for mobile only */}
+          <div className="flex items-center justify-center gap-2 mb-1">
+            <LogoIcon className="w-8 h-8 md:w-10 md:h-10" />
+            <h1 className="logo-text">Who Has More?</h1>
+          </div>
+
           {gameState !== 'idle' && (
-            <div className="mobile-score-display">
-              <div className="score-inline">
-                <span className="score-label">Score:</span>
-                <span className="score-value score-blue-mobile">{score}</span>
+            <div className="score-board-mobile">
+              <div className="score-segment">
+                <span className="score-icon">★</span>
+                <span className="score-number">{score}</span>
               </div>
-              <div className="score-inline">
-                <span className="score-label">Accuracy:</span>
-                <span className="score-value score-purple-mobile">{accuracyPercentage}%</span>
+              <div className="score-segment">
+                <span className="score-icon">🎯</span>
+                <span className="score-number">{accuracyPercentage}%</span>
               </div>
             </div>
           )}
@@ -48,4 +50,4 @@ export default function ShowHeader() {
       </div>
     </>
   );
-} 
+}
