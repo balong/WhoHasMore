@@ -206,7 +206,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
     <div className="w-full max-w-xl mx-auto px-2.5 md:px-3">
       <div className="space-y-3 md:space-y-4">
         <div className="text-center space-y-1.5 md:space-y-2">
-          <p className="text-xl md:text-2xl font-black text-primary leading-tight">
+          <p className="text-2xl md:text-3xl font-black text-primary leading-tight">
             {formatQuestion(question.category)}
           </p>
           <p className="text-small text-secondary">
@@ -245,12 +245,12 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
                   whileHover={!isAnswered ? { scale: 1.02 } : undefined}
                   whileTap={!isAnswered ? { scale: 0.98 } : undefined}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-5">
                     <div className={badgeClass}>
                       {letter}
                     </div>
                     <div className="flex-1 text-left">
-                      <div className="text-body font-semibold text-primary">
+                      <div className="text-body font-bold text-primary">
                         {option.name}
                       </div>
                       {isAnswered && (
