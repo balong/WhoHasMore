@@ -169,52 +169,6 @@ body::after {
   opacity: 0.8;
 }
 
-/* Compact score container for top-right placement */
-.score-container-compact {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-  padding: var(--space-8) var(--space-12);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
-}
-
-/* Separated score containers */
-.score-container-separated {
-  display: flex;
-  gap: var(--space-4);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
-}
-
-/* Desktop score display - positioned on the right */
-.score-container-separated {
-  position: fixed;
-  top: var(--space-4);
-  right: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  z-index: 100;
-}
-
-.score-item {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  padding: var(--space-4) var(--space-6);
-  text-align: center;
-  min-width: 100px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
 /* Category chip styling */
 .category-chip {
   display: inline-flex;
@@ -424,21 +378,6 @@ body::after {
     filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
   }
   
-  .score-container-compact {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: var(--space-8) auto;
-  }
-  
-  .score-container-separated {
-    display: none; /* Hide desktop score display on mobile */
-  }
-  
-  .score-item {
-    min-width: 70px;
-    padding: var(--space-4) var(--space-6);
-  }
   
   .answer-card {
     padding: var(--space-6) var(--space-8);
@@ -475,77 +414,6 @@ body::after {
 .focus-ring {
   outline: 2px solid var(--arcade-blue);
   outline-offset: 2px;
-}
-
-/* Mobile score display - inline with title */
-.mobile-score-display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
-}
-
-/* Hide mobile score display on desktop */
-@media (min-width: 769px) {
-  .mobile-score-display {
-    display: none;
-  }
-}
-
-.score-inline {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.score-label {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.score-value {
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-.score-blue {
-  color: var(--arcade-blue);
-  text-shadow: 0 0 4px rgba(79, 70, 229, 0.4);
-}
-
-.score-purple {
-  color: var(--arcade-purple);
-  text-shadow: 0 0 4px rgba(147, 51, 234, 0.4);
-}
-
-.score-text {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
-}
-
-/* Mobile-specific score colors for better readability */
-.score-blue-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(79, 70, 229, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-purple-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(147, 51, 234, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-text-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
 }
 
 /* Enhanced Text-Question: THE HERO ELEMENT */
@@ -652,22 +520,6 @@ body::after {
     margin-bottom: 1rem !important; /* Reduced from 1.5rem */
   }
 
-  .mobile-score-display {
-    gap: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .score-inline {
-    font-size: 0.75rem;
-  }
-
-  .score-label {
-    font-size: 0.625rem;
-  }
-
-  .score-value {
-    font-size: 0.75rem;
-  }
 
   /* Make answer cards more compact on mobile */
   .answer-card {
@@ -701,5 +553,70 @@ body::after {
 
   .next-button-spacing {
     margin-top: 0.5rem !important;
+  }
+}
+/* Modern stats bar for score and accuracy */
+.stats-bar {
+  display: flex;
+  gap: var(--space-4);
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 100;
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--arcade-card-bg);
+  border: 1px solid var(--arcade-card-border);
+  border-radius: 12px;
+  padding: var(--space-2) var(--space-4);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.stat-label {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--arcade-tertiary-text);
+}
+
+.stat-value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--arcade-primary-text);
+}
+
+/* Mobile stats bar */
+.stats-bar-mobile {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 769px) {
+  .stats-bar-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    display: none;
   }
 }

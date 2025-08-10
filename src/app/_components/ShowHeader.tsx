@@ -1,51 +1,58 @@
 'use client';
 
+import Logo from './Logo';
 import { useGameStore } from '../_stores/gameStore';
+import { Trophy, Target } from 'lucide-react';
 
 export default function ShowHeader() {
   const { gameState, score, answeredQuestions } = useGameStore();
 
   const questionsAnswered = answeredQuestions.size;
-  const accuracyPercentage = questionsAnswered > 0 ? Math.round((score / answeredQuestions.size) * 100) : 0;
+  const accuracyPercentage =
+    questionsAnswered > 0 ? Math.round((score / answeredQuestions.size) * 100) : 0;
 
   return (
     <>
-      {/* Desktop Score Display - Top Right */}
       {gameState !== 'idle' && (
-        <div className="score-container-separated">
-          <div className="score-item">
-            <span className="text-caption">SCORE</span>
-            <span className="text-heading-xl text-arcade-blue">{score}</span>
+        <div className="stats-bar">
+          <div className="stat-box">
+            <Trophy className="stat-icon text-arcade-blue" />
+            <div className="stat-content">
+              <span className="stat-label">Score</span>
+              <span className="stat-value text-arcade-blue">{score}</span>
+            </div>
           </div>
-          <div className="score-item">
-            <span className="text-caption">ACCURACY</span>
-            <span className="text-heading-xl text-arcade-purple">{accuracyPercentage}%</span>
+          <div className="stat-box">
+            <Target className="stat-icon text-arcade-purple" />
+            <div className="stat-content">
+              <span className="stat-label">Accuracy</span>
+              <span className="stat-value text-arcade-purple">{accuracyPercentage}%</span>
+            </div>
           </div>
         </div>
       )}
 
-      {/* Main Title with inline score info for mobile */}
-      <div className="w-full">
-        <div className="text-center">
-          <h1 className="logo-text">
-            Who Has More?
-          </h1>
-          
-          {/* Inline score display for mobile only */}
-          {gameState !== 'idle' && (
-            <div className="mobile-score-display">
-              <div className="score-inline">
-                <span className="score-label">Score:</span>
-                <span className="score-value score-blue-mobile">{score}</span>
-              </div>
-              <div className="score-inline">
-                <span className="score-label">Accuracy:</span>
-                <span className="score-value score-purple-mobile">{accuracyPercentage}%</span>
+      <div className="w-full text-center">
+        <Logo />
+        {gameState !== 'idle' && (
+          <div className="stats-bar-mobile">
+            <div className="stat-box">
+              <Trophy className="stat-icon text-arcade-blue" />
+              <div className="stat-content">
+                <span className="stat-label">Score</span>
+                <span className="stat-value text-arcade-blue">{score}</span>
               </div>
             </div>
-          )}
-        </div>
+            <div className="stat-box">
+              <Target className="stat-icon text-arcade-purple" />
+              <div className="stat-content">
+                <span className="stat-label">Accuracy</span>
+                <span className="stat-value text-arcade-purple">{accuracyPercentage}%</span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
-} 
+}
