@@ -1,0 +1,7 @@
+{
+  "source": "State wildlife agencies (2023)",
+  "data": [
+    { "state": "Florida", "permits": 720 },
+    { "state": "Ohio", "permits": 150 }
+  ]
+}

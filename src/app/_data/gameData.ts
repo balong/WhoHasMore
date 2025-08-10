@@ -171,6 +171,74 @@ export const gameData = {
       },
       correctAnswer: 'A',
       explanation: 'California has the most national parks with 9, while Alaska has 8.'
-    }
-  ] as Question[]
-}; 
+    },
+      {
+        id: '11',
+        category: 'Exotic Animal Permits',
+        question: 'Which state issues more exotic animal permits?',
+        optionA: {
+          name: 'Florida',
+          value: 720,
+          unit: 'permits'
+        },
+        optionB: {
+          name: 'Ohio',
+          value: 150,
+          unit: 'permits'
+        },
+        correctAnswer: 'A',
+        explanation: 'Florida issues more exotic animal permits (720) than Ohio (150).'
+      },
+      {
+        id: '12',
+        category: 'Public Nudity & Indecent Exposure',
+        question: 'Which state had more indecent exposure arrests in 2022?',
+        optionA: {
+          name: 'California',
+          value: 5200,
+          unit: 'arrests'
+        },
+        optionB: {
+          name: 'Texas',
+          value: 3100,
+          unit: 'arrests'
+        },
+        correctAnswer: 'A',
+        explanation: 'California recorded about 5,200 indecent exposure arrests in 2022, compared to Texas with 3,100.'
+      },
+      {
+        id: '13',
+        category: 'UFO Sightings',
+        question: 'Which state reported more UFO sightings in 2023?',
+        optionA: {
+          name: 'California',
+          value: 486,
+          unit: 'sightings'
+        },
+        optionB: {
+          name: 'Florida',
+          value: 375,
+          unit: 'sightings'
+        },
+        correctAnswer: 'A',
+        explanation: 'California had 486 UFO sightings in 2023, while Florida had 375.'
+      },
+      {
+        id: '14',
+        category: 'Paranormal & Haunted Locations',
+        question: 'Which state has more reported haunted locations?',
+        optionA: {
+          name: 'Pennsylvania',
+          value: 225,
+          unit: 'locations'
+        },
+        optionB: {
+          name: 'New York',
+          value: 156,
+          unit: 'locations'
+        },
+        correctAnswer: 'A',
+        explanation: 'Pennsylvania lists 225 haunted locations compared to New York\'s 156.'
+      }
+    ] as Question[]
+  };
