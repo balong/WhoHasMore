@@ -315,15 +315,15 @@ export default function QuestionCard() {
           style={{maxWidth: '760px'}}
         >
           <div className="nintendo-card text-left">
-            <div className="flex items-start gap-4 md:gap-6">
-              <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
+            <div className="flex items-start gap-3 md:gap-4">
+              <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
                 {wasAnswerCorrect ? (
-                  <Trophy className="h-5 w-5 md:h-6 md:w-6 text-white" />
+                  <Trophy className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white" />
                 ) : (
-                  <Info className="h-5 w-5 md:h-6 md:w-6 text-white" />
+                  <Info className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white" />
                 )}
               </div>
-              <div className="flex-1 space-y-2 md:space-y-3">
+              <div className="flex-1 space-y-1.5 md:space-y-2 lg:space-y-3">
                 <div className="flex items-center gap-2">
                   <h3 className="text-heading font-bold text-nintendo-primary-text">
                     {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}

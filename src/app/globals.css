@@ -409,7 +409,7 @@ body::after {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 20px;
-  padding: var(--space-16);
+  padding: var(--space-8);
   backdrop-filter: blur(12px);
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
@@ -669,7 +669,7 @@ body::after {
 
 /* Explanation card spacing */
 .explanation-spacing {
-  margin-top: 1rem !important;
+  margin-top: 0.5rem !important;
 }
 
 /* Next button spacing */
@@ -734,7 +734,7 @@ body::after {
   }
 
   .explanation-spacing {
-    margin-top: 0.5rem !important;
+    margin-top: 0.25rem !important;
   }
 
   .next-button-spacing {
@@ -749,7 +749,7 @@ body::after {
   }
 
   .explanation-spacing {
-    margin-top: 0.5rem !important;
+    margin-top: 0.25rem !important;
   }
 
   .next-button-spacing {
