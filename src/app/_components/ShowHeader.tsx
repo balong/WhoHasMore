@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+import { Trophy, Target } from 'lucide-react';
 import { useGameStore } from '../_stores/gameStore';
 
 export default function ShowHeader() {
@@ -10,37 +12,48 @@ export default function ShowHeader() {
 
   return (
     <>
-      {/* Desktop Score Display - Top Right */}
+      {/* Desktop stats */}
       {gameState !== 'idle' && (
-        <div className="score-container-separated">
-          <div className="score-item">
-            <span className="text-caption">SCORE</span>
-            <span className="text-heading-xl text-nintendo-blue">{score}</span>
+        <div className="stats-floating">
+          <div className="stat-box">
+            <Trophy className="stat-icon text-arcade-blue" />
+            <div>
+              <div className="stat-label">Score</div>
+              <div className="stat-value">{score}</div>
+            </div>
           </div>
-          <div className="score-item">
-            <span className="text-caption">ACCURACY</span>
-            <span className="text-heading-xl text-nintendo-purple">{accuracyPercentage}%</span>
+          <div className="stat-box">
+            <Target className="stat-icon text-arcade-purple" />
+            <div>
+              <div className="stat-label">Accuracy</div>
+              <div className="stat-value">{accuracyPercentage}%</div>
+            </div>
           </div>
         </div>
       )}
 
-      {/* Main Title with inline score info for mobile */}
       <div className="w-full">
         <div className="text-center">
-          <h1 className="logo-text">
-            Who Has More?
-          </h1>
-          
-          {/* Inline score display for mobile only */}
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <Image src="/logo.svg" alt="" width={40} height={40} />
+            <h1 className="logo-text">Who Has More?</h1>
+          </div>
+
           {gameState !== 'idle' && (
-            <div className="mobile-score-display">
-              <div className="score-inline">
-                <span className="score-label">Score:</span>
-                <span className="score-value score-blue-mobile">{score}</span>
+            <div className="stats-inline md:hidden">
+              <div className="stat-box">
+                <Trophy className="stat-icon text-arcade-blue" />
+                <div>
+                  <div className="stat-label">Score</div>
+                  <div className="stat-value">{score}</div>
+                </div>
               </div>
-              <div className="score-inline">
-                <span className="score-label">Accuracy:</span>
-                <span className="score-value score-purple-mobile">{accuracyPercentage}%</span>
+              <div className="stat-box">
+                <Target className="stat-icon text-arcade-purple" />
+                <div>
+                  <div className="stat-label">Accuracy</div>
+                  <div className="stat-value">{accuracyPercentage}%</div>
+                </div>
               </div>
             </div>
           )}
@@ -48,4 +61,4 @@ export default function ShowHeader() {
       </div>
     </>
   );
-} 
+}
