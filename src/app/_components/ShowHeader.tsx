@@ -15,11 +15,11 @@ export default function ShowHeader() {
         <div className="score-container-separated">
           <div className="score-item">
             <span className="text-caption">SCORE</span>
-            <span className="text-heading-xl text-nintendo-blue">{score}</span>
+            <span className="text-heading-xl text-arcade-blue">{score}</span>
           </div>
           <div className="score-item">
             <span className="text-caption">ACCURACY</span>
-            <span className="text-heading-xl text-nintendo-purple">{accuracyPercentage}%</span>
+            <span className="text-heading-xl text-arcade-purple">{accuracyPercentage}%</span>
           </div>
         </div>
       )}
