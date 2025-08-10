@@ -2,711 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import modern font pairings */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Nintendo-Inspired Bright & Playful Design System */
 :root {
-  --nintendo-red: #e60012;
-  --nintendo-blue: #0066cc;
-  --nintendo-yellow: #ffcc00;
-  --nintendo-green: #00a652;
-  --nintendo-purple: #8b5fbf;
-  --nintendo-orange: #ff6600;
-  --nintendo-pink: #ff69b4;
-  
-  /* Background colors */
-  --nintendo-bg-primary: #e8f4fd;
-  --nintendo-bg-secondary: #f0f8ff;
-  
-  /* Text colors */
-  --nintendo-primary-text: #1a365d;
-  --nintendo-secondary-text: #4a5568;
-  --nintendo-tertiary-text: #718096;
-  
-  /* Card colors */
-  --nintendo-card-bg: rgba(255, 255, 255, 0.95);
-  --nintendo-card-border: rgba(255, 255, 255, 0.6);
-  
-  /* Spacing grid - 8pt system */
-  --space-1: 0.125rem; /* 2px */
-  --space-2: 0.25rem;  /* 4px */
-  --space-3: 0.375rem; /* 6px */
-  --space-4: 0.5rem;   /* 8px */
-  --space-6: 0.75rem;  /* 12px */
-  --space-8: 1rem;     /* 16px */
-  --space-12: 1.5rem;  /* 24px */
-  --space-16: 2rem;    /* 32px */
-  --space-20: 2.5rem;  /* 40px */
-  --space-24: 3rem;    /* 48px */
+  --nintendo-red: #dc2626;
+  --nintendo-blue: #2563eb;
+  --nintendo-yellow: #facc15;
+  --nintendo-green: #16a34a;
+  --nintendo-purple: #7c3aed;
+  --nintendo-orange: #ea580c;
+  --nintendo-pink: #db2777;
+
+  --nintendo-primary-text: #1f2937;
+  --nintendo-secondary-text: #4b5563;
+  --nintendo-tertiary-text: #6b7280;
+
+  --nintendo-card-bg: #ffffff;
+  --nintendo-card-border: #e5e7eb;
 }
 
-/* Modern Typography System */
-.text-display-hero {
-  font-family: 'Sora', sans-serif;
-  font-size: 2.5rem; /* 40px */
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.text-display-lg {
-  font-family: 'Sora', sans-serif;
-  font-size: 2rem; /* 32px */
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-}
-
-.text-heading-xl {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.5rem; /* 24px */
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.text-heading {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.25rem; /* 20px */
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.text-body-lg {
+body {
   font-family: 'Inter', sans-serif;
-  font-size: 1.125rem; /* 18px */
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.text-body {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem; /* 16px */
-  font-weight: 500;
-  line-height: 1.5;
+  background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+  min-height: 100vh;
+  overflow: hidden;
   color: var(--nintendo-primary-text);
 }
 
-.text-small {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem; /* 14px */
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--nintendo-secondary-text);
-}
-
-.text-caption {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem; /* 12px */
-  font-weight: 500;
-  line-height: 1.3;
-  color: var(--nintendo-tertiary-text);
-}
-
-/* Question text - hero treatment */
+/* Question heading */
 .text-question {
-  font-family: 'Sora', sans-serif;
-  font-size: 2.25rem; /* 36px */
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1.3;
-  letter-spacing: -0.01em;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  max-width: 720px;
-  margin: 0 auto 24px auto; /* Explicit bottom margin */
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-/* Enhanced body styling - Static background */
-body {
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(ellipse at center, #87ceeb 0%, #4682b4 50%, #1e3a8a 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Remove animated background effects - make static */
-body::before {
-  display: none;
-}
-
-body::after {
-  display: none;
-}
-
-/* Enhanced logo with better contrast */
-.logo-text {
-  font-family: 'Sora', sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #ffffff 100%);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 2px 4px rgba(255, 255, 255, 0.3);
-  position: relative;
-  display: inline-block;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
-}
-
-.logo-text::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--nintendo-yellow), transparent);
-  border-radius: 2px;
-}
-
-/* Compact score container for top-right placement */
-.score-container-compact {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-  padding: var(--space-8) var(--space-12);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
-}
-
-/* Separated score containers */
-.score-container-separated {
-  display: flex;
-  gap: var(--space-4);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
-}
-
-/* Desktop score display - positioned on the right */
-.score-container-separated {
-  position: fixed;
-  top: var(--space-4);
-  right: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  z-index: 100;
-}
-
-.score-item {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  padding: var(--space-4) var(--space-6);
-  text-align: center;
-  min-width: 100px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Category chip styling */
-.category-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  padding: var(--space-2) var(--space-6);
-  backdrop-filter: blur(8px);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--nintendo-secondary-text);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.category-chip-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.8;
-}
-
-/* Enhanced answer cards with tactile design */
+/* Answer cards */
 .answer-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
-  padding: var(--space-6) var(--space-8);
+  background: var(--nintendo-card-bg);
+  border: 1px solid var(--nintendo-card-border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
   cursor: pointer;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  transition: background-color 150ms, border-color 150ms, transform 150ms;
 }
-
 .answer-card:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 
-    0 8px 24px rgba(0, 0, 0, 0.12),
-    0 4px 8px rgba(0, 0, 0, 0.06);
-  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
 }
-
 .answer-card:active {
-  transform: translateY(-1px) scale(1.005);
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.1),
-    0 2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
 }
-
 .answer-card-selected {
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(139, 95, 191, 0.15));
   border-color: var(--nintendo-blue);
-  box-shadow: 
-    0 4px 16px rgba(0, 102, 204, 0.2),
-    0 2px 8px rgba(0, 102, 204, 0.1);
+  background: #eff6ff;
 }
-
-/* Answer card reveal states - full opacity colors */
 .answer-card-correct {
-  background: #00a652 !important;
-  border-color: #00a652 !important;
-  color: white !important;
-  animation: correctReveal 300ms ease-out;
+  background: var(--nintendo-green) !important;
+  border-color: var(--nintendo-green) !important;
+  color: #fff !important;
 }
-
 .answer-card-incorrect {
-  background: #e60012 !important;
-  border-color: #e60012 !important;
-  color: white !important;
-  animation: incorrectShake 400ms ease-out;
+  background: var(--nintendo-red) !important;
+  border-color: var(--nintendo-red) !important;
+  color: #fff !important;
 }
-
-/* Ensure text in revealed answers is white */
 .answer-card-correct .text-body-lg,
 .answer-card-correct .text-small,
 .answer-card-incorrect .text-body-lg,
 .answer-card-incorrect .text-small {
-  color: white !important;
+  color: #fff !important;
 }
 
-@keyframes correctReveal {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-  100% { transform: scale(1); }
-}
-
-@keyframes incorrectShake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-3px); }
-  75% { transform: translateX(3px); }
-}
-
-/* Letter badge enhancements */
+/* Letter badges */
 .letter-badge {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Sora', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: white;
-  background: linear-gradient(135deg, var(--nintendo-blue), var(--nintendo-purple));
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 200ms ease;
-  margin-right: var(--space-4);
+  font-weight: 600;
+  color: #fff;
+  background: var(--nintendo-blue);
+  margin-right: 0.5rem;
   flex-shrink: 0;
 }
-
 .letter-badge-correct {
-  background: linear-gradient(135deg, var(--nintendo-green), #00d26a);
-  animation: badgeCorrect 300ms ease-out;
+  background: var(--nintendo-green);
 }
-
 .letter-badge-incorrect {
-  background: linear-gradient(135deg, var(--nintendo-red), #ff4757);
-  animation: badgeIncorrect 400ms ease-out;
+  background: var(--nintendo-red);
 }
 
-@keyframes badgeCorrect {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-@keyframes badgeIncorrect {
-  0%, 100% { transform: scale(1); }
-  25%, 75% { transform: scale(1.05); }
-}
-
-/* Nintendo card updates */
+/* Generic card */
 .nintendo-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  padding: 0 var(--space-8) var(--space-8) var(--space-8);
-  backdrop-filter: blur(12px);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 4px 16px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--nintendo-card-bg);
+  border: 1px solid var(--nintendo-card-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.nintendo-card::before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--nintendo-red), var(--nintendo-yellow), var(--nintendo-green), var(--nintendo-blue), var(--nintendo-purple));
-  border-radius: 20px 20px 0 0;
-}
-
-/* Button enhancements */
-.nintendo-btn {
-  font-family: 'Inter', sans-serif;
-  padding: var(--space-6) var(--space-12);
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 12px;
-  border: none;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.nintendo-btn-primary {
-  background: linear-gradient(135deg, var(--nintendo-blue), var(--nintendo-purple));
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-}
-
-.nintendo-btn-primary:hover {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
-}
-
-.nintendo-btn-secondary {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
-  color: var(--nintendo-primary-text);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-}
-
-.nintendo-btn-secondary:hover {
-  transform: translateY(-1px) scale(1.02);
-  border-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .text-question {
-    font-size: 1.5rem; /* 24px */
-    font-weight: 700;
-    max-width: 100%;
-  }
-  
-  .text-display-hero {
-    font-size: 2rem; /* 32px */
-  }
-  
-  .logo-text {
-    font-size: 2.5rem;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 2px 3px rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
-  }
-  
-  .score-container-compact {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: var(--space-8) auto;
-  }
-  
-  .score-container-separated {
-    display: none; /* Hide desktop score display on mobile */
-  }
-  
-  .score-item {
-    min-width: 70px;
-    padding: var(--space-4) var(--space-6);
-  }
-  
-  .answer-card {
-    padding: var(--space-6) var(--space-8);
-  }
-  
-  .letter-badge {
-    width: 2.25rem;
-    height: 2.25rem;
-    font-size: 0.9375rem;
-  }
-}
-
-/* Color utilities */
-.text-nintendo-red { color: var(--nintendo-red); }
+/* Utility colors */
 .text-nintendo-blue { color: var(--nintendo-blue); }
-.text-nintendo-yellow { color: var(--nintendo-yellow); }
-.text-nintendo-green { color: var(--nintendo-green); }
 .text-nintendo-purple { color: var(--nintendo-purple); }
-.text-nintendo-orange { color: var(--nintendo-orange); }
-.text-nintendo-pink { color: var(--nintendo-pink); }
+.text-nintendo-primary-text { color: var(--nintendo-primary-text); }
+.text-nintendo-secondary-text { color: var(--nintendo-secondary-text); }
 
-.bg-nintendo-red { background-color: var(--nintendo-red); }
-.bg-nintendo-blue { background-color: var(--nintendo-blue); }
-.bg-nintendo-yellow { background-color: var(--nintendo-yellow); }
-.bg-nintendo-green { background-color: var(--nintendo-green); }
-.bg-nintendo-purple { background-color: var(--nintendo-purple); }
-.bg-nintendo-orange { background-color: var(--nintendo-orange); }
-.bg-nintendo-pink { background-color: var(--nintendo-pink); }
+/* Utility spacing */
+.answer-spacing { margin-bottom: 1rem; }
+.explanation-spacing { margin-top: 0.5rem; }
+.next-button-spacing { margin-top: 1rem; }
 
 /* Focus ring */
 .focus-ring {
   outline: 2px solid var(--nintendo-blue);
   outline-offset: 2px;
-}
-
-/* Mobile score display - inline with title */
-.mobile-score-display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
-}
-
-/* Hide mobile score display on desktop */
-@media (min-width: 769px) {
-  .mobile-score-display {
-    display: none;
-  }
-}
-
-.score-inline {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.score-label {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.score-value {
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-.score-blue {
-  color: var(--nintendo-blue);
-  text-shadow: 0 0 4px rgba(0, 102, 204, 0.4);
-}
-
-.score-purple {
-  color: var(--nintendo-purple);
-  text-shadow: 0 0 4px rgba(139, 95, 191, 0.4);
-}
-
-.score-text {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
-}
-
-/* Mobile-specific score colors for better readability */
-.score-blue-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(0, 102, 204, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-purple-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(139, 95, 191, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-text-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-/* Enhanced Text-Question: THE HERO ELEMENT */
-.text-question {
-  font-family: 'Sora', sans-serif;
-  font-size: 2.75rem !important; /* Increased from 2.25rem for dominance */
-  font-weight: 900 !important; /* Maximum impact */
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  /* Multi-layer dramatic text shadow for depth and readability */
-  text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.4),
-    0 4px 12px rgba(0, 0, 0, 0.6),
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    0 8px 24px rgba(0, 0, 0, 0.3);
-  max-width: 800px !important; /* Increased from 720px for more presence */
-  margin: 0 auto 32px auto !important; /* Increased bottom margin */
-  text-align: center;
-  position: relative;
-}
-
-/* Subtle glow effect around question text */
-.text-question::before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
-  border-radius: 20px;
-  z-index: -1;
-  opacity: 0.7;
-}
-
-/* Refined Professional Logo */
-.logo-text {
-  font-family: 'Sora', sans-serif !important;
-  font-size: 2rem !important; /* Reduced from 3rem to be supporting */
-  font-weight: 700 !important; /* Reduced from 900 for subtlety */
-  line-height: 0.9;
-  letter-spacing: -0.02em !important;
-  color: #ffffff !important;
-  text-shadow: 
-    0 0 8px rgba(255, 255, 255, 0.6),
-    0 2px 4px rgba(255, 255, 255, 0.4),
-    0 1px 2px rgba(0, 0, 0, 0.3) !important;
-  position: relative;
-  display: inline-block;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3)) !important;
-  text-transform: uppercase;
-  opacity: 0.9 !important;
-  margin-bottom: 2rem !important;
-}
-
-/* Refined logo underline */
-.logo-text::after {
-  content: '';
-  position: absolute;
-  bottom: -6px !important;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40% !important; /* Reduced from 60% for subtlety */
-  height: 2px !important; /* Reduced from 3px */
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
-  border-radius: 1px;
-}
-
-/* Answer spacing utility */
-.answer-spacing {
-  margin-bottom: 1rem !important;
-}
-
-/* Explanation card spacing */
-.explanation-spacing {
-  margin-top: 0.5rem !important;
-}
-
-/* Next button spacing */
-.next-button-spacing {
-  margin-top: 1rem !important;
-}
-
-/* Enhanced next button text readability */
-.nintendo-btn-primary {
-  background: linear-gradient(135deg, var(--nintendo-red), var(--nintendo-orange));
-  color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(230, 0, 18, 0.3);
-}
-
-/* Mobile responsive enhancements */
-@media (max-width: 768px) {
-  .text-question {
-    font-size: 1.75rem !important; /* Reduced from 2rem for better mobile fit */
-    font-weight: 800 !important;
-    max-width: 100% !important;
-    margin-bottom: 16px !important; /* Reduced from 24px */
-    text-shadow: 
-      0 0 8px rgba(255, 255, 255, 0.4),
-      0 3px 8px rgba(0, 0, 0, 0.5),
-      0 2px 4px rgba(0, 0, 0, 0.4);
-  }
-
-  .logo-text {
-    font-size: 1.5rem !important; /* Smaller on mobile to preserve question prominence */
-    opacity: 0.8 !important;
-    margin-bottom: 1rem !important; /* Reduced from 1.5rem */
-  }
-
-  .mobile-score-display {
-    gap: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .score-inline {
-    font-size: 0.75rem;
-  }
-
-  .score-label {
-    font-size: 0.625rem;
-  }
-
-  .score-value {
-    font-size: 0.75rem;
-  }
-
-  /* Make answer cards more compact on mobile */
-  .answer-card {
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Reduce spacing between elements */
-  .answer-spacing {
-    margin-bottom: 0.5rem !important;
-  }
-
-  .explanation-spacing {
-    margin-top: 0.25rem !important;
-  }
-
-  .next-button-spacing {
-    margin-top: 0.5rem !important;
-  }
-}
-
-/* Mobile compact spacing */
-@media (max-width: 768px) {
-  .answer-spacing {
-    margin-bottom: 0.5rem !important;
-  }
-
-  .explanation-spacing {
-    margin-top: 0.25rem !important;
-  }
-
-  .next-button-spacing {
-    margin-top: 0.5rem !important;
-  }
 }
