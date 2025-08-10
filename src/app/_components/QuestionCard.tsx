@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useGameStore } from '../_stores/gameStore';
 import { cleanLocationName } from '../_utils/stateNames';
 import { Check, X, Trophy, Info } from 'lucide-react';
-import { useState } from 'react';
 
 const formatQuestion = (category: string): string => {
   // Get emoji for category
@@ -194,7 +193,6 @@ export default function QuestionCard() {
     submitAnswer 
   } = useGameStore();
 
-  const [hoveredOption, setHoveredOption] = useState<string | null>(null);
 
   if (!question) return null;
 
@@ -262,8 +260,6 @@ export default function QuestionCard() {
                 key={letter}
                 className={`${getAnswerCardClass(letter)} ${letter === 'A' ? 'answer-spacing' : ''}`}
                 onClick={() => handleAnswerSelect(letter)}
-                onHoverStart={() => setHoveredOption(letter)}
-                onHoverEnd={() => setHoveredOption(null)}
                 whileHover={!isAnswered ? { scale: 1.01 } : {}}
                 whileTap={!isAnswered ? { scale: 0.99 } : {}}
                 layout
@@ -271,7 +267,7 @@ export default function QuestionCard() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, type: "spring", stiffness: 300, damping: 30 }}
               >
-                <div className="flex items-center" style={{gap: '10px'}}>
+                <div className="flex items-center" style={{ gap: '10px' }}>
                   <div className={getLetterBadgeClass(letter)}>
                     {isAnswered && question.correctAnswer === letter ? (
                       <Check className="w-4 h-4" />
@@ -282,7 +278,7 @@ export default function QuestionCard() {
                     )}
                   </div>
                   <div className="flex-1 text-left">
-                    <div className="text-body-lg font-semibold text-nintendo-primary-text">
+                    <div className="text-body-lg font-semibold">
                       {cleanedOption}
                     </div>
                     {isAnswered && (
@@ -292,7 +288,7 @@ export default function QuestionCard() {
                         transition={{ delay: 0.3 }}
                         className="mt-2"
                       >
-                        <div className="text-small text-nintendo-secondary-text">
+                        <div className="text-small">
                           Value: {option.value?.toLocaleString()} {option.unit}
                         </div>
                       </motion.div>
@@ -314,9 +310,9 @@ export default function QuestionCard() {
           className="w-full mx-auto explanation-spacing"
           style={{maxWidth: '760px'}}
         >
-          <div className="nintendo-card text-left">
+          <div className="arcade-card text-left">
             <div className="flex items-start gap-3 md:gap-4">
-              <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
+              <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-sky-500 to-violet-500 flex items-center justify-center">
                 {wasAnswerCorrect ? (
                   <Trophy className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 text-white" />
                 ) : (
@@ -325,7 +321,7 @@ export default function QuestionCard() {
               </div>
               <div className="flex-1 space-y-1.5 md:space-y-2 lg:space-y-3">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-heading font-bold text-nintendo-primary-text">
+                  <h3 className="text-heading font-bold">
                     {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}
                   </h3>
                   {wasAnswerCorrect && (
@@ -333,13 +329,13 @@ export default function QuestionCard() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.7, type: "spring", stiffness: 500, damping: 20 }}
-                      className="text-nintendo-green"
+                      className="text-green-400"
                     >
                       ✨
                     </motion.div>
                   )}
                 </div>
-                <p className="text-body text-nintendo-secondary-text leading-relaxed">
+                <p className="text-body leading-relaxed">
                   {question.explanation}
                 </p>
               </div>
