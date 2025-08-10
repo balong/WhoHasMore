@@ -26,7 +26,7 @@ export default function ProgressIndicator() {
 
       {/* Question Counter - Top left */}
       <div className="progress-indicator">
-        Q {Math.min(currentQuestion, totalQuestions)}/{totalQuestions}
+        <span className="progress-text">Q {Math.min(currentQuestion, totalQuestions)}/{totalQuestions}</span>
       </div>
     </>
   );

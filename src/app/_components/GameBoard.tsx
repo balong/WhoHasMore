@@ -20,9 +20,9 @@ export default function GameBoard() {
   if (gameState === 'idle') {
     return (
       <div className="w-full max-w-4xl mx-auto px-4">
-        <div className="nintendo-card text-center space-y-6 md:space-y-8">
+        <div className="nintendo-card text-center space-y-4 md:space-y-6 lg:space-y-8">
           {/* Hero Section */}
-          <div className="space-y-4 md:space-y-6">
+          <div className="space-y-3 md:space-y-4 lg:space-y-6">
             <h2 className="text-display-lg md:text-display-hero text-white font-bold leading-tight">
               Test Your Knowledge
             </h2>
@@ -32,7 +32,7 @@ export default function GameBoard() {
           </div>
           
           {/* Category Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 py-6 md:py-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 py-4 md:py-6 lg:py-8 mb-6 md:mb-8">
             <div className="category-chip">
               <span className="category-chip-icon">👥</span>
               <span>Population</span>
@@ -77,7 +77,7 @@ export default function GameBoard() {
   }
 
   return (
-    <div className="w-full space-y-6">
+    <div className="w-full space-y-4 md:space-y-6">
       <QuestionCard />
     
       {gameState === 'answered' && (

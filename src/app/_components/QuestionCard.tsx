@@ -242,16 +242,16 @@ export default function QuestionCard() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 py-6 relative z-10">
+    <div className="w-full max-w-4xl mx-auto px-4 py-3 md:py-6 relative z-10">
       {/* Question Header */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-4 md:mb-8">
         <h2 className="text-question">
           {formatQuestion(question.category)}
         </h2>
       </div>
 
       {/* Answer Options */}
-      <div className="w-full mx-auto mb-8" style={{maxWidth: '760px'}}>
+      <div className="w-full mx-auto mb-4 md:mb-8" style={{maxWidth: '760px'}}>
         <div className="flex flex-col">
           {(['A', 'B'] as const).map((letter, index) => {
             const option = letter === 'A' ? question.optionA : question.optionB;
@@ -315,15 +315,15 @@ export default function QuestionCard() {
           style={{maxWidth: '760px'}}
         >
           <div className="nintendo-card text-left">
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
+            <div className="flex items-start gap-4 md:gap-6">
+              <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-nintendo-blue to-nintendo-purple flex items-center justify-center">
                 {wasAnswerCorrect ? (
-                  <Trophy className="h-6 w-6 text-white" />
+                  <Trophy className="h-5 w-5 md:h-6 md:w-6 text-white" />
                 ) : (
-                  <Info className="h-6 w-6 text-white" />
+                  <Info className="h-5 w-5 md:h-6 md:w-6 text-white" />
                 )}
               </div>
-              <div className="flex-1 space-y-3">
+              <div className="flex-1 space-y-2 md:space-y-3">
                 <div className="flex items-center gap-2">
                   <h3 className="text-heading font-bold text-nintendo-primary-text">
                     {wasAnswerCorrect ? 'Correct!' : 'Not quite!'}

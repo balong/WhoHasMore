@@ -14,7 +14,7 @@ export default function Home() {
       <ProgressIndicator />
       <ConfettiEffect trigger={showConfetti} type="confetti" />
       <ConfettiEffect trigger={showStarburst} type="starburst" />
-      <div className="px-6 py-8 space-y-8">
+      <div className="px-4 py-4 space-y-4 md:px-6 md:py-8 md:space-y-8">
         <ShowHeader />
         <GameBoard />
       </div>

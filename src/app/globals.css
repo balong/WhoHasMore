@@ -343,16 +343,24 @@ body::after {
 .progress-indicator {
   position: fixed;
   top: var(--space-4);
-  left: var(--space-8);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border-radius: 8px;
-  padding: var(--space-2) var(--space-4);
+  left: var(--space-4);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: var(--space-3) var(--space-4);
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--nintendo-secondary-text);
+  font-size: 0.875rem;
+  color: var(--nintendo-primary-text);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   z-index: 100;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--nintendo-primary-text);
 }
 
 /* Letter badge enhancements */
@@ -500,6 +508,12 @@ body::after {
   
   .progress-indicator {
     left: var(--space-4);
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.75rem;
+  }
+  
+  .progress-text {
+    font-size: 0.75rem;
   }
   
   .answer-card {
@@ -534,6 +548,51 @@ body::after {
 .focus-ring {
   outline: 2px solid var(--nintendo-blue);
   outline-offset: 2px;
+}
+
+/* Mobile score display - inline with title */
+.mobile-score-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.score-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.score-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.score-value {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.score-blue {
+  color: var(--nintendo-blue);
+  text-shadow: 0 0 4px rgba(0, 102, 204, 0.4);
+}
+
+.score-purple {
+  color: var(--nintendo-purple);
+  text-shadow: 0 0 4px rgba(139, 95, 191, 0.4);
+}
+
+.score-text {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 /* Enhanced Text-Question: THE HERO ELEMENT */
@@ -630,10 +689,10 @@ body::after {
 /* Mobile responsive enhancements */
 @media (max-width: 768px) {
   .text-question {
-    font-size: 2rem !important; /* Increased from 1.5rem on mobile */
+    font-size: 1.75rem !important; /* Reduced from 2rem for better mobile fit */
     font-weight: 800 !important;
     max-width: 100% !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 16px !important; /* Reduced from 24px */
     text-shadow: 
       0 0 8px rgba(255, 255, 255, 0.4),
       0 3px 8px rgba(0, 0, 0, 0.5),
@@ -643,6 +702,57 @@ body::after {
   .logo-text {
     font-size: 1.5rem !important; /* Smaller on mobile to preserve question prominence */
     opacity: 0.8 !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important; /* Reduced from 1.5rem */
+  }
+
+  .mobile-score-display {
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .score-inline {
+    font-size: 0.75rem;
+  }
+
+  .score-label {
+    font-size: 0.625rem;
+  }
+
+  .score-value {
+    font-size: 0.75rem;
+  }
+
+  /* Make answer cards more compact on mobile */
+  .answer-card {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Reduce spacing between elements */
+  .answer-spacing {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .explanation-spacing {
+    margin-top: 0.5rem !important;
+  }
+
+  .next-button-spacing {
+    margin-top: 0.5rem !important;
+  }
+}
+
+/* Mobile compact spacing */
+@media (max-width: 768px) {
+  .answer-spacing {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .explanation-spacing {
+    margin-top: 0.5rem !important;
+  }
+
+  .next-button-spacing {
+    margin-top: 0.5rem !important;
   }
 }
