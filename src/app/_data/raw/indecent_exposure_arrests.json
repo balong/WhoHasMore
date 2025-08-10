@@ -1,0 +1,7 @@
+{
+  "source": "FBI Uniform Crime Reporting, 2022",
+  "data": [
+    { "state": "California", "arrests": 5200 },
+    { "state": "Texas", "arrests": 3100 }
+  ]
+}

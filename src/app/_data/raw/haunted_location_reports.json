@@ -1,0 +1,7 @@
+{
+  "source": "HauntedPlaces.org, 2024",
+  "data": [
+    { "state": "Pennsylvania", "reports": 225 },
+    { "state": "New York", "reports": 156 }
+  ]
+}
