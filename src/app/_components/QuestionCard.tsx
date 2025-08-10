@@ -246,7 +246,7 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
                   whileHover={!isAnswered ? { y: -4, scale: 1.02 } : {}}
                   whileTap={!isAnswered ? { scale: 0.98 } : {}}
                 >
-                  <div className="flex items-center" style={{gap: '30px'}}>
+                  <div className="flex items-center" style={{gap: '15px'}}>
                     <div className={badgeClass}>
                       {letter}
                     </div>
