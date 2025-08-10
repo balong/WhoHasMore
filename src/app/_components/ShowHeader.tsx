@@ -23,7 +23,7 @@ export default function ShowHeader() {
         {gameState !== 'idle' && (
           <div className="flex justify-center">
             <div className="score-container">
-              <div className="flex gap-8 md:gap-12">
+              <div className="flex gap-12 md:gap-16">
                 <div className="score-stat">
                   <span className="score-label">Score</span>
                   <span className="score-value">{score}</span>
