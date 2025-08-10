@@ -20,7 +20,7 @@ export default function GameBoard() {
   if (gameState === 'idle') {
     return (
       <div className="w-full max-w-4xl mx-auto px-4">
-        <div className="nintendo-card text-center space-y-4 md:space-y-6 lg:space-y-8">
+        <div className="arcade-card text-center space-y-4 md:space-y-6 lg:space-y-8">
           {/* Hero Section */}
           <div className="space-y-3 md:space-y-4 lg:space-y-6">
             <h2 className="text-display-lg md:text-display-hero text-white font-bold leading-tight">
@@ -89,7 +89,7 @@ export default function GameBoard() {
         >
           <button
             onClick={handleNextQuestion}
-            className="nintendo-btn nintendo-btn-primary"
+            className="arcade-btn arcade-btn-primary"
           >
             Next Question
           </button>

@@ -2,711 +2,331 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import modern font pairings */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
-/* Nintendo-Inspired Bright & Playful Design System */
 :root {
-  --nintendo-red: #e60012;
-  --nintendo-blue: #0066cc;
-  --nintendo-yellow: #ffcc00;
-  --nintendo-green: #00a652;
-  --nintendo-purple: #8b5fbf;
-  --nintendo-orange: #ff6600;
-  --nintendo-pink: #ff69b4;
-  
-  /* Background colors */
-  --nintendo-bg-primary: #e8f4fd;
-  --nintendo-bg-secondary: #f0f8ff;
-  
-  /* Text colors */
-  --nintendo-primary-text: #1a365d;
-  --nintendo-secondary-text: #4a5568;
-  --nintendo-tertiary-text: #718096;
-  
-  /* Card colors */
-  --nintendo-card-bg: rgba(255, 255, 255, 0.95);
-  --nintendo-card-border: rgba(255, 255, 255, 0.6);
-  
-  /* Spacing grid - 8pt system */
-  --space-1: 0.125rem; /* 2px */
-  --space-2: 0.25rem;  /* 4px */
-  --space-3: 0.375rem; /* 6px */
-  --space-4: 0.5rem;   /* 8px */
-  --space-6: 0.75rem;  /* 12px */
-  --space-8: 1rem;     /* 16px */
-  --space-12: 1.5rem;  /* 24px */
-  --space-16: 2rem;    /* 32px */
-  --space-20: 2.5rem;  /* 40px */
-  --space-24: 3rem;    /* 48px */
+  --arcade-blue: #0A84FF;
+  --arcade-purple: #AF52DE;
+  --arcade-green: #30D158;
+  --arcade-yellow: #FFD60A;
+  --arcade-orange: #FF9F0A;
+  --arcade-pink: #FF375F;
+  --arcade-red: #FF453A;
+
+  --arcade-bg-primary: #1c1c1e;
+  --arcade-bg-secondary: #2c2c2e;
+
+  --arcade-primary-text: #f2f2f7;
+  --arcade-secondary-text: #d1d1d6;
+  --arcade-tertiary-text: #8e8e93;
+
+  --arcade-card-bg: rgba(255,255,255,0.08);
+  --arcade-card-border: rgba(255,255,255,0.15);
+
+  --space-1: 0.125rem;
+  --space-2: 0.25rem;
+  --space-3: 0.375rem;
+  --space-4: 0.5rem;
+  --space-6: 0.75rem;
+  --space-8: 1rem;
+  --space-12: 1.5rem;
+  --space-16: 2rem;
+  --space-20: 2.5rem;
+  --space-24: 3rem;
 }
 
-/* Modern Typography System */
+body {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(100% 100% at 50% 0%, #2c2c2e 0%, #1c1c1e 100%);
+  color: var(--arcade-primary-text);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Typography */
 .text-display-hero {
-  font-family: 'Sora', sans-serif;
-  font-size: 2.5rem; /* 40px */
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .text-display-lg {
-  font-family: 'Sora', sans-serif;
-  font-size: 2rem; /* 32px */
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
 .text-heading-xl {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.5rem; /* 24px */
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.3;
 }
 
 .text-heading {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.25rem; /* 20px */
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.3;
 }
 
 .text-body-lg {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.125rem; /* 18px */
+  font-family: 'SF Pro Text', -apple-system, sans-serif;
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .text-body {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem; /* 16px */
+  font-family: 'SF Pro Text', -apple-system, sans-serif;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--nintendo-primary-text);
+  color: var(--arcade-primary-text);
 }
 
 .text-small {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem; /* 14px */
+  font-family: 'SF Pro Text', -apple-system, sans-serif;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.4;
-  color: var(--nintendo-secondary-text);
+  color: var(--arcade-secondary-text);
 }
 
 .text-caption {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem; /* 12px */
+  font-family: 'SF Pro Text', -apple-system, sans-serif;
+  font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.3;
-  color: var(--nintendo-tertiary-text);
+  color: var(--arcade-tertiary-text);
 }
 
-/* Question text - hero treatment */
 .text-question {
-  font-family: 'Sora', sans-serif;
-  font-size: 2.25rem; /* 36px */
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  font-size: 2.25rem;
   font-weight: 800;
   line-height: 1.3;
-  letter-spacing: -0.01em;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  max-width: 720px;
-  margin: 0 auto 24px auto; /* Explicit bottom margin */
   text-align: center;
+  margin: 0 auto var(--space-16) auto;
+  color: var(--arcade-primary-text);
 }
 
-/* Enhanced body styling - Static background */
-body {
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(ellipse at center, #87ceeb 0%, #4682b4 50%, #1e3a8a 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Remove animated background effects - make static */
-body::before {
-  display: none;
-}
-
-body::after {
-  display: none;
-}
-
-/* Enhanced logo with better contrast */
 .logo-text {
-  font-family: 'Sora', sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #ffffff 100%);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 2px 4px rgba(255, 255, 255, 0.3);
+  font-family: 'SF Pro Display', -apple-system, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--arcade-primary-text);
   position: relative;
   display: inline-block;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+  margin-bottom: var(--space-16);
 }
 
 .logo-text::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--nintendo-yellow), transparent);
-  border-radius: 2px;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--arcade-purple), transparent);
+  border-radius: 1px;
 }
 
-/* Compact score container for top-right placement */
-.score-container-compact {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
+/* Cards & Buttons */
+.arcade-card {
+  background: var(--arcade-card-bg);
+  border: 1px solid var(--arcade-card-border);
+  border-radius: 1.25rem;
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-  padding: var(--space-8) var(--space-12);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  padding: var(--space-16);
 }
 
-/* Separated score containers */
-.score-container-separated {
-  display: flex;
-  gap: var(--space-4);
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-8);
-  z-index: 50;
-}
-
-/* Desktop score display - positioned on the right */
-.score-container-separated {
-  position: fixed;
-  top: var(--space-4);
-  right: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  z-index: 100;
-}
-
-.score-item {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  padding: var(--space-4) var(--space-6);
-  text-align: center;
-  min-width: 100px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Category chip styling */
-.category-chip {
+.arcade-btn {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  padding: var(--space-2) var(--space-6);
-  backdrop-filter: blur(8px);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
+  justify-content: center;
+  border-radius: 0.75rem;
+  font-family: 'SF Pro Text', -apple-system, sans-serif;
   font-weight: 600;
-  color: var(--nintendo-secondary-text);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.arcade-btn-primary {
+  background: linear-gradient(135deg, var(--arcade-blue), var(--arcade-purple));
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(10,132,255,0.4);
+}
+
+.arcade-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(10,132,255,0.5);
+}
+
+.arcade-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(10,132,255,0.4);
+}
+
+.arcade-btn-secondary {
+  background: var(--arcade-bg-secondary);
+  color: var(--arcade-primary-text);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.arcade-btn-secondary:hover {
+  background: var(--arcade-bg-primary);
+}
+
+/* Category Chips */
+.category-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 9999px;
+  background: var(--arcade-bg-secondary);
+  border: 1px solid var(--arcade-card-border);
+  font-size: 0.875rem;
+  color: var(--arcade-secondary-text);
 }
 
 .category-chip-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.8;
+  font-size: 1rem;
 }
 
-/* Enhanced answer cards with tactile design */
+/* Answer Cards */
 .answer-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
-  padding: var(--space-6) var(--space-8);
+  background: var(--arcade-bg-secondary);
+  border: 1px solid var(--arcade-card-border);
+  border-radius: 0.75rem;
+  padding: var(--space-8) var(--space-12);
   cursor: pointer;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .answer-card:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 
-    0 8px 24px rgba(0, 0, 0, 0.12),
-    0 4px 8px rgba(0, 0, 0, 0.06);
-  border-color: rgba(255, 255, 255, 0.9);
-}
-
-.answer-card:active {
-  transform: translateY(-1px) scale(1.005);
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.1),
-    0 2px 4px rgba(0, 0, 0, 0.06);
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
 }
 
 .answer-card-selected {
-  background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(139, 95, 191, 0.15));
-  border-color: var(--nintendo-blue);
-  box-shadow: 
-    0 4px 16px rgba(0, 102, 204, 0.2),
-    0 2px 8px rgba(0, 102, 204, 0.1);
+  border-color: var(--arcade-blue);
 }
 
-/* Answer card reveal states - full opacity colors */
 .answer-card-correct {
-  background: #00a652 !important;
-  border-color: #00a652 !important;
-  color: white !important;
-  animation: correctReveal 300ms ease-out;
+  border-color: var(--arcade-green);
+  background: rgba(48,209,88,0.15);
 }
 
 .answer-card-incorrect {
-  background: #e60012 !important;
-  border-color: #e60012 !important;
-  color: white !important;
-  animation: incorrectShake 400ms ease-out;
+  border-color: var(--arcade-red);
+  background: rgba(255,69,58,0.15);
 }
 
-/* Ensure text in revealed answers is white */
-.answer-card-correct .text-body-lg,
-.answer-card-correct .text-small,
-.answer-card-incorrect .text-body-lg,
-.answer-card-incorrect .text-small {
-  color: white !important;
-}
+/* Spacing helpers */
+.answer-spacing { margin-bottom: 1rem; }
+.explanation-spacing { margin-top: 0.5rem; }
+.next-button-spacing { margin-top: 1rem; }
 
-@keyframes correctReveal {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-  100% { transform: scale(1); }
-}
-
-@keyframes incorrectShake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-3px); }
-  75% { transform: translateX(3px); }
-}
-
-/* Letter badge enhancements */
-.letter-badge {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Sora', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: white;
-  background: linear-gradient(135deg, var(--nintendo-blue), var(--nintendo-purple));
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 200ms ease;
-  margin-right: var(--space-4);
-  flex-shrink: 0;
-}
-
-.letter-badge-correct {
-  background: linear-gradient(135deg, var(--nintendo-green), #00d26a);
-  animation: badgeCorrect 300ms ease-out;
-}
-
-.letter-badge-incorrect {
-  background: linear-gradient(135deg, var(--nintendo-red), #ff4757);
-  animation: badgeIncorrect 400ms ease-out;
-}
-
-@keyframes badgeCorrect {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-@keyframes badgeIncorrect {
-  0%, 100% { transform: scale(1); }
-  25%, 75% { transform: scale(1.05); }
-}
-
-/* Nintendo card updates */
-.nintendo-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  padding: 0 var(--space-8) var(--space-8) var(--space-8);
-  backdrop-filter: blur(12px);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 4px 16px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nintendo-card::before {
-  content: '';
+/* Score Display */
+.score-container-separated {
   position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--nintendo-red), var(--nintendo-yellow), var(--nintendo-green), var(--nintendo-blue), var(--nintendo-purple));
-  border-radius: 20px 20px 0 0;
+  top: var(--space-8);
+  right: var(--space-8);
+  display: flex;
+  gap: var(--space-8);
 }
 
-/* Button enhancements */
-.nintendo-btn {
-  font-family: 'Inter', sans-serif;
-  padding: var(--space-6) var(--space-12);
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 12px;
-  border: none;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.nintendo-btn-primary {
-  background: linear-gradient(135deg, var(--nintendo-blue), var(--nintendo-purple));
-  color: white;
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-}
-
-.nintendo-btn-primary:hover {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
-}
-
-.nintendo-btn-secondary {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
-  color: var(--nintendo-primary-text);
-  border: 2px solid rgba(255, 255, 255, 0.6);
+.score-item {
+  background: var(--arcade-card-bg);
+  border: 1px solid var(--arcade-card-border);
   backdrop-filter: blur(8px);
+  padding: var(--space-4) var(--space-8);
+  border-radius: 0.75rem;
+  text-align: center;
 }
 
-.nintendo-btn-secondary:hover {
-  transform: translateY(-1px) scale(1.02);
-  border-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .text-question {
-    font-size: 1.5rem; /* 24px */
-    font-weight: 700;
-    max-width: 100%;
-  }
-  
-  .text-display-hero {
-    font-size: 2rem; /* 32px */
-  }
-  
-  .logo-text {
-    font-size: 2.5rem;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 2px 3px rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
-  }
-  
-  .score-container-compact {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin: var(--space-8) auto;
-  }
-  
-  .score-container-separated {
-    display: none; /* Hide desktop score display on mobile */
-  }
-  
-  .score-item {
-    min-width: 70px;
-    padding: var(--space-4) var(--space-6);
-  }
-  
-  .answer-card {
-    padding: var(--space-6) var(--space-8);
-  }
-  
-  .letter-badge {
-    width: 2.25rem;
-    height: 2.25rem;
-    font-size: 0.9375rem;
-  }
-}
-
-/* Color utilities */
-.text-nintendo-red { color: var(--nintendo-red); }
-.text-nintendo-blue { color: var(--nintendo-blue); }
-.text-nintendo-yellow { color: var(--nintendo-yellow); }
-.text-nintendo-green { color: var(--nintendo-green); }
-.text-nintendo-purple { color: var(--nintendo-purple); }
-.text-nintendo-orange { color: var(--nintendo-orange); }
-.text-nintendo-pink { color: var(--nintendo-pink); }
-
-.bg-nintendo-red { background-color: var(--nintendo-red); }
-.bg-nintendo-blue { background-color: var(--nintendo-blue); }
-.bg-nintendo-yellow { background-color: var(--nintendo-yellow); }
-.bg-nintendo-green { background-color: var(--nintendo-green); }
-.bg-nintendo-purple { background-color: var(--nintendo-purple); }
-.bg-nintendo-orange { background-color: var(--nintendo-orange); }
-.bg-nintendo-pink { background-color: var(--nintendo-pink); }
-
-/* Focus ring */
-.focus-ring {
-  outline: 2px solid var(--nintendo-blue);
-  outline-offset: 2px;
-}
-
-/* Mobile score display - inline with title */
 .mobile-score-display {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
-}
-
-/* Hide mobile score display on desktop */
-@media (min-width: 769px) {
-  .mobile-score-display {
-    display: none;
-  }
+  gap: var(--space-6);
+  margin-top: var(--space-4);
 }
 
 .score-inline {
   display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
+  gap: var(--space-2);
+  align-items: baseline;
 }
 
 .score-label {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--arcade-tertiary-text);
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .score-value {
-  font-weight: 600;
   font-size: 0.875rem;
-}
-
-.score-blue {
-  color: var(--nintendo-blue);
-  text-shadow: 0 0 4px rgba(0, 102, 204, 0.4);
-}
-
-.score-purple {
-  color: var(--nintendo-purple);
-  text-shadow: 0 0 4px rgba(139, 95, 191, 0.4);
-}
-
-.score-text {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
-}
-
-/* Mobile-specific score colors for better readability */
-.score-blue-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(0, 102, 204, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-purple-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(139, 95, 191, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-.score-text-mobile {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
-  font-weight: 700;
-}
-
-/* Enhanced Text-Question: THE HERO ELEMENT */
-.text-question {
-  font-family: 'Sora', sans-serif;
-  font-size: 2.75rem !important; /* Increased from 2.25rem for dominance */
-  font-weight: 900 !important; /* Maximum impact */
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  /* Multi-layer dramatic text shadow for depth and readability */
-  text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.4),
-    0 4px 12px rgba(0, 0, 0, 0.6),
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    0 8px 24px rgba(0, 0, 0, 0.3);
-  max-width: 800px !important; /* Increased from 720px for more presence */
-  margin: 0 auto 32px auto !important; /* Increased bottom margin */
-  text-align: center;
-  position: relative;
-}
-
-/* Subtle glow effect around question text */
-.text-question::before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  right: -15px;
-  bottom: -15px;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
-  border-radius: 20px;
-  z-index: -1;
-  opacity: 0.7;
-}
-
-/* Refined Professional Logo */
-.logo-text {
-  font-family: 'Sora', sans-serif !important;
-  font-size: 2rem !important; /* Reduced from 3rem to be supporting */
-  font-weight: 700 !important; /* Reduced from 900 for subtlety */
-  line-height: 0.9;
-  letter-spacing: -0.02em !important;
-  color: #ffffff !important;
-  text-shadow: 
-    0 0 8px rgba(255, 255, 255, 0.6),
-    0 2px 4px rgba(255, 255, 255, 0.4),
-    0 1px 2px rgba(0, 0, 0, 0.3) !important;
-  position: relative;
-  display: inline-block;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3)) !important;
-  text-transform: uppercase;
-  opacity: 0.9 !important;
-  margin-bottom: 2rem !important;
-}
-
-/* Refined logo underline */
-.logo-text::after {
-  content: '';
-  position: absolute;
-  bottom: -6px !important;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40% !important; /* Reduced from 60% for subtlety */
-  height: 2px !important; /* Reduced from 3px */
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
-  border-radius: 1px;
-}
-
-/* Answer spacing utility */
-.answer-spacing {
-  margin-bottom: 1rem !important;
-}
-
-/* Explanation card spacing */
-.explanation-spacing {
-  margin-top: 0.5rem !important;
-}
-
-/* Next button spacing */
-.next-button-spacing {
-  margin-top: 1rem !important;
-}
-
-/* Enhanced next button text readability */
-.nintendo-btn-primary {
-  background: linear-gradient(135deg, var(--nintendo-red), var(--nintendo-orange));
-  color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(230, 0, 18, 0.3);
 }
 
-/* Mobile responsive enhancements */
+.score-blue-mobile { color: var(--arcade-blue); }
+.score-purple-mobile { color: var(--arcade-purple); }
+
+/* Color utilities */
+.text-arcade-primary-text { color: var(--arcade-primary-text); }
+.text-arcade-secondary-text { color: var(--arcade-secondary-text); }
+.text-arcade-blue { color: var(--arcade-blue); }
+.text-arcade-purple { color: var(--arcade-purple); }
+.text-arcade-green { color: var(--arcade-green); }
+.text-arcade-yellow { color: var(--arcade-yellow); }
+.text-arcade-orange { color: var(--arcade-orange); }
+.text-arcade-pink { color: var(--arcade-pink); }
+.text-arcade-red { color: var(--arcade-red); }
+
+.bg-arcade-blue { background-color: var(--arcade-blue); }
+.bg-arcade-purple { background-color: var(--arcade-purple); }
+.bg-arcade-green { background-color: var(--arcade-green); }
+.bg-arcade-yellow { background-color: var(--arcade-yellow); }
+.bg-arcade-orange { background-color: var(--arcade-orange); }
+.bg-arcade-pink { background-color: var(--arcade-pink); }
+.bg-arcade-red { background-color: var(--arcade-red); }
+
+.from-arcade-blue {
+  --tw-gradient-from: var(--arcade-blue);
+  --tw-gradient-to: rgb(10 132 255 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-arcade-purple {
+  --tw-gradient-to: var(--arcade-purple);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .text-question {
-    font-size: 1.75rem !important; /* Reduced from 2rem for better mobile fit */
-    font-weight: 800 !important;
-    max-width: 100% !important;
-    margin-bottom: 16px !important; /* Reduced from 24px */
-    text-shadow: 
-      0 0 8px rgba(255, 255, 255, 0.4),
-      0 3px 8px rgba(0, 0, 0, 0.5),
-      0 2px 4px rgba(0, 0, 0, 0.4);
+    font-size: 1.75rem;
+    margin-bottom: var(--space-12);
   }
 
   .logo-text {
-    font-size: 1.5rem !important; /* Smaller on mobile to preserve question prominence */
-    opacity: 0.8 !important;
-    margin-bottom: 1rem !important; /* Reduced from 1.5rem */
+    font-size: 1.5rem;
+    margin-bottom: var(--space-8);
   }
 
-  .mobile-score-display {
-    gap: 0.75rem;
-    margin-top: 0.25rem;
-  }
-
-  .score-inline {
-    font-size: 0.75rem;
-  }
-
-  .score-label {
-    font-size: 0.625rem;
-  }
-
-  .score-value {
-    font-size: 0.75rem;
-  }
-
-  /* Make answer cards more compact on mobile */
   .answer-card {
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
+    padding: var(--space-6) var(--space-8);
   }
 
-  /* Reduce spacing between elements */
-  .answer-spacing {
-    margin-bottom: 0.5rem !important;
-  }
-
-  .explanation-spacing {
-    margin-top: 0.25rem !important;
-  }
-
-  .next-button-spacing {
-    margin-top: 0.5rem !important;
-  }
-}
-
-/* Mobile compact spacing */
-@media (max-width: 768px) {
-  .answer-spacing {
-    margin-bottom: 0.5rem !important;
-  }
-
-  .explanation-spacing {
-    margin-top: 0.25rem !important;
-  }
-
-  .next-button-spacing {
-    margin-top: 0.5rem !important;
-  }
+  .answer-spacing { margin-bottom: 0.5rem; }
+  .explanation-spacing { margin-top: 0.25rem; }
+  .next-button-spacing { margin-top: 0.5rem; }
 }
