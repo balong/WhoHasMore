@@ -5,7 +5,7 @@
 /* Import modern font pairings */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Nintendo-Inspired Bright & Playful Design System */
+/* Neutral design system */
 :root {
   --nintendo-red: #e60012;
   --nintendo-blue: #0066cc;
@@ -117,14 +117,13 @@
   text-align: center;
 }
 
-/* Enhanced body styling - Static background */
+/* Layout base */
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(ellipse at center, #87ceeb 0%, #4682b4 50%, #1e3a8a 100%);
-  background-attachment: fixed;
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Remove animated background effects - make static */
@@ -136,34 +135,17 @@ body::after {
   display: none;
 }
 
-/* Enhanced logo with better contrast */
+/* Simple logo styling */
 .logo-text {
   font-family: 'Sora', sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #ffffff 100%);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 2px 4px rgba(255, 255, 255, 0.3);
-  position: relative;
-  display: inline-block;
-  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--nintendo-primary-text);
 }
 
 .logo-text::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--nintendo-yellow), transparent);
-  border-radius: 2px;
+  content: none;
 }
 
 /* Compact score container for top-right placement */

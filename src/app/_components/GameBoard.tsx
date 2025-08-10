@@ -19,8 +19,8 @@ export default function GameBoard() {
 
   if (gameState === 'idle') {
     return (
-      <div className="w-full max-w-4xl mx-auto px-4">
-        <div className="nintendo-card text-center space-y-4 md:space-y-6 lg:space-y-8">
+      <div className="w-full h-full flex items-center justify-center px-4">
+        <div className="nintendo-card w-full max-w-4xl text-center space-y-4 md:space-y-6 lg:space-y-8">
           {/* Hero Section */}
           <div className="space-y-3 md:space-y-4 lg:space-y-6">
             <h2 className="text-display-lg md:text-display-hero text-white font-bold leading-tight">
@@ -30,9 +30,9 @@ export default function GameBoard() {
               Compare facts across cities and states. Can you guess which location has more?
             </p>
           </div>
-          
+
           {/* Category Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 py-4 md:py-6 lg:py-8 mb-6 md:mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 lg:gap-6 py-2 md:py-4 lg:py-6 mb-4 md:mb-6">
             <div className="category-chip">
               <span className="category-chip-icon">👥</span>
               <span>Population</span>
@@ -77,9 +77,9 @@ export default function GameBoard() {
   }
 
   return (
-    <div className="w-full space-y-4 md:space-y-6">
+    <div className="w-full h-full flex flex-col items-center justify-center space-y-4 md:space-y-6">
       <QuestionCard />
-    
+
       {gameState === 'answered' && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -97,4 +97,4 @@ export default function GameBoard() {
       )}
     </div>
   );
-} 
+}
