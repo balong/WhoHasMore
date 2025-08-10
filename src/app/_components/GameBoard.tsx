@@ -20,19 +20,19 @@ export default function GameBoard() {
   if (gameState === 'idle') {
     return (
       <div className="w-full max-w-4xl mx-auto px-4">
-        <div className="nintendo-card text-center space-y-4 md:space-y-6 lg:space-y-8">
+        <div className="arcade-card text-center flex flex-col justify-between min-h-[calc(100vh-8rem)] py-6 md:py-8">
           {/* Hero Section */}
           <div className="space-y-3 md:space-y-4 lg:space-y-6">
             <h2 className="text-display-lg md:text-display-hero text-white font-bold leading-tight">
-              Test Your Knowledge
+              Which State Has More?
             </h2>
             <p className="text-body md:text-body-lg text-white/90 max-w-2xl mx-auto leading-relaxed px-4">
-              Compare facts across cities and states. Can you guess which location has more?
+              From population to parks, pick the U.S. state that tops the other.
             </p>
           </div>
-          
+
           {/* Category Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 py-4 md:py-6 lg:py-8 mb-6 md:mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6 py-4 md:py-6 lg:py-8">
             <div className="category-chip">
               <span className="category-chip-icon">👥</span>
               <span>Population</span>
@@ -66,9 +66,9 @@ export default function GameBoard() {
               <span>Culture</span>
             </div>
           </div>
-          
+
           {/* Start Button Section */}
-          <div>
+          <div className="mb-4 md:mb-6">
             <StartButton />
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function GameBoard() {
   return (
     <div className="w-full space-y-4 md:space-y-6">
       <QuestionCard />
-    
+
       {gameState === 'answered' && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ export default function GameBoard() {
         >
           <button
             onClick={handleNextQuestion}
-            className="nintendo-btn nintendo-btn-primary"
+            className="arcade-btn arcade-btn-primary"
           >
             Next Question
           </button>
@@ -97,4 +97,4 @@ export default function GameBoard() {
       )}
     </div>
   );
-} 
+}
